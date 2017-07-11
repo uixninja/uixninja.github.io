@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>synergy_sandbox.dev</title>
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+		<link rel="stylesheet" href="css/bootstrap-slider.min.css">
+		<link rel="stylesheet" href="css/tour.css">
+		<link rel="stylesheet" href="css/bootstrap-table.css">
+		<link rel="stylesheet" href="css/jquery.multiselect.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/media.css">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<!-- MODALS -->
+		<div class="modal-welcome modal fade" id="modal-welcome-1">
+			<div class="modal-dialog">			
+				<div class="tour-box">
+					<h1>Welcome to the<br><span>sitezeus sandbox<span class="superscript">tm</span></span></h1>
+					<p>A tool that can help optimize your existing portfolio of sites</p>
+					<button class="btn btn-modal-2" data-dismiss="modal">next</button>
+				</div>				
+			</div>
+		</div>
+		<div class="modal-welcome modal fade" id="modal-welcome-2">
+			<div class="modal-dialog">			
+				<div class="tour-box">
+					<h1>SOME THINGS YOU CAN ANSWER</h1>
+					<ul>
+						<li><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    <path fill="#0084ff" d="M7,2V13H10V22L17,10H13L17,2H7Z" />
+</svg>&nbsp Which stores will benefit most from a remodel?</li>
+						<li><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    <path fill="#0084ff" d="M7,2V13H10V22L17,10H13L17,2H7Z" />
+</svg>&nbsp Should I add more signage to some of my sites?</li>
+						<li><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    <path fill="#0084ff" d="M7,2V13H10V22L17,10H13L17,2H7Z" />
+</svg>&nbsp What would happen if I improved operations at particular sites?</li>
+						<li><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    <path fill="#0084ff" d="M7,2V13H10V22L17,10H13L17,2H7Z" />
+</svg>&nbsp Which sites will benefit most from more marketing spend?</li>
+						<li><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    <path fill="#0084ff" d="M7,2V13H10V22L17,10H13L17,2H7Z" />
+</svg>&nbsp If I  build larger sites, will revenue increase?</li>
+					</ul>
+					<button class="btn cd-tour-trigger" data-dismiss="modal">learn more</button>
+				</div>				
+			</div>
+		</div>
+		<!-- END MODALS -->
+		
+		<!-- STEPS -->	
+		<ul class="cd-tour-wrapper">
+			<li class="cd-single-step" data-active-selector=".search-box">
+				<span>Step 1</span>
+
+				<div class="cd-more-info bottom">
+					<h2>Sites Filter</h2>
+					<p>Choose the sites you would like to ask your question or experiment against, or just leave all selected as default assumed </p>
+				</div>
+			</li> <!-- .cd-single-step -->
+
+			<li class="cd-single-step" data-active-selector=".box-graph">
+				<span>Step 2</span>
+
+				<div class="cd-more-info right">
+					<h2>Predictive Power Gauge</h2>
+					<p>Our simple percentage based predictive confidence that can range between 0 and 100 percent. The higher the score the more trust worthy the results.</p>
+				</div>
+			</li> <!-- .cd-single-step -->
+
+			<li class="cd-single-step" data-active-selector=".box.attributes">
+				<span>Step 3</span>
+
+				<div class="cd-more-info right">
+					<h2>Your Attributes</h2>
+					<h3>The things you can optimize</h3>
+					<p>By changing attributes values, you are changing the current value of your selected sites to a desired value to measure the effect on revenue. Just click the “+” button on an attribute and change the values as desired then click “run experiment when ready! <br>
+					<span class="redfont">Not all attributes will change revenues!</span></p>
+				</div>
+			</li> <!-- .cd-single-step -->
+
+			<li class="cd-single-step" data-active-selector=".right-side .box">
+				<span>Step 4</span>
+
+				<div class="cd-more-info bottom">
+					<p>Optimization Results  |  Template-1</p>
+				</div>
+			</li> <!-- .cd-single-step -->
+			
+			<li class="cd-single-step" data-active-selector=".table-stat">
+				<span>Step 5</span>
+
+				<div class="cd-more-info top">
+					<p>The Existing Sales/Revenue Of Your Sites</p>
+				</div>
+			</li> <!-- .cd-single-step -->
+
+			<li class="cd-single-step" data-active-selector=".table-stat">
+				<span>Step 6</span>
+
+				<div class="cd-more-info top">
+					<p>The New Sales/Revenue Projection Of Your Sites</p>
+				</div>
+			</li> <!-- .cd-single-step -->
+
+			<li class="cd-single-step" data-active-selector=".table-stat">
+				<span>Step 7</span>
+
+				<div class="cd-more-info top">
+					<p>The Sales/Revenue Increase Or Decrese Of Your Sites</p>
+				</div>
+			</li> <!-- .cd-single-step -->
+
+			<li class="cd-single-step" data-active-selector=".table-stat">
+				<span>Step 8</span>
+
+				<div class="cd-more-info top">
+					<p>The Confidence Level Of The New Projections</p>
+				</div>
+			</li> <!-- .cd-single-step -->
+
+			<li class="cd-single-step" data-active-selector=".table-stat">
+				<span>Step 9</span>
+
+				<div class="cd-more-info top">
+					<p>Our Recommendation Based On Confidence And Optimization</p>
+				</div>
+			</li> <!-- .cd-single-step -->
+
+
+			<li class="cd-single-step" data-active-selector=".report .btn">
+				<span>Step 10</span>
+
+				<div class="cd-more-info left">
+					<h2>Report Your Finding</h2>
+					<p>Once you are happy with the results of your expirement, just click report and show the rest of the team the amazing new insites you just created!</p>
+				</div>
+			</li> <!-- .cd-single-step -->
+
+			<li class="cd-single-step" data-active-selector="div.reset-tour-btn">
+				<span>Finish</span>
+
+				<div class="cd-more-info bottom">
+					<p>If you want to start help again, just click this button</p>
+				</div>
+			</li> <!-- .cd-single-step -->
+		</ul> <!-- .cd-tour-wrapper -->
+
+		<!-- / STEPS -->
+
+
+		<!-- ______________HEADER______________ -->		
+		<header class="header">
+			<div class="col-md-6 col-sm-12 paddings-left header-top">
+				<div class="logo">
+					<p class="logo">Predictive <span class="logo-white">SiteZeus Sandbox <span class="superscript">tm</span></span>&nbsp|&nbsp&nbsp<span class="logo-small">Powerful Portfolio Optimization</span></p>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-12 paddings-right header-top">
+				<div class="search">
+					<a href="#" class="drop-link"><svg style="width:20px;height:20px" viewBox="0 0 24 24">
+    <path fill="#fff" d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z" />
+</svg></a>
+
+					<div class="search-box">
+						<!--<input type="text" name="" id="input" class="form-control" value="Sites: 67 Sites Filtered" required="required" pattern="" title="">
+						-->
+						<select name="searchPanel[]" multiple id="searchPanel">
+							<option value="Denmark">Denmark</option>
+							<option value="Italy">Italy</option>
+							<option value="Spain">Spain</option>
+							<option value="Germany">Germany</option>
+							<option value="France">France</option>
+							<option value="Turkey">Turkey</option>
+							<option value="Austria">Austria</option>
+							<option value="Portugal">Portugal</option>
+							<option value="Belgium">Belgium</option>
+							<option value="Cyprus">Cyprus</option>
+							<option value="Egypt">Egypt</option>
+							<option value="Tunisia">Tunisia</option>
+							<option value="Montenegro">Montenegro</option>
+							<option value="Poland">Poland</option>
+						</select>
+
+						<a href="#" class="search-btn"><svg style="width:20px;height:20px" viewBox="0 0 24 24">
+    <path fill="#fff" d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
+</svg></a>
+					</div>		
+					<a href="#" class="info" data-helper="0"><svg style="width:17px;height:17px" viewBox="0 0 24 24" class="icon">
+    <path fill="#929bbd" d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+								</svg></a>
+					<div class="reset-tour-btn">
+					<div class="icon-tour" data-helper="10">
+						<svg style="width:17px;height:17px" class="icon" viewBox="0 0 24 24">
+    <path fill="#0b85f2" d="M21,17V5H3V17H21M21,3A2,2 0 0,1 23,5V17A2,2 0 0,1 21,19H16V21H8V19H3A2,2 0 0,1 1,17V5A2,2 0 0,1 3,3H21M5,7H11V11H5V7M5,13H11V15H5V13M13,7H19V9H13V7M13,11H19V15H13V11Z" />
+</svg>
+					</div>
+						<a href="#" class="reset-tour-btn cd-tour-trigger">Start guided tour</a>
+						<!-- <button id="cd-tour-trigger" class="btn" data-dismiss="modal">learn more</button> -->
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- ______________END HEADER______________ -->
+
+		
+		<!-- ______________LEFT-SIDE______________ -->		
+			<div class="col-sm-3 left-side-block paddings-left">
+			<div class="left-side">	
+				<div class="box box-graph">
+					<div class="box-header left-top">
+						<div class="header-info-icon" data-helper="1">
+									<svg style="width:16px;height:16px" viewBox="0 0 24 24" class="icon">
+    <path fill="#929bbd" d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+						</svg>
+						</div>
+						<h3>Predictive <span>Power Gauge</span></h3>
+						<p>The Average Accuracy of your selected sites</p>
+
+					</div>
+					<div class="box-body">
+						<div class="graph"><img src="img/graph.png" alt="" class="img-responsive"></div>
+					</div>
+				</div>
+
+				<div class="box attributes">
+					<div class="box-header">
+						<div class="header-info-icon" data-helper="2">
+									<svg style="width:16px;height:16px" viewBox="0 0 24 24" class="icon">
+    <path fill="#929bbd" d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+						</svg>
+						</div>
+						<h3>Optimization <span>Attributes</span></h3>
+						<p>Add tags & activate attributes to optimize portfolio</p>
+						<!-- <a href="#" class="sidebar-toggle-btn refresh"><svg style="width:18px;height:18px" viewBox="0 0 24 24">
+    <path fill="#0b85f2" d="M11,4H13V16L18.5,10.5L19.92,11.92L12,19.84L4.08,11.92L5.5,10.5L11,16V4Z" />
+</svg></a> -->
+					</div>
+					<div class="box-body left-bottom box-body-without-padding">
+						<div class="tags-block">
+							<div class="col-xs-4">
+								<a href="#" class="add-tag-link"><span><svg style="width:18px;height:18px" viewBox="0 0 24 24">
+    <path fill="#0b85f2" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+</svg></span>add tag</a>
+							</div>
+							<div class="col-xs-6">
+								<a href="#" class="add-tag-link add-template"><span><svg style="width:18px;height:18px" viewBox="0 0 24 24">
+    <path fill="#0b85f2" d="M17,18V5H7V18L12,15.82L17,18M17,3A2,2 0 0,1 19,5V21L12,18L5,21V5C5,3.89 5.9,3 7,3H17M11,7H13V9H15V11H13V13H11V11H9V9H11V7Z" />
+</svg></span>Add template</a>
+							</div>
+							<div class="col-xs-2">
+								<a href="#" class="btn-play"><span><svg style="width:18px;height:18px" viewBox="0 0 24 24">
+    <path fill="#fff" d="M7,2V13H10V22L17,10H13L17,2H7Z" />
+</svg></span></a>
+							</div>
+
+						
+						</div>
+						<div class="sidebar-toggle-body">
+
+						<div class="add-tag-body">
+							<!-- row -->
+							<div class="row add-tag-body-row">
+								<div class="col-md-8">
+									<div class="chack-icon">
+										<svg style="width:16px;height:16px" viewBox="0 0 24 24">
+										    <path fill="#fff" d="M20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4C12.76,4 13.5,4.11 14.2,4.31L15.77,2.74C14.61,2.26 13.34,2 12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z" />
+										</svg>
+									</div>
+									<a class="add-tag-body-link" href="#">New Template</a>
+									<div class="lock-icon">
+										<svg style="width:16px;height:16px" viewBox="0 0 24 24">
+    <path fill="#0b85f2" d="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z" />
+</svg>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="delete-icon">
+										<svg style="width:18px;height:18px" viewBox="0 0 24 24">
+    <path fill="#0b85f2" d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" />
+										</svg>
+									</div>
+								</div>
+							</div><!-- end row -->
+							<!-- row -->
+							<div class="row add-tag-body-row">
+								<div class="col-md-8">
+									<a class="add-tag-body-link" href="#">Avarage</a>
+									<div class="lock-icon">
+										<svg style="width:16px;height:16px" viewBox="0 0 24 24">
+    <path fill="#0b85f2" d="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z" />
+</svg>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="delete-icon">
+										<svg style="width:18px;height:18px" viewBox="0 0 24 24">
+    <path fill="#0b85f2" d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" />
+										</svg>
+									</div>
+								</div>
+							</div><!-- end row -->
+							<!-- row -->
+							<div class="row add-tag-body-row">
+								<div class="col-md-8">
+									<a class="add-tag-body-link" href="#">Avarage - 2</a>
+									<div class="lock-icon">
+										<svg style="width:16px;height:16px" viewBox="0 0 24 24">
+    <path fill="#0b85f2" d="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z" />
+</svg>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="delete-icon">
+										<svg style="width:18px;height:18px" viewBox="0 0 24 24">
+    <path fill="#0b85f2" d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" />
+										</svg>
+									</div>
+								</div>
+							</div><!-- end row -->
+						</div>
+						
+					
+						<!-- slider-item -->
+						<!-- <div class="slider-item">
+							<div class="row slider-head slider-head-1">
+								<div class="col-md-12">
+									<span class="slider-head-text slider-head-text-1">access <span class="btn-toggle-slide"></span></span>
+								</div>
+								
+							</div>
+							<div class="row collapse collapse-top collapse-1">
+								<div class="col-md-9">
+									<div class="row">
+										<div class="col-md-6 col-xs-6">
+											<span class="first"></span>
+										</div>
+										<div class="col-md-6 col-xs-6">
+											<span class="second">low</span>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<span class="add-tag"></span>
+								</div>
+							</div>
+							<div class="row collapse collapse-1">
+								<div class="col-md-9">
+									<div class="avg">Avg</div>
+									<input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="14"/> 
+								</div>
+								<div class="col-md-3">
+									<input type="text" class="slider-txt" placeholder="12">
+								</div>
+							</div>
+						</div> -->
+
+
+						<!-- slider-item -->
+						<div class="slider-item slider-item-1">
+							
+							<div class="row">
+								<div class="col-md-9">
+									<div class="row">
+										<div class="col-md-6 col-xs-6 slider-head slider-head-1">
+											<span class="slider-head-text slider-head-text-1">access <span class="btn-toggle-slide"></span></span>
+										</div>
+										<div class="col-md-6 col-xs-6 collapse collapse-top collapse-1">
+											<span class="second">low</span>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<span class="add-tag"></span>
+								</div>
+							</div>
+							<div class="row collapse collapse-1">
+								<div class="col-md-9 slider-body">
+									<div class="avg">Avg</div>
+									<input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="14"/> 
+								</div>
+								<div class="col-md-3 slider-body">
+									<input type="text" class="slider-txt" placeholder="12">
+								</div>
+							</div>
+						</div>
+
+						<!-- slider-item -->
+						<div class="slider-item slider-item-2">
+							
+							<div class="row">
+								<div class="col-md-9">
+									<div class="row">
+										<div class="col-md-6 col-xs-6 slider-head slider-head-2">
+											<span class="slider-head-text slider-head-text-2">access - 2<span class="btn-toggle-slide"></span></span>
+										</div>
+										<div class="col-md-6 col-xs-6 collapse collapse-top collapse-2">
+											<span class="second">low</span>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<span class="add-tag"></span>
+								</div>
+							</div>
+							<div class="row collapse collapse-2">
+								<div class="col-md-9 slider-body">
+									<div class="avg">Avg</div>
+									<input id="ex2" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="14"/> 
+								</div>
+								<div class="col-md-3 slider-body">
+									<input type="text" class="slider-txt" placeholder="12">
+								</div>
+							</div>
+						</div>
+
+						<!-- slider-item -->
+						<div class="slider-item slider-item-3">
+							
+							<div class="row">
+								<div class="col-md-9">
+									<div class="row">
+										<div class="col-md-6 col-xs-6 slider-head slider-head-3">
+											<span class="slider-head-text slider-head-text-3">access - 3<span class="btn-toggle-slide"></span></span>
+										</div>
+										<div class="col-md-6 col-xs-6 collapse collapse-top collapse-3">
+											<span class="second">low</span>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<span class="add-tag"></span>
+								</div>
+							</div>
+							<div class="row collapse collapse-3">
+								<div class="col-md-9 slider-body">
+									<div class="avg">Avg</div>
+									<input id="ex3" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="14"/> 
+								</div>
+								<div class="col-md-3 slider-body">
+									<input type="text" class="slider-txt" placeholder="12">
+								</div>
+							</div>
+						</div>
+
+						<!-- slider-item -->
+						<div class="slider-item slider-item-4">
+							
+							<div class="row">
+								<div class="col-md-9">
+									<div class="row">
+										<div class="col-md-6 col-xs-6 slider-head slider-head-4">
+											<span class="slider-head-text slider-head-text-4">access - 4<span class="btn-toggle-slide"></span></span>
+										</div>
+										<div class="col-md-6 col-xs-6 collapse collapse-top collapse-4">
+											<span class="second">low</span>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<span class="add-tag"></span>
+								</div>
+							</div>
+							<div class="row collapse collapse-4">
+								<div class="col-md-9 slider-body">
+									<div class="avg">Avg</div>
+									<input id="ex4" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="14"/> 
+								</div>
+								<div class="col-md-3 slider-body">
+									<input type="text" class="slider-txt" placeholder="12">
+								</div>
+							</div>
+						</div>
+
+
+						<!-- slider-item -->
+						<!-- <div class="slider-item">
+							<div class="row">
+								<div class="col-md-9">
+									<div class="row">
+										<div class="col-md-6 col-xs-6">
+											<span class="first">access</span>
+										</div>
+										<div class="col-md-6 col-xs-6">
+											<span class="second">low</span>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<span class="add-tag"></span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-9">
+									<div class="avg">Avg</div>
+									<input id="ex4" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="14"/> 
+								</div>
+								<div class="col-md-3">
+									<input type="text" class="slider-txt" placeholder="12">
+								</div>
+							</div>
+						</div> -->
+						</div>
+
+						<!-- <div class="tags-block">
+							<div class="col-xs-12">
+								<a href="#" class="add-runexperiment-link"><span><svg style="width:18px;height:18px" viewBox="0 0 24 24">
+    <path fill="#0b85f2" d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M10,16.5L16,12L10,7.5V16.5Z" />
+</svg></span>test scenario</a>
+							</div>
+						</div> -->
+
+
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+		<!-- ______________END LEFT-SIDE______________ -->
+
+
+		<!-- ______________RIGHT-SIDE______________ -->	
+		<div class="col-md-9 right-side-block paddings-right">
+			<div class="right-side">
+				<div class="box">
+					<div class="box-header right-top">
+						<div class="row">
+							<div class="col-md-7 ">
+								<div class="header-info-icon" data-helper="3">
+									<svg style="width:16px;height:16px" viewBox="0 0 24 24" class="icon">
+    <path fill="#929bbd" d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+						</svg>
+						</div>
+								<h3>Optimization <span>Results</span>&nbsp&nbsp|&nbsp&nbsp<span class="template">Template-1</span></h3>
+								<p>The filtered list of optimizrd sites & thier optimization results </p>
+							</div>
+							<div class="col-md-5 ">
+
+								<div class="report">									
+									<a href="#" class="info" data-helper="9"><svg style="width:17px;height:17px" viewBox="0 0 24 24" class="icon">
+    <path fill="#929bbd" d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+								</svg></a>
+
+									<a href="#" class="btn">Report</a>
+								</div>
+
+								<!-- <p class="template-name"><span><svg style="width:18px;height:18px" viewBox="0 0 24 24">
+    <path fill="#fff" d="M13,9H18.5L13,3.5V9M6,2H14L20,8V20A2,2 0 0,1 18,22H6C4.89,22 4,21.1 4,20V4C4,2.89 4.89,2 6,2M7,20H9V14H7V20M11,20H13V12H11V20M15,20H17V16H15V20Z" />
+</svg></span>Template-1</p> -->
+							</div>
+						</div>
+					</div>
+					
+                
+					<div class="box-body">
+						<div class="row">
+							<div class="col-md-3">
+								<div class="stat-block">
+									<h3>4</h3>
+									<p><span>Attributes</span><br>Adjusted</p>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="stat-block">
+									<h3>6 <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+  <path fill="#66cc99" d="M18,16V14.5L12,8.5L6,14.5V16H18M12,11.33L14.67,14H9.33L12,11.33Z" />
+									</svg></h3>
+									<p>Positively<br>Affected <span>Sites</span></p>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="stat-block">
+									<h3>4 <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+  <path fill="#ec558d" d="M18,9V10.5L12,16.5L6,10.5V9H18M12,13.67L14.67,11H9.33L12,13.67Z" />
+									</svg></h3>
+									<p>Negatively<br>Affected <span>Sites</span></p>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="stat-block">
+									<h3><span class="buks">$&nbsp</span>5.7<span>m</span> </h3>
+									<p>Net Projected<br>Optimization</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="table-stat right-bottom">
+					<table class="table table-hover" data-toggle="table">
+						<thead>
+							<tr>
+								<th data-sortable="true">Existing portfolio site</th>
+								<th data-sortable="true"><a href="#" class="info" data-helper="4"><svg style="width:17px;height:17px" viewBox="0 0 24 24" class="icon">
+    <path fill="#929bbd" d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+								</svg></a>&nbsp&nbsp Actual Sales</th>
+								<th data-sortable="true"><a href="#" class="info" data-helper="5"><svg style="width:17px;height:17px" viewBox="0 0 24 24" class="icon">
+    <path fill="#929bbd" d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+								</svg></a>&nbsp&nbsp Adjusted Zeustimate</th>
+								<th data-sortable="true"><a href="#" class="info" data-helper="6"><svg style="width:17px;height:17px" viewBox="0 0 24 24" class="icon">
+    <path fill="#929bbd" d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+								</svg></a>&nbsp&nbsp projected optimization</th>
+								<th data-sortable="true"><a href="#" class="info" data-helper="7"><svg style="width:17px;height:17px" viewBox="0 0 24 24" class="icon">
+    <path fill="#929bbd" d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+								</svg></a>&nbsp&nbsp optimization confidence</th>
+								<th data-sortable="true"><a href="#" class="info" data-helper="8"><svg style="width:17px;height:17px" viewBox="0 0 24 24" class="icon">
+    <path fill="#929bbd" d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+								</svg></a>&nbsp&nbsp recommendation</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- row -->
+							<tr>
+								<td class="existing-portfolio-site">
+									<div class="card-icon card-icon-left icon-table">
+									<div class="background-1"></div>
+									<div class="background-2"></div>
+									<div class="icon-left"><svg style="width:12px;height:12px" viewBox="0 0 24 24">
+    <path fill="#fff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+									</svg></div>
+									</div>
+								<p class="green">Johnson’s Village</p><span>1214 West Baystreet, Tampa, FL 330709</span></td>
+								<td class="actual-sales">$2.43m</td>
+								<td class="projected-sales"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+  <path fill="#66cc99" d="M18,16V14.5L12,8.5L6,14.5V16H18M12,11.33L14.67,14H9.33L12,11.33Z" />
+									</svg> $2.74m</td>
+								<td class="projected-optimization"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+  <path fill="#66cc99" d="M18,16V14.5L12,8.5L6,14.5V16H18M12,11.33L14.67,14H9.33L12,11.33Z" />
+									</svg> $534k</td>
+								<td class="optimization-confidence"><p><span class="optimization-name green">Great</span>84%</p></td>
+								<td><a class="tooltipup" data-placement="left"  href="#" data-toggle="tooltip" title="<span>projected optimization</span><br><h4>0% - 50%</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sapien, pellentesque in ornare non, tincidunt nec nisl. Praesent facilisis semper scelerisque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas</p>"><svg style="width:17px;height:17px" viewBox="0 0 24 24">
+    <path fill="#929bbd" d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+								</svg></a></td>
+							</tr>
+							<!-- row -->
+							<tr>
+								<td class="existing-portfolio-site">
+								<div class="card-icon card-icon-left icon-table">
+									<div class="background-1"></div>
+									<div class="background-2"></div>
+									<div class="icon-left"><svg style="width:12px;height:12px" viewBox="0 0 24 24">
+    <path fill="#fff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+									</svg></div>
+									</div>
+								<p class="green">West Brandon</p><span>2346 Banyon Street, St. Petersburg, FL 473890</span></td>
+								<td class="actual-sales">$3.14m</td>
+								<td class="projected-sales"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+  <path fill="#66cc99" d="M18,16V14.5L12,8.5L6,14.5V16H18M12,11.33L14.67,14H9.33L12,11.33Z" />
+									</svg> $3.71m</td>
+								<td class="projected-optimization"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+  <path fill="#66cc99" d="M18,16V14.5L12,8.5L6,14.5V16H18M12,11.33L14.67,14H9.33L12,11.33Z" />
+									</svg> $519k</td>
+								<td class="optimization-confidence"><p><span class="optimization-name gold">good</span>78%</p></td>
+								<td><a class="tooltipup" data-placement="left"  href="#" data-toggle="tooltip" title="<span>projected optimization</span><br><h4>0% - 50%</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sapien, pellentesque in ornare non, tincidunt nec nisl. Praesent facilisis semper scelerisque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas</p>"><svg style="width:17px;height:17px" viewBox="0 0 24 24">
+    <path fill="#929bbd" d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+								</svg></a></td>
+							</tr>
+							<!-- row -->
+							<tr>
+								<td class="existing-portfolio-site">
+								<div class="card-icon card-icon-left icon-table">
+									<div class="background-1"></div>
+									<div class="background-2"></div>
+									<div class="icon-left"><svg style="width:12px;height:12px" viewBox="0 0 24 24">
+    <path fill="#fff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+									</svg></div>
+									</div>
+								<p class="green">Carrollwood</p><span>1214 West Baystreet, Tampa, FL 330709</span></td>
+								<td class="actual-sales">$3.14m</td>
+								<td class="projected-sales"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+  <path fill="#66cc99" d="M18,16V14.5L12,8.5L6,14.5V16H18M12,11.33L14.67,14H9.33L12,11.33Z" />
+									</svg> $3.71m</td>
+								<td class="projected-optimization"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+  <path fill="#66cc99" d="M18,16V14.5L12,8.5L6,14.5V16H18M12,11.33L14.67,14H9.33L12,11.33Z" />
+									</svg> $519k</td>
+								<td class="optimization-confidence"><p><span class="optimization-name blue">insane</span>96%</p></td>
+								<td><a class="tooltipup" data-placement="left"  href="#" data-toggle="tooltip" title="<span>projected optimization</span><br><h4>0% - 50%</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sapien, pellentesque in ornare non, tincidunt nec nisl. Praesent facilisis semper scelerisque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas</p>"><svg style="width:17px;height:17px" viewBox="0 0 24 24">
+    <path fill="#929bbd" d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+								</svg></a></td>
+							</tr>
+							<!-- row -->
+							<tr>
+								<td class="existing-portfolio-site">
+								<div class="card-icon card-icon-left icon-table">
+									<div class="background-1"></div>
+									<div class="background-2"></div>
+									<div class="icon-left"><svg style="width:12px;height:12px" viewBox="0 0 24 24">
+    <path fill="#fff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+									</svg></div>
+									</div>
+								<p class="green">Johnson’s Village</p><span>2346 Banyon Street, St. Petersburg, FL 473890</span></td>
+								<td class="actual-sales">$765k</td>
+								<td class="projected-sales"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+  <path fill="#66cc99" d="M18,16V14.5L12,8.5L6,14.5V16H18M12,11.33L14.67,14H9.33L12,11.33Z" />
+									</svg> $1.23m</td>
+								<td class="projected-optimization"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+  <path fill="#66cc99" d="M18,16V14.5L12,8.5L6,14.5V16H18M12,11.33L14.67,14H9.33L12,11.33Z" />
+									</svg> $428k</td>
+								<td class="optimization-confidence"><p><span class="optimization-name red">needs work</span>59%</p></td>
+								<td><a class="tooltipup" data-placement="left"  href="#" data-toggle="tooltip" title="<span>projected optimization</span><br><h4>0% - 50%</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sapien, pellentesque in ornare non, tincidunt nec nisl. Praesent facilisis semper scelerisque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas</p>"><svg style="width:17px;height:17px" viewBox="0 0 24 24">
+    <path fill="#929bbd" d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+								</svg></a></td>
+							</tr>
+							<!-- row -->
+							<tr>
+								<td class="existing-portfolio-site">
+								<div class="card-icon card-icon-left icon-table">
+									<div class="background-1"></div>
+									<div class="background-2"></div>
+									<div class="icon-left"><svg style="width:12px;height:12px" viewBox="0 0 24 24">
+    <path fill="#fff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+									</svg></div>
+									</div>
+								<p class="red">West Brandon</p><span>1214 West Baystreet, Tampa, FL 330709</span></td>
+								<td class="actual-sales">$984k</td>
+								<td class="projected-sales"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+  <path fill="#ec558d" d="M18,9V10.5L12,16.5L6,10.5V9H18M12,13.67L14.67,11H9.33L12,13.67Z" />
+									</svg> $678k</td>
+								<td class="projected-optimization"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+  <path fill="#ec558d" d="M18,9V10.5L12,16.5L6,10.5V9H18M12,13.67L14.67,11H9.33L12,13.67Z" />
+									</svg> $298k</td>
+								<td class="optimization-confidence"><p><span class="optimization-name breeze">Epic</span>91%</p></td>
+								<td><a class="tooltipup" data-placement="left"  href="#" data-toggle="tooltip" title="<span>projected optimization</span><br><h4>0% - 50%</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sapien, pellentesque in ornare non, tincidunt nec nisl. Praesent facilisis semper scelerisque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas</p>"><svg style="width:17px;height:17px" viewBox="0 0 24 24">
+    <path fill="#929bbd" d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+								</svg></a></td>
+							</tr>
+							<tr>
+								<td class="existing-portfolio-site">
+								<div class="card-icon card-icon-left icon-table">
+									<div class="background-1"></div>
+									<div class="background-2"></div>
+									<div class="icon-left"><svg style="width:12px;height:12px" viewBox="0 0 24 24">
+    <path fill="#fff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+									</svg></div>
+									</div>
+								<p class="green">Johnson’s Village</p><span>1214 West Baystreet, Tampa, FL 330709</span></td>
+								<td class="actual-sales">$2.43m</td>
+								<td class="projected-sales"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+  <path fill="#66cc99" d="M18,16V14.5L12,8.5L6,14.5V16H18M12,11.33L14.67,14H9.33L12,11.33Z" />
+									</svg> $2.74m</td>
+								<td class="projected-optimization"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+  <path fill="#66cc99" d="M18,16V14.5L12,8.5L6,14.5V16H18M12,11.33L14.67,14H9.33L12,11.33Z" />
+									</svg> $534k</td>
+								<td class="optimization-confidence"><p><span class="optimization-name green">Great</span>84%</p></td>
+								<td><a class="tooltipup" data-placement="left"  href="#" data-toggle="tooltip" title="<span>projected optimization</span><br><h4>0% - 50%</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sapien, pellentesque in ornare non, tincidunt nec nisl. Praesent facilisis semper scelerisque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas</p>"><svg style="width:17px;height:17px" viewBox="0 0 24 24">
+    <path fill="#929bbd" d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+								</svg></a></td>
+							</tr>
+							<!-- row -->
+							<tr>
+								<td class="existing-portfolio-site">
+								<div class="card-icon card-icon-left icon-table">
+									<div class="background-1"></div>
+									<div class="background-2"></div>
+									<div class="icon-left"><svg style="width:12px;height:12px" viewBox="0 0 24 24">
+    <path fill="#fff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+									</svg></div>
+									</div>
+								<p class="green">West Brandon</p><span>2346 Banyon Street, St. Petersburg, FL 473890</span></td>
+								<td class="actual-sales">$3.14m</td>
+								<td class="projected-sales"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+  <path fill="#66cc99" d="M18,16V14.5L12,8.5L6,14.5V16H18M12,11.33L14.67,14H9.33L12,11.33Z" />
+									</svg> $3.71m</td>
+								<td class="projected-optimization"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+  <path fill="#66cc99" d="M18,16V14.5L12,8.5L6,14.5V16H18M12,11.33L14.67,14H9.33L12,11.33Z" />
+									</svg> $519k</td>
+								<td class="optimization-confidence"><p><span class="optimization-name gold">good</span>78%</p></td>
+								<td><a class="tooltipup" data-placement="left"  href="#" data-toggle="tooltip" title="<span>projected optimization</span><br><h4>0% - 50%</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sapien, pellentesque in ornare non, tincidunt nec nisl. Praesent facilisis semper scelerisque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas</p>"><svg style="width:17px;height:17px" viewBox="0 0 24 24">
+    <path fill="#929bbd" d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+								</svg></a></td>
+							</tr>
+							<!-- row -->
+							<tr>
+								<td class="existing-portfolio-site">
+								<div class="card-icon card-icon-left icon-table">
+									<div class="background-1"></div>
+									<div class="background-2"></div>
+									<div class="icon-left"><svg style="width:12px;height:12px" viewBox="0 0 24 24">
+    <path fill="#fff" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+									</svg></div>
+									</div>
+								<p class="">Carrollwood</p><span>1214 West Baystreet, Tampa, FL 330709</span></td>
+								<td class="actual-sales">$3.14m</td>
+								<td class="projected-sales"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+  <path fill="#ec558d" d="M18,9V10.5L12,16.5L6,10.5V9H18M12,13.67L14.67,11H9.33L12,13.67Z" />
+									</svg> $3.71m</td>
+								<td class="projected-optimization"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+  <path fill="#ec558d" d="M18,9V10.5L12,16.5L6,10.5V9H18M12,13.67L14.67,11H9.33L12,13.67Z" />
+									</svg> $519k</td>
+								<td class="optimization-confidence"><p><span class="optimization-name blue">insane</span>96%</p></td>
+								<td><a class="tooltipup" data-placement="left"  href="#" data-toggle="tooltip" title="<span>projected optimization</span><br><h4>0% - 50%</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lectus sapien, pellentesque in ornare non, tincidunt nec nisl. Praesent facilisis semper scelerisque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas</p>"><svg style="width:17px;height:17px" viewBox="0 0 24 24">
+    <path fill="#929bbd" d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+								</svg></a></td>
+							</tr>
+							<!-- row -->
+							<!-- <tr>
+								<td class="existing-portfolio-site"><span class="table-label"></span><p class="">Johnson’s Village</p><span>2346 Banyon Street, St. Petersburg, FL 473890</span></td>
+								<td class="actual-sales">$765k</td>
+								<td class="projected-sales"><span class="down"></span>$1.23m</td>
+								<td class="projected-optimization"><span class="down"></span>$428k</td>
+								<td class="optimization-confidence"><p><span class="optimization-name red">needs work</span>59%</p></td>
+							</tr> -->
+							<!-- row -->
+							<!-- <tr>
+								<td class="existing-portfolio-site"><span class="table-label"></span><p class="red">West Brandon</p><span>1214 West Baystreet, Tampa, FL 330709</span></td>
+								<td class="actual-sales">$984k</td>
+								<td class="projected-sales"><span class="down"></span>$678k</td>
+								<td class="projected-optimization"><span class="down"></span>($298k)</td>
+								<td class="optimization-confidence"><p><span class="optimization-name breeze">Epic</span>91%</p></td>
+							</tr> -->
+							
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>		
+
+		<!-- ______________END RIGHT-SIDE______________ -->	
+
+
+		<!-- JS -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/bootstrap-slider.min.js"></script>
+		<script src="js/bootstrap-table.min.js"></script>
+		<script src="js/tour.js"></script>
+		<script src="js/jquery.multiselect.js"></script>
+ 		<script src="js/scripts.js"></script>
+ 		
+	</body>
+</html>
