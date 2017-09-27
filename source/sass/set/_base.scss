@@ -1,0 +1,115 @@
+::-webkit-scrollbar-track {
+    background: $color-blue-charcoal;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background: $color-haiti;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: $color-east-bay;
+    width: 8px;
+}
+
+body {
+    background: $color-jaguar;
+    font-family: $font-base;
+}
+html, body, .main {
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    letter-spacing: 0.5px;
+    font-family: inherit;
+}
+
+p, span, tr, td {
+    color: $color-white;
+    font-family: inherit;
+    letter-spacing: 0.7px;
+}
+
+p.template-name {
+    font-size: 14px;
+    color: $color-white;
+    float: right;
+    margin-right: 30px;
+    margin-top: 10px;
+    position: relative;
+
+    span {
+        position: absolute;
+        top: 0;
+        left: -30px;
+    }
+}
+span.indicator {
+    display: inline-block;
+    background-image: $url-sprite;
+    width: 12px;
+    height: 8px;
+    &.up {
+        background-position: -29px 0;
+    }
+    &.down {
+        background-position: -29px -8px;
+    }
+    &.superscript {
+        position: relative;
+        top: -1em;
+        font-size: 40%;
+        text-transform: uppercase;
+    }
+}
+
+.left-top {
+    border-radius: 20px 20px 0 0;
+}
+.left-bottom {
+    border-radius: 0 0 20px 20px;
+}
+.right-top {
+    border-radius: 20px 20px 0 0;
+}
+.right-bottom {
+    border-radius: 0 0 20px 20px;
+}
+a {
+    color: $color-azure;
+
+    &:hover {
+        color: $color-azure;
+        text-decoration: none;
+    }
+    &:focus {
+        color: $color-azure;
+        text-decoration: none;
+    }
+    &.info {
+        display: block;
+        width: 16px;
+        height: 16px;
+        z-index: 999;
+
+        .tooltip {
+            z-index: 9999;
+        }
+    }
+    &.refresh {
+        width: 16px;
+        height: 16px;
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 40px;
+    }
+    &.reset-tour-btn {
+        margin-left: 26px;
+    }
+    &.add-tag-body-link {
+        float: left;
+        text-align: left;
+    }
+}

@@ -1,0 +1,68 @@
+@mixin i-icons {
+    background-image: $url-icons;
+    background-repeat: no-repeat;
+
+    @include pixel-ratio {
+        background-image: $url-icons-x2;
+        background-size: 90px auto;
+    }
+}
+
+[class*=" i-icon-"],
+[class^="i-icon-"] {
+    @include i-icons();
+    display: inline-block;
+    font-size: 0;
+    overflow: hidden;
+    text-indent: -9999px;
+    vertical-align: middle;
+    height: 18px;
+    width: 18px;
+}
+.i-icon-menu {
+    background-position: 0 0;
+
+    button:hover &,
+    a:hover & {
+        background-position: -18px 0;
+    }
+}
+.i-icon-marker {
+    background-position: 0 -18px;
+
+    button:hover &,
+    a:hover & {
+        background-position: -18px -18px;
+    }
+}
+.i-icon-marker-white {
+    background-position: -36px -18px;
+}
+.i-icon-search {
+    background-position: 0 -36px;
+
+    button:hover &,
+    a:hover & {
+        background-position: -18px -36px;
+    }
+}
+.i-icon-search-white {
+    background-position: -36px -36px;
+}
+.i-icon-search-blue {
+    background-position: -18px -36px;
+}
+.i-icon-edit {
+    background-position: 0 -54px;
+
+    button:hover &,
+    a:hover & {
+        background-position: -18px -54px;
+    }
+}
+.i-icon-settings {
+    background-position: -36px 0;
+}
+.i-icon-gps {
+    background-position: -36px -54px;
+}

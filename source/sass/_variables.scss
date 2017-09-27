@@ -1,0 +1,52 @@
+$font-base: 'Roboto', Arial, sans-serif;
+
+/* colours */
+$color-blue-charcoal: #010622;
+$color-haiti: #151935;
+$color-east-bay: #454e75;
+$color-santas-gray: #959fbb;
+$color-jaguar: #010413;
+$color-white: #fff;
+$color-azure: #0b85f2;
+$color-dodger-blue: #1796ff;
+$color-white-20: rgba($color-white,0.2);
+$color-science-blue: #0070d8;
+$color-mirage-60: rgba(15, 19, 43, 0.6);
+$color-pickled-bluewood: #333957;
+$color-big-stone: rgba(28,35,64,1);
+$color-martinique: #2c3553;
+$color-clay-18: rgba(29, 36, 58, 0.18);
+$color-snuff: #dfdeee;
+$color-mirage: #0e122b;
+$color-fiord: #3e4663;
+$color-picton-blue: #4ca5fa;
+$color-hawkes-blue: #d4def7;
+$color-french-rose: #ea4c89;
+$color-olivine: #92d375;
+$color-kournikova: #ffe57f;
+$color-portage: #78a5fe; // #749fff
+$color-salmon: #ff8965;
+$color-viking: #50cad8;
+$color-medium-purple: #8a6bec;
+$color-froly: #ff738c;
+$color-charcoal-70: rgba(4, 7, 27, 0.7);
+$color-black-pearl: #0b0f26;
+$color-lynch: #6e7797;
+
+/* media (will be implemented) */
+$screen-xs: 360px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+
+$anim-speed: 200ms;
+
+/* url */
+$url-sprite: url(../img/image-sprite.png);
+$url-sprite-2: url(../img/image-sprite-2.png);
+$url-search: url(../img/search-label.png);
+$url-sort-both: url(../img/tablesort-both.png);
+$url-sort-desc: url(../img/tablesort-desc.png);
+$url-sort-ask: url(../img/tablesort-ask.png);
+$url-icons: url(../img/icons.png);
+$url-icons-x2: url(../img/icons-x2.png);

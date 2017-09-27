@@ -1,0 +1,93 @@
+input[type=text] {
+    background: $color-pickled-bluewood;
+    border-radius: 3px;
+    font-weight: 500;
+    font-family: $font-base;
+    font-size: 13px;
+    border: none;
+    padding: 5px 10px;
+
+    &.slider-txt {
+        width: 56px;
+        float: right;
+        color: $color-white;
+    }
+}
+
+$checkbox-size: 19px;
+.checkbox-control {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0;
+    margin-bottom: 0;
+    margin-right: 10px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+    height: $checkbox-size;
+    width: $checkbox-size;
+
+    .checker {
+        @include border-radius(3px);
+        background: transparent;
+        border: 2px solid $color-lynch;
+        display: block;
+        height: $checkbox-size;
+        width: $checkbox-size;
+
+        &:before {
+            @include rotate(-45deg);
+            content: "";
+            border-left: 2px solid;
+            border-bottom: 2px solid;
+            height: 6px;
+            width: 10px;
+            position: absolute;
+            left: 4px;
+            top: 5px;
+            visibility: hidden;
+        }
+        &:hover {
+            background-color: rgba($color-lynch, 0.25);
+        }
+    }
+    &[readonly] {
+        cursor: default !important;
+    }
+    input[type="checkbox"] {
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        position: absolute;
+    }
+    &.-pre-checked .checker {
+        background: $color-lynch;
+        border: 0 none;
+
+        &:before {
+            visibility: visible;
+        }
+    }
+    input[type="checkbox"]:checked {
+        & + .checker {
+            background: $color-dodger-blue;
+            background: -webkit-linear-gradient(top, $color-dodger-blue 0%,$color-azure 100%);
+            background: linear-gradient(to bottom, $color-dodger-blue 0%,$color-azure 100%);
+            border-width: 0;
+            color: $color-white;
+
+            &:before {
+                visibility: visible;
+            }
+        }
+    }
+
+    & + label,
+    & + .label-control {
+        color: $color-lynch;
+        cursor: pointer;
+        font-weight: 400;
+        margin-bottom: 0;
+        vertical-align: middle;
+    }
+}

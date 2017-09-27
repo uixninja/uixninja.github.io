@@ -1,0 +1,89 @@
+.btn {
+	background: linear-gradient(45deg, $color-azure 25%, $color-dodger-blue 75%);
+	border-top-color: $color-white_20;
+	border-right-color: $color-white_20;
+	border-bottom-color: $color-science-blue;
+	border-left-color: $color-science-blue;
+	border-radius: 5px;
+	padding: 12px 24px 11px;
+	font-size: 13px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	color: $color-white;
+	text-transform: uppercase;
+	display: initial;
+	box-shadow: 0 11px 49px $color-mirage-60;
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	border: none;
+	margin: 0 6px;
+
+	&:active {
+		background: linear-gradient(45deg, $color-azure 25%, $color-dodger-blue 75%);
+        box-shadow: 0 11px 49px $color-mirage-60;
+	}
+	&:hover {
+		color: $color-white;
+	}
+	&:focus {
+		color: $color-white;
+	}
+	&.btn-second {
+		background: linear-gradient(45deg, $color-haiti -30%, rgba($color-pickled-bluewood, 0.8) 130%);
+		border: solid 1px;
+		border-top-color: rgba($color-pickled-bluewood, 0.8);
+		border-right-color: rgba($color-pickled-bluewood, 0.8);
+		border-bottom-color: $color-big-stone;
+		border-left-color: $color-big-stone;
+		border-radius: 5px;
+		padding: 12px 24px 11px;
+		color: $color-santas-gray;
+	}
+	&.btn-icon {
+		position: relative;
+		&.btn-icon-left {
+			padding-left: 48px;
+			span.icon {
+				left: 24px;
+			}
+		}
+		&.btn-icon-right {
+			padding-right: 48px;
+			span.icon {
+				right: 24px;
+			}
+		}
+		span.icon {
+			position: absolute;
+			width: 18px;
+			height: 18px;
+			top: 10px;
+			&.arrow-left {
+				width: 13px;
+				height: 12px;
+				top: 13px;
+				background: $url-sprite-2 -123px 0 no-repeat;
+			}
+			&.arrow-right {
+				width: 13px;
+				height: 12px;
+				top: 13px;
+				background: $url-sprite-2 -110px 0 no-repeat;
+			}
+		}
+	}
+}
+.btn-play {
+	background: linear-gradient(45deg, $color-azure 25%, $color-dodger-blue 75%);
+	border: solid 1px;
+	border-top-color: $color-white-20;
+	border-right-color: $color-white-20;
+	border-bottom-color: $color-science-blue;
+	border-left-color: $color-science-blue;
+	border-radius: 5px;
+	padding: 8.5px 10px;
+	display: initial;
+	box-shadow: 0 11px 49px $color-mirage-60;
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	float: right;
+	margin-top: 8px;
+}

@@ -1,0 +1,85 @@
+.add-tag-body {
+	padding: 8px 16px;
+	background: $color-big-stone;
+	display: none;
+	.lock-icon {
+		float: left;
+		margin-left: 8px;
+	}
+	.delete-icon {
+		float: right;
+	}
+}
+.add-tag-body-row {
+	padding: 8px 0;
+}
+.check-icon {
+	float: left;
+	margin-right: 8px;
+}
+.add-tag {
+	display: block;
+	float: right;
+	width: 14px;
+	height: 14px;
+	background: $url-sprite -41px 0 no-repeat;
+	cursor: pointer;
+}
+
+
+%tags-block-text {
+	position: relative;
+	margin: 0 auto;
+	display: block;
+	margin-top: -2px;
+}
+%tags-block-link {
+	font-weight: 600;
+	font-size: 10px;
+	color: $color-azure;
+	text-transform: uppercase;
+	letter-spacing: 1.2px;
+	padding-left: 22px;
+	margin-left: 0;
+	float: left;
+	position: relative;
+	padding-top: 5px;
+	margin-top: 16px;
+}
+
+.tags-block {
+	background: $color-mirage;
+	height: 56px;
+	a {
+		span {
+			@extend %tags-block-text;
+			display: block;
+			position: absolute;
+			top: 4px;
+			left: 0;
+		}
+		&.add-tag-link {
+			@extend %tags-block-link;
+		}
+		&.add-runexperiment-link {
+			@extend %tags-block-link;
+			float: left;
+			padding-left: 32px;
+			margin-right: 0;
+			padding-top: 5px;
+			margin-top: 14px;
+		}
+		&.add-template {
+			float: left;
+			&.active {
+				color: $color-white;
+				path {
+					fill: $color-white;
+				}
+			}
+		}
+		&.btn-play span {
+			@extend %tags-block-text;
+		}
+	}
+}

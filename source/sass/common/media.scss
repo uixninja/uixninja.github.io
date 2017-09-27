@@ -1,0 +1,190 @@
+/*   Media Queries File   */
+/* BASE */
+@media (max-width: 1600px) {
+	.table-stat table td.actual-sales, .table-stat table td.projected-sales, .table-stat table td.projected-optimization, .table-stat table td.optimization-confidence p {
+		font-size: 14px;
+	}
+	.table-stat table td.existing-portfolio-site p {
+		font-size: 14px;
+	}
+	.table-stat table td.existing-portfolio-site span {
+		font-size: 12px;
+	}
+}
+@media (max-width: 1400px) {
+	.card-icon {
+		display: none;
+	}
+	.table-stat {
+		overflow-x: scroll;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.box-body {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.stat-block h3 {
+		font-size: 50px;
+	}
+	.stat-block h3 span {
+		font-size: 24px;
+	}
+	.stat-block p {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.stat-block p {
+		padding-left: 20%;
+	}
+	.stat-block h3 {
+		font-size: 40px;
+	}
+}
+@media (max-width: 1600px) and (min-width: 1200px) {
+	.stat-block p {
+		padding-left: 30%;
+	}
+}
+@media (min-width: 1200px) {
+	.paddings-left {
+		padding-left:40px;
+	}
+	.paddings-right {
+		padding-right:40px;
+	}
+
+}
+
+@media (max-width: 992px) { 
+	.col-sm-12 {
+		text-align: center;
+		margin: 0 auto;
+		display: table;
+	}
+	.right-side .box-body {
+		overflow: hidden;
+	}
+	.search a.drop-link svg {
+		margin: 4px 0px 0px 0px;
+	}
+	.left-side-block {
+		width: auto;
+		position: relative;
+		float: none;
+	}
+	.right-side-block {
+		width: auto;
+		padding-left: 15px;
+		padding-right: 15px;
+		float: none;
+	}
+	.stat-block p {
+		text-align: center;
+		padding-left: 0;
+	}
+	.left-top {
+		border-radius: 20px 20px 0px 0px;
+	}
+	.right-side,
+	.left-side {
+		float: none;
+		border-radius: 20px 20px 0px 0px;
+	}
+	.right-top {
+		border-radius: 20px 20px 0px 0px ;
+	}
+	.right-bottom {
+		border-radius: 0px 0px 20px 20px;
+	}
+
+	.box-header .header-info-icon {
+		float: none;
+		padding: 5px 0px 8px 0px;
+		height: auto;
+	}
+	.right-side .box-header .report {
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+		display: table;
+		margin-top: 16px;
+	}
+
+	.box.attributes .box-header {
+		padding-right: 0;
+	}
+	.box.attributes .box-header {
+		text-align: center;
+	}
+	a.refresh {
+		float: none;
+		margin: 16px auto 0px;
+		display: table;
+		clear: both;
+		position: relative;
+		top: 0;
+		right: 0;
+		width: 18px;
+		height: 18px;
+	}
+	.box-header {
+		padding: 24px 0px;
+		text-align: center;
+	}
+	.header-top {
+		text-align: center;
+		margin: 0 auto;
+		display: table;
+	}
+	.search {
+		margin: 0px auto 24px;
+		float: none;
+		display: table;
+	}
+	header.header p.logo {
+		text-align: center;
+	}
+	/* modal */
+	.modal-welcome .modal-dialog {
+		top: 40%;
+	}
+	.modal-welcome .modal-dialog h1 {
+		font-size: 26px;
+		line-height: 26px;
+	}
+	.modal-welcome ul {
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+	.modal-welcome ul li {
+		padding: 6px;
+	}
+	.modal-dialog {
+		width: auto;
+	}
+}
+@media (max-width: 768px) {
+	.modal-welcome .modal-dialog {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		overflow: scroll;
+		padding: 10%;
+		margin: 50px 0px;
+	}
+	#modal-welcome-1 .modal-dialog {
+		transform: none;
+		top: 0;
+		left: 0;
+		padding: 30px 0px 130px;
+	}
+	#modal-welcome-2 .modal-dialog {
+		transform: none;
+		top: 0;
+		left: 0;
+		padding: 30px 0px 130px;
+	}
+}

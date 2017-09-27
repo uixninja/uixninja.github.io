@@ -1,0 +1,141 @@
+.header {
+	width: 100%;
+	min-height: 76px;
+	background: $color-big-stone;
+	-webkit-box-shadow: 0 16px 40px #010419;
+	box-shadow: 0 16px 40px $color-blue-charcoal;
+
+	p.logo {
+        font-family: $font-base;
+		font-weight: 100;
+		color: $color-santas-gray;
+		font-size: 19px;
+		padding-top: 23px;
+		margin: 0;
+		text-align: left;
+		span {
+			&.logo-white {
+				color: $color-white;
+			}
+			&.logo-small {
+				color: $color-santas-gray;
+				font-size: 13px;
+				font-weight: 400;
+				font-family: $font-base;
+			}
+		}
+	}
+    span.superscript {
+        position: relative;
+        top: -1em;
+        font-size: 40%;
+        text-transform: uppercase;
+    }
+}
+.search {
+    a {
+        &.info {
+            float: right;
+            margin-top: 30px;
+            margin-right: 20px;
+        }
+        &.drop-link {
+            width: 32px;
+            height: 32px;
+            border: 2px solid $color-east-bay;
+            border-radius: 50px;
+            float: right;
+            margin-left: 20px;
+            margin-top: 22px;
+            position: relative;
+            svg {
+                margin: 4px 0 0 4px;
+            }
+        }
+    }
+    .search-box {
+        .ms-options-wrap {
+            min-width: 280px;
+            font-size: 12px;
+            background: $color-martinique $url-search 16px 10px no-repeat;
+            -webkit-box-shadow: 0 24px 50px rgba(29, 36, 58, 0.18);
+            box-shadow: 0 24px 50px $color-clay-18;
+            border: none;
+            height: 46px;
+            color: $color-snuff;
+            font-weight: 400;
+            letter-spacing: 0.7px;
+            font-family: $font-base;
+            padding-left: 55px;
+            border-radius: 13px;
+            > button {
+                border: none;
+                background: none;
+                font-size: 12px;
+                height: 46px;
+                color: $color-snuff;
+                font-weight: 400;
+                letter-spacing: 0.7px;
+                font-family: $font-base;
+            }
+        }
+        a.search-btn {
+            position: absolute;
+            display: block;
+            width: 14px;
+            height: 14px;
+            top: 13px;
+            right: 16px;
+        }
+    }
+}
+.search-box {
+    margin-top: 16px;
+    position: relative;
+    float: right;
+    width: 275px;
+    border-radius: 13px;
+}
+.ms-options-wrap {
+    > button:after {
+        display: none !important;
+    }
+    > .ms-options {
+        width: 350px !important;
+        border: none !important;
+        background: $color-martinique !important;
+        border-radius: 10px;
+        padding: 8px;
+        ul {
+            list-style: none;
+            padding: 0 10px;
+            margin: 0;
+        }
+        > {
+            .ms-search input {
+                border-bottom: none !important;
+                font-weight: 100;
+                padding: 13px 15px !important;
+            }
+            .ms-selectall.global {
+                font-size: 12px;
+                font-weight: 500;
+                text-transform: uppercase;
+                margin: 16px;
+            }
+        }
+        > ul {
+            label {
+                padding-left: 20px;
+                &:hover {
+                    background: $color-pickled-bluewood !important;
+                }
+            }
+            input[type="checkbox"] {
+            }
+            li.selected label {
+                background: $color-pickled-bluewood !important;
+            }
+        }
+    }
+}

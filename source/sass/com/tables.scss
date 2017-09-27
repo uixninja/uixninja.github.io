@@ -1,0 +1,401 @@
+%table-cell {
+    border: 0;
+    vertical-align: middle;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.bootstrap-table .table {
+    border: 0;
+}
+.table {
+    > tbody > tr {
+        > td {
+            @extend %table-cell;
+            &:first-child {
+                padding-left: 30px;
+            }
+            &:last-child {
+                text-align: right;
+                padding-right: 40px;
+            }
+            &:nth-child(5) {
+                text-align: right;
+                padding-right: 40px;
+            }
+            &:nth-child(4) {
+                text-align: right;
+                padding-right: 40px;
+            }
+            &:nth-child(3) {
+                text-align: right;
+                padding-right: 40px;
+            }
+            &:nth-child(2) {
+                text-align: right;
+                padding-right: 40px;
+            }
+        }
+        > th {
+            @extend %table-cell;
+            &:first-child {
+                padding-left: 30px;
+            }
+            &:last-child {
+                text-align: right;
+                padding-right: 40px;
+            }
+            &:nth-child(5) {
+                text-align: right;
+                padding-right: 40px;
+            }
+            &:nth-child(4) {
+                text-align: right;
+                padding-right: 40px;
+            }
+            &:nth-child(3) {
+                text-align: right;
+                padding-right: 40px;
+            }
+            &:nth-child(2) {
+                text-align: right;
+                padding-right: 40px;
+            }
+        }
+    }
+    > tfoot > tr {
+        > td {
+            @extend %table-cell;
+            &:first-child {
+                padding-left: 30px;
+            }
+            &:last-child {
+                text-align: right;
+                padding-right: 40px;
+            }
+            &:nth-child(5) {
+                text-align: right;
+                padding-right: 40px;
+            }
+            &:nth-child(4) {
+                text-align: right;
+                padding-right: 40px;
+            }
+            &:nth-child(3) {
+                text-align: right;
+                padding-right: 40px;
+            }
+            &:nth-child(2) {
+                text-align: right;
+                padding-right: 40px;
+            }
+        }
+        > th {
+            @extend %table-cell;
+            &:first-child {
+                padding-left: 30px;
+            }
+            &:last-child {
+                text-align: right;
+                padding-right: 40px;
+            }
+            &:nth-child(5) {
+                text-align: right;
+                padding-right: 40px;
+            }
+            &:nth-child(4) {
+                text-align: right;
+                padding-right: 40px;
+            }
+            &:nth-child(3) {
+                text-align: right;
+                padding-right: 40px;
+            }
+            &:nth-child(2) {
+                text-align: right;
+                padding-right: 40px;
+            }
+        }
+    }
+    > thead > tr {
+        > td {
+            @extend %table-cell;
+            &:first-child {
+                padding-left: 30px;
+            }
+            &:last-child {
+                text-align: right;
+                padding-right: 40px;
+            }
+            &:nth-child(5) {
+                text-align: right;
+                padding-right: 40px;
+            }
+            &:nth-child(4) {
+                text-align: right;
+                padding-right: 40px;
+            }
+            &:nth-child(3) {
+                text-align: right;
+                padding-right: 40px;
+            }
+            &:nth-child(2) {
+                text-align: right;
+                padding-right: 40px;
+            }
+        }
+        > th {
+            @extend %table-cell;
+            &:first-child {
+                padding-left: 17px;
+            }
+            &:last-child {
+                text-align: right;
+                padding-right: 40px;
+            }
+            &:nth-child(5) {
+                text-align: right;
+                padding-right: 40px;
+            }
+            &:nth-child(4) {
+                text-align: right;
+                padding-right: 40px;
+            }
+            &:nth-child(3) {
+                text-align: right;
+                padding-right: 40px;
+            }
+            &:nth-child(2) {
+                text-align: right;
+                padding-right: 40px;
+            }
+        }
+    }
+}
+%table-stat-cell {
+    font-size: 18px;
+    color: $color-santas-gray;
+    font-weight: 400;
+    font-family: $font-base;
+    white-space: nowrap;
+}
+%table-stat-head-cell {
+    float: left;
+    display: block;
+    background-image: $url-sprite;
+    width: 12px;
+    height: 8px;
+    margin: 6px 10px 0 0;
+}
+
+.table-stat {
+    background: $color-haiti;
+    padding: 20px;
+    table {
+        td {
+            overflow: hidden;
+            &.existing-portfolio-site {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                p {
+                    font-size: 15px;
+                    color: $color-snuff;
+                    font-weight: 400;
+                    font-family: $font-base;
+                    margin: 0;
+                    white-space: nowrap;
+                    &.red {
+                        color: $color-french-rose;
+                        background-image: -webkit-gradient(linear, left top, right bottom, from(#ea4c89), to(#f06292));
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                    &.green {
+                        color: $color-olivine;
+                        background-image: -webkit-gradient(linear, left top, right bottom, from(#66cc99), to(#92d375));
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+                span {
+                    color: $color-santas-gray;
+                    font-weight: 500;
+                    font-family: $font-base;
+                    font-size: 13px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    &.table-label {
+                        width: 40px;
+                        height: 40px;
+                        float: left;
+                        background: $url-sprite -111px 0 no-repeat;
+                        margin-right: 15px;
+                    }
+                }
+            }
+            &.actual-sales {
+                @extend %table-stat-cell;
+            }
+            &.projected-sales {
+                @extend %table-stat-cell;
+                span {
+                    @extend %table-stat-head-cell;
+                    &.up {
+                        background-position: -29px 0;
+                    }
+                    &.down {
+                        background-position: -29px -8px;
+                    }
+                }
+            }
+            &.projected-optimization {
+                @extend %table-stat-cell;
+                span {
+                    @extend %table-stat-head-cell;
+                    &.up {
+                        background-position: -29px 0;
+                    }
+                    &.down {
+                        background-position: -29px -8px;
+                    }
+                }
+            }
+            &.optimization-confidence p {
+                @extend %table-stat-cell;
+                span.optimization-name {
+                    color: $color-snuff;
+                    font-size: 12px;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                    font-family: $font-base;
+                    padding-right: 20px;
+                    text-transform: uppercase;
+                    &.green {
+                        color: $color-olivine;
+                        background-image: -webkit-gradient(linear, left top, right bottom, from(#66cc99), to(#92d375));
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                    &.gold {
+                        color: $color-kournikova;
+                        background-image: -webkit-gradient(linear, left top, right bottom, from(#ffd740), to(#ffe57f));
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                    &.blue {
+                        color: $color-portage;
+                        background-image: -webkit-gradient(linear, left top, right bottom, from(#6a93ff), to(#78a5fe));
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                    &.red {
+                        color: $color-salmon;
+                        background-image: -webkit-gradient(linear, left top, right bottom, from(#ff65a5), to(#ff8965));
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                    &.breeze {
+                        color: $color-viking;
+                        background-image: -webkit-gradient(linear, left top, right bottom, from(#1b93c9), to(#50d8c4));
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                    &.purple {
+                        color: $color-medium-purple;
+                        background-image: -webkit-gradient(linear, left top, right bottom, from(#7460ee), to(#8a6bec));
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+            }
+        }
+        th {
+            color: $color-santas-gray;
+            font-size: 11px;
+            font-weight: 800;
+            font-family: $font-base;
+            text-transform: uppercase;
+        }
+        tr:hover td svg path {
+            fill: $color-white;
+        }
+    }
+    a.info {
+        position: absolute;
+        left: 0;
+        top: 10px;
+    }
+}
+table {
+    .tooltip-inner {
+        background: $color-pickled-bluewood;
+        width: 400px;
+        color: $color-santas-gray;
+        padding: 24px;
+        text-align: left;
+        span {
+            color: $color-froly;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+        h4 {
+            color: $color-white;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        p {
+            color: $color-santas-gray;
+            font-size: 12px;
+            font-weight: 400;
+        }
+    }
+}
+.table-hover > tbody > tr:hover {
+    background: $color-big-stone;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 16px 40px rgba(24, 30, 48, 0.06);
+    box-shadow: 0 16px 40px $color-clay-18;
+    td {
+        &:first-child {
+            border-radius: 8px 0 0 8px;
+        }
+        &:last-child {
+            border-radius: 0 8px 8px 0;
+        }
+        &.actual-sales {
+            color: $color-snuff;
+        }
+        &.projected-sales {
+            color: $color-snuff;
+        }
+        &.projected-optimization {
+            color: $color-snuff;
+        }
+        &.optimization-confidence p {
+            color: $color-snuff;
+        }
+    }
+}
+.fixed-table-container thead th {
+    .sortable {
+        padding-left: 13px;
+        position: relative;
+    }
+    &:nth-child(2) a.info {
+        right: 114px;
+    }
+    &:nth-child(3) a.info {
+        right: 166px;
+    }
+    &:nth-child(4) a.info {
+        right: 185px;
+    }
+    &:nth-child(5) a.info {
+        right: 188px;
+    }
+    &:nth-child(6) a.info {
+        right: 118px;
+    }
+}
+

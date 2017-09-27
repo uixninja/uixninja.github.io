@@ -1,0 +1,54 @@
+.box-header {
+	background: $color-big-stone;
+	min-height: 80px;
+	padding: 20px 24px;
+	position: relative;
+	.header-info-icon {
+		float: left;
+		height: 48px;
+		padding: 14px 16px 0 0;
+	}
+	h3 {
+		font-size: 22px;
+		color: $color-santas-gray;
+		font-family: $font-base;
+		font-weight: 100;
+		margin: 0;
+		padding: 0;
+		span {
+			color: $color-snuff;
+			&.template {
+				font-size: 22px;
+				color: $color-white;
+				font-family: $font-base;
+				font-weight: 100;
+			}
+		}
+	}
+	p {
+		font-size: 12px;
+		color: $color-santas-gray;
+		font-weight: 400;
+		font-family: $font-base;
+		margin: 0;
+		margin-top: 6px;
+	}
+}
+.box-body {
+	min-height: 50px;
+	background: $color-haiti;
+	padding: 20px;
+	&.box-body-without-padding {
+		padding: 0;
+		margin: 0;
+	}
+}
+.box.attributes .box-header {
+	padding-right: 50px;
+}
+.header-info-icon svg {
+	cursor: pointer;
+}
+.graph img {
+	margin: 0 auto;
+}

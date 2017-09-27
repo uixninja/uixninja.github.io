@@ -1,0 +1,91 @@
+body[data-step="1"] header {
+	z-index: 2;
+	position: relative;
+}
+body[data-step="2"] {
+	.right-side-block {
+		z-index: 0;
+	}
+	.box-graph {
+		position: relative;
+	}
+	.box.attributes {
+		z-index: 0;
+	}
+}
+body[data-step="3"] {
+	.box-graph {
+		z-index: 0;
+	}
+	.right-side-block {
+		z-index: 0;
+	}
+	.box.attributes {
+		position: relative;
+	}
+}
+body[data-step="5"] {
+	.table-stat {
+		position: relative;
+	}
+	.right-side-block > .right-side > .box {
+		z-index: 0;
+		position: relative;
+	}
+}
+body[data-step="6"] {
+	.table-stat {
+		position: relative;
+	}
+	.right-side-block > .right-side > .box {
+		z-index: 0;
+		position: relative;
+	}
+}
+body[data-step="7"] {
+	.table-stat {
+		position: relative;
+	}
+	.right-side-block > .right-side > .box {
+		z-index: 0;
+		position: relative;
+	}
+}
+body[data-step="8"] {
+	.table-stat {
+		position: relative;
+	}
+	.right-side-block > .right-side > .box {
+		z-index: 0;
+		position: relative;
+	}
+}
+body[data-step="9"] {
+	.table-stat {
+		position: relative;
+	}
+	.right-side-block > .right-side > .box {
+		z-index: 0;
+		position: relative;
+	}
+}
+body[data-step="10"] .right-side-block > .right-side .box-header {
+	z-index: 1;
+}
+body[data-step="11"] div.reset-tour-btn {
+	background: $color-black-pearl;
+}
+body[data-step] .left-side-block {
+	z-index: 1;
+}
+div.reset-tour-btn {
+	float: right;
+	margin-top: 28px;
+	margin-right: 32px;
+	position: relative;
+	.icon-tour {
+		position: absolute;
+		top: 1px;
+		left: 0;
+	}
+}

@@ -1,0 +1,138 @@
+.poi-block-wrp {
+    @include border-radius(20px);
+    background-color: $color-haiti;
+    overflow-y: auto;
+    max-height: calc(100vh - 80px);
+    margin: 40px 0;
+}
+.poi-block {
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 40px 10px;
+    position: relative;
+
+    &--label {
+        color: $color-big-stone;
+        font-size: 88px;
+        font-weight: 900;
+        text-align: center;
+        margin-bottom: -30px;
+        line-height: 1;
+    }
+    &--title {
+        color: rgba($color-white, 0.8);
+        font-size: 34px;
+        font-weight: 100;
+        margin-top: 0;
+        margin-bottom: 15px;
+        text-align: center;
+        position: relative;
+    }
+    &--descr {
+        color: $color-pickled-bluewood;
+        font-size: 18px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .box-header {
+        @include flexbox();
+        @include justify-content(space-between);
+        @include align-items(center);
+        background: lighten($color-big-stone, 5%);
+        min-height: 0;
+        padding: 8px 25px;
+
+        .el-title {
+            color: $color-dodger-blue;
+            font-size: 13px;
+        }
+        .el-points {
+            color: $color-lynch;
+            font-size: 18px;
+            font-weight: 100;
+
+            b {
+                font-weight: 400;
+            }
+        }
+    }
+    .box-body {
+        background: $color-big-stone;
+        margin-bottom: 40px;
+        padding: 15px 25px 10px;
+    }
+    &--search {
+        @include border-radius(15px);
+        background: $color-big-stone;
+        margin-bottom: 40px;
+        padding: 10px 50px;
+        position: relative;
+        overflow: hidden;
+
+        [class^="i-icon-"] {
+            @include translate(0, -50%);
+            position: absolute;
+            left: 25px;
+            top: 50%;
+        }
+        input {
+            @include placeholder{color:  $color-east-bay};
+            background: transparent;
+            color: rgba($color-white, 0.8);
+            font-size: 12px;
+            font-weight: 500;
+            border: 0 none;
+            margin: 0;
+            padding: 6px 5px;
+            width: 100%;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    &--points {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        .list-item {
+            padding: 8px 0;
+            overflow: hidden;
+        }
+        .checkbox-control {
+            float: left;
+            margin-right: 12px;
+        }
+        .label-control {
+            display: block;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            color: $color-lynch;
+            font-size: 14px;
+
+            .match {
+                color:  rgba($color-white, 0.8);
+            }
+            &.group-title {
+                font-size: 11px;
+                color: rgba($color-white, 0.8);
+                text-transform: uppercase;
+                line-height: 1.6;
+
+                &:hover {
+                    color: $color-dodger-blue;
+                }
+            }
+        }
+    }
+    &--points-group {
+        padding: 10px 0 0;
+        list-style: none;
+        margin-left: 32px;
+    }
+    &--buttons {
+        text-align: center;
+    }
+}

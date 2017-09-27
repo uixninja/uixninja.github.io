@@ -1,0 +1,117 @@
+.right-side {
+    margin-top: 40px;
+    -webkit-box-shadow: 0 16px 40px $color-blue-charcoal;
+    box-shadow: 0 16px 40px $color-blue-charcoal;
+    margin-bottom: 40px;
+    height: auto;
+    background: $color-haiti;
+    border-radius: 20px 20px 20px 20px;
+    .box-header {
+        .report {
+            margin-top: 7px;
+        }
+        a {
+            &.btn {
+                display: block;
+                float: right;
+            }
+            &.info {
+                float: right;
+                margin: 12px 0 0 20px;
+            }
+        }
+    }
+    .box-body {
+        background: $color-mirage;
+        overflow-x: auto;
+    }
+}
+.right-side-block {
+    padding-left: 440px;
+    width: auto;
+    float: none;
+    z-index: 1;
+}
+.stat-block {
+    text-align: center;
+    padding: 10px 0 35px;
+    h3 {
+        font-size: 88px;
+        color: $color-snuff;
+        font-weight: 100;
+        font-family: $font-base;
+        span {
+            font-size: 40px;
+        }
+    }
+    p {
+        color: $color-santas-gray;
+        font-size: 17px;
+        font-family: $font-base;
+        font-weight: 300;
+        text-align: left;
+        padding-left: 40%;
+        span {
+            color: $color-hawkes-blue;
+        }
+    }
+}
+
+%card-icon-gradient {
+    background: -webkit-linear-gradient(#0084ff, #1796ff);
+    background: -o-linear-gradient(#0084ff, #1796ff);
+    background: linear-gradient($color-azure, $color-dodger-blue);
+}
+
+.card-icon-left {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    display: block;
+    border-radius: 50%;
+    float: left;
+    margin-top: 10px;
+    margin-right: 26px;
+    .icon-left {
+        top: -5px;
+        left: -5px;
+        position: absolute;
+        .star {
+            width: 28px;
+            height: 28px;
+            background: $url-search;
+        }
+    }
+    
+    .background-1 {
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        width: 28px;
+        height: 28px;
+        display: block;
+        border-radius: 50%;
+        opacity: 0.4;
+        filter: alpha(opacity=0.4);
+    }
+    .background-2 {
+        position: absolute;
+        top: -11px;
+        left: -11px;
+        width: 40px;
+        height: 40px;
+        display: block;
+        border-radius: 50%;
+        opacity: 0.16;
+        filter: alpha(opacity=0.16);
+    }
+    &.icon-table {
+        @extend %card-icon-gradient;
+        .background-1 {
+            @extend %card-icon-gradient;
+        }
+        .background-2 {
+            @extend %card-icon-gradient;
+        }
+    }
+}

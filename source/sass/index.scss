@@ -1,0 +1,27 @@
+/* Only imported files */
+@import "_variables";
+@import "_mixins";
+
+/* setings */
+@import "set/_base";
+@import "set/_icons";
+
+/* components */
+@import "com/header";
+@import "com/left-side";
+@import "com/right-side";
+@import "com/box";
+@import "com/buttons";
+@import "com/form";
+@import "com/slider";
+@import "com/tables";
+@import "com/steps";
+@import "com/modals";
+@import "com/tooltip";
+@import "com/tags";
+@import "com/map";
+@import "com/point-inteserts";
+
+/* tour and media */
+@import "common/tour";
+@import "common/media";

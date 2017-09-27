@@ -1,0 +1,20 @@
+.left-side-block {
+    width: 450px;
+    position: absolute;
+    height: auto;
+    z-index: 2;
+}
+.left-side {
+    background: $color-haiti;
+    -webkit-box-shadow: 0 16px 40px #010419;
+    box-shadow: 0 16px 40px $color-blue-charcoal;
+    border-radius: 20px 20px 20px 20px;
+    margin-top: 40px;
+    height: auto;
+    float: left;
+
+    input[type=text] {
+        background: $color-martinique;
+        color: $color-santas-gray;
+    }
+}

@@ -1,0 +1,21 @@
+.tooltip-inner {
+    background-color: $color-pickled-bluewood;
+    text-align: left;
+    padding: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    color: $color-santas-gray;
+    line-height: 20px;
+    -webkit-box-shadow: 0 5px 20px #191e3a;
+    box-shadow: 0 5px 20px $color-big-stone;
+}
+.tooltip-arrow {
+    display: none;
+}
+.active-overlay {
+    z-index: 100;
+    box-shadow: 100px 100px 100px 10000px $color-charcoal-70;
+}
+.tooltip.top .tooltip-arrow {
+    display: none;
+}
