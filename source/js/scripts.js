@@ -112,3 +112,61 @@ $( ".add-template" ).click(function() {
   $( ".add-tag-body" ).slideToggle( "slow" );
   $(this).toggleClass('active');
 });
+
+// Multy checkboxes
+$(function () {
+    var liSet_Id;
+    $("#filter-points li").each( function (i){
+        var liSet_Id = i+1;
+        $("ul", this).attr("id", "categorySubItem_"+liSet_Id);
+        $(".check-all-group input[type='checkbox']", this).attr("id", "checkedAllBox_"+liSet_Id);
+    });
+
+    $(".check-all-group input[type=checkbox]").change(function () {
+        var checkedAllId = $(this).attr("id");
+        var numbIdsElem = checkedAllId.split('_').pop();
+
+        if($(this).is(":checked")){
+            $(this).parent("label").removeClass('-multi');
+            $("#categorySubItem_"+numbIdsElem+" .checkbox-control input[type=checkbox]").each(function(){
+                $(this).prop('checked', 'checked');
+                $(this).parent("label").removeClass('-multi');
+            });
+        }
+        else{
+            $(this).parent("label").removeClass("-multi");
+            $("#categorySubItem_"+numbIdsElem+" .checkbox-control input[type=checkbox]").each(function(){
+                $(this).prop('checked', '');
+                $(this).parent("label").removeClass('-multi');
+            });
+        }
+    });
+
+
+    $('.checkbox-control input[type=checkbox]').change (function (){
+    	if ($(this).hasClass("check-all-group")) {
+            return false;
+        }
+        var idParentUl = $(this).closest("ul").attr("id");
+        var numbIdsElem = idParentUl.split('_').pop();
+
+        var countChBoxChec = $("#"+idParentUl+" > li .checkbox-control input[type=checkbox]:checked").length;
+        var countChBoxNotChec = $("#"+idParentUl+" > li .checkbox-control input[type=checkbox]:not(:checked)").length;
+
+        // if($(this).is(":checked")){
+        //     $(this).prop('checked', 'checked');
+        // }
+        // else{
+        //     $(this).prop('checked', '');
+        // }
+        if (countChBoxChec != 0 && countChBoxNotChec == 0) {
+            $("#checkedAllBox_"+numbIdsElem).prop('checked', 'checked').parent("label").removeClass('-multi');
+        }
+        else if (countChBoxChec != 0 && countChBoxNotChec != 0) {
+            $("#checkedAllBox_"+numbIdsElem).prop('checked', '').parent("label").addClass("-multi");
+        }
+        else{
+            $("#checkedAllBox_"+numbIdsElem).prop('checked', '').parent("label").removeClass('-multi');
+        }
+    });
+});
