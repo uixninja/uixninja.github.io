@@ -24,6 +24,19 @@ body {
   font-family: "Roboto", Arial, sans-serif;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
+body.no-scroll:before, body.no-scroll:after {
+  content: " ";
+  display: table;
+}
+
+body.no-scroll:after {
+  clear: both;
+}
+
 html, body, .main {
   height: 100%;
 }
@@ -735,12 +748,12 @@ input[type=text].slider-txt {
   position: absolute;
 }
 
-.checkbox-control.-pre-checked .checker {
+.checkbox-control.-multi .checker {
   background: #6e7797;
   border: 0 none;
 }
 
-.checkbox-control.-pre-checked .checker:before {
+.checkbox-control.-multi .checker:before {
   visibility: visible;
 }
 
@@ -1890,8 +1903,15 @@ div.reset-tour-btn .icon-tour {
   border-radius: 20px;
   background-color: #151935;
   overflow-y: auto;
-  max-height: calc(100vh - 80px);
-  margin: 40px 0;
+  height: calc(100vh - 80px);
+  margin: 40px 40px 0;
+}
+
+@media (max-width: 767px) {
+  .poi-block-wrp {
+    height: calc(100vh - 20px);
+    margin: 10px 10px 0;
+  }
 }
 
 .poi-block {

@@ -60,7 +60,7 @@ $checkbox-size: 19px;
         visibility: hidden;
         position: absolute;
     }
-    &.-pre-checked .checker {
+    &.-multi .checker {
         background: $color-lynch;
         border: 0 none;
 

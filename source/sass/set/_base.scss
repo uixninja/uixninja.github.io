@@ -15,6 +15,11 @@
 body {
     background: $color-jaguar;
     font-family: $font-base;
+
+    &.no-scroll {
+        @include clearfix();
+        overflow: hidden;
+    }
 }
 html, body, .main {
     height: 100%;

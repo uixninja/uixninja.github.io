@@ -2,8 +2,13 @@
     @include border-radius(20px);
     background-color: $color-haiti;
     overflow-y: auto;
-    max-height: calc(100vh - 80px);
-    margin: 40px 0;
+    height: calc(100vh - 80px);
+    margin: 40px 40px 0;
+
+    @include mobile {
+        height: calc(100vh - 20px);
+        margin: 10px 10px 0;
+    }
 }
 .poi-block {
     margin: 0 auto;
