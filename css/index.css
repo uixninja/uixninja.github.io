@@ -2090,6 +2090,10 @@ div.reset-tour-btn .icon-tour {
 }
 
 /* tour and media */
+.synergy-panel-modelrebuild {
+  z-index: 5 !important;
+}
+
 .cd-nugget-info {
   position: absolute;
   width: 60%;

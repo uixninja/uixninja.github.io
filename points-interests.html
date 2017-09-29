@@ -20,7 +20,7 @@
 	</head>
 	<body>
 		<div class="container">
-			<div class="poi-block-wrp">
+			<div class="poi-block-wrp"><!-- this container can be changed if I will know more information-->
 			    <div class="poi-block">
 			        <div class="poi-block--label">Layers</div>
 			        <h1 class="poi-block--title">Points of Interest</h1>
@@ -35,17 +35,17 @@
 			                <div class="el-points"><b>3,489</b> Points</div>
 			            </div>
 			            <div class="box-body right-bottom">
-			                <ul id="filter-points" class="poi-block--points">
+			                <ul class="poi-block--points">
 			                    <li class="list-item">
-			                        <label class="checkbox-control"> <!-- add class "-multi" for point this checkbox to indicate that the group is not all marked -->
-			                            <input id="points-1" type="checkbox" />
+			                        <label class="checkbox-control"> <!-- add class "-pre-checked" for point this checkbox to indicate that the group is not all marked -->
+			                            <input id="points-1" type="checkbox" checked />
 			                            <span class="checker"></span>
 			                        </label>
 			                        <label class="label-control group-title" for="points-1">Restourant</label>
 			
 			                        <ul class="poi-block--points-group">
 			                            <li class="list-item">
-			                                <label class="checkbox-control check-all-group"> <!-- add class "-multi" for point this checkbox to indicate that the group is not all marked -->
+			                                <label class="checkbox-control -pre-checked"> <!-- add class "-pre-checked" for point this checkbox to indicate that the group is not all marked -->
 			                                    <input id="points-group-1" type="checkbox" />
 			                                    <span class="checker"></span>
 			                                </label>
@@ -93,7 +93,7 @@
 			                        </ul>
 			                    </li>
 			                    <li class="list-item">
-			                        <label class="checkbox-control check-all-group"> <!-- add class "-multi" for point this checkbox to indicate that the group is not all marked -->
+			                        <label class="checkbox-control"> <!-- add class "-pre-checked" for point this checkbox to indicate that the group is not all marked -->
 			                            <input id="points-2" type="checkbox" checked />
 			                            <span class="checker"></span>
 			                        </label>
