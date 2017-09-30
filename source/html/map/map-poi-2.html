@@ -1,100 +1,100 @@
-<div class="poi-block-wrp"><!-- this container can be changed if I will know more information-->
-    <div class="poi-block">
-        <div class="poi-block--label">Layers</div>
-        <h1 class="poi-block--title">Points of Interest</h1>
-        <p class="poi-block--descr">Search & Select Points of Interest</p>
-        <div class="poi-block--search">
-            <span class="i-icon-search-blue"></span>
-            <input class="map-search--input" type="search" placeholder="Search By Industry, Category or Brand" />
-        </div>
-        <div class="box box-graph">
-            <div class="box-header left-top">
-                <div class="el-title">Selected</div>
-                <div class="el-points"><b>3,489</b> Points</div>
+<div class="poi-block-wrp">
+        <div class="poi-block">
+            <div class="poi-block--label">Layers</div>
+            <h1 class="poi-block--title">Points of Interest</h1>
+            <p class="poi-block--descr">Search & Select Points of Interest</p>
+            <div class="poi-block--search">
+                <span class="i-icon-search-blue"></span>
+                <input class="map-search--input" type="search" placeholder="Search By Industry, Category or Brand" />
             </div>
-            <div class="box-body right-bottom">
-                <ul class="poi-block--points">
-                    <li class="list-item">
-                        <label class="checkbox-control"> <!-- add class "-pre-checked" for point this checkbox to indicate that the group is not all marked -->
-                            <input id="points-1" type="checkbox" checked />
-                            <span class="checker"></span>
-                        </label>
-                        <label class="label-control group-title" for="points-1">Restourant</label>
-
-                        <ul class="poi-block--points-group">
-                            <li class="list-item">
-                                <label class="checkbox-control -pre-checked"> <!-- add class "-pre-checked" for point this checkbox to indicate that the group is not all marked -->
-                                    <input id="points-group-1" type="checkbox" />
-                                    <span class="checker"></span>
-                                </label>
-                                <label class="label-control group-title" for="points-group-1">Mexican</label>
-
-                                <ul class="poi-block--points-group">
-                                    <li class="list-item">
-                                        <label class="checkbox-control">
-                                            <input id="points-group-ext-1" type="checkbox" checked />
-                                            <span class="checker"></span>
-                                        </label>
-                                        <label class="label-control" for="points-group-ext-1">
-                                            <span class="match">C</span>hipotle (1,234 Points)
-                                        </label>
-                                    </li>
-                                    <li class="list-item">
-                                        <label class="checkbox-control">
-                                            <input id="points-group-ext-2" type="checkbox" checked />
-                                            <span class="checker"></span>
-                                        </label>
-                                        <label class="label-control" for="points-group-ext-2">
-                                            <span class="match">C</span>hick Fil A (3,208 Points)
-                                        </label>
-                                    </li>
-                                    <li class="list-item">
-                                        <label class="checkbox-control">
-                                            <input id="points-group-ext-3" type="checkbox" />
-                                            <span class="checker"></span>
-                                        </label>
-                                        <label class="label-control" for="points-group-ext-3">
-                                            <span class="match">C</span>heckers (645 Points)
-                                        </label>
-                                    </li>
-                                    <li class="list-item">
-                                        <label class="checkbox-control">
-                                            <input id="points-group-ext-4" type="checkbox" checked />
-                                            <span class="checker"></span>
-                                        </label>
-                                        <label class="label-control" for="points-group-ext-4">
-                                            <span class="match">C</span>heckers (3,206 Points)
-                                        </label>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="list-item">
-                        <label class="checkbox-control"> <!-- add class "-pre-checked" for point this checkbox to indicate that the group is not all marked -->
-                            <input id="points-2" type="checkbox" checked />
-                            <span class="checker"></span>
-                        </label>
-                        <label class="label-control group-title" for="points-2">greek</label>
-
-                        <ul class="poi-block--points-group">
-                            <li class="list-item">
-                                <label class="checkbox-control">
-                                    <input id="points-group-ext-21" type="checkbox" checked />
-                                    <span class="checker"></span>
-                                </label>
-                                <label class="label-control" for="points-group-ext-21">
-                                    <span class="match">C</span>hipotle (1,234 Points)
-                                </label>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+            <div class="box box-graph">
+                <div class="box-header left-top">
+                    <div class="el-title">Selected</div>
+                    <div class="el-points"><b>3,489</b> Points</div>
+                </div>
+                <div class="box-body right-bottom">
+                    <ul id="filter-points" class="poi-block--points">
+                        <li class="list-item">
+                            <label class="checkbox-control"> <!-- add class "-multi" for point this checkbox to indicate that the group is not all marked -->
+                                <input id="points-1" type="checkbox" />
+                                <span class="checker"></span>
+                            </label>
+                            <label class="label-control group-title" for="points-1">Restourant</label>
+    
+                            <ul class="poi-block--points-group">
+                                <li class="list-item">
+                                    <label class="checkbox-control check-all-group"> <!-- add class "-multi" for point this checkbox to indicate that the group is not all marked -->
+                                        <input id="points-group-1" type="checkbox" />
+                                        <span class="checker"></span>
+                                    </label>
+                                    <label class="label-control group-title" for="points-group-1">Mexican</label>
+    
+                                    <ul class="poi-block--points-group">
+                                        <li class="list-item">
+                                            <label class="checkbox-control">
+                                                <input id="points-group-ext-1" type="checkbox" checked />
+                                                <span class="checker"></span>
+                                            </label>
+                                            <label class="label-control" for="points-group-ext-1">
+                                                <span class="match">C</span>hipotle (1,234 Points)
+                                            </label>
+                                        </li>
+                                        <li class="list-item">
+                                            <label class="checkbox-control">
+                                                <input id="points-group-ext-2" type="checkbox" checked />
+                                                <span class="checker"></span>
+                                            </label>
+                                            <label class="label-control" for="points-group-ext-2">
+                                                <span class="match">C</span>hick Fil A (3,208 Points)
+                                            </label>
+                                        </li>
+                                        <li class="list-item">
+                                            <label class="checkbox-control">
+                                                <input id="points-group-ext-3" type="checkbox" />
+                                                <span class="checker"></span>
+                                            </label>
+                                            <label class="label-control" for="points-group-ext-3">
+                                                <span class="match">C</span>heckers (645 Points)
+                                            </label>
+                                        </li>
+                                        <li class="list-item">
+                                            <label class="checkbox-control">
+                                                <input id="points-group-ext-4" type="checkbox" checked />
+                                                <span class="checker"></span>
+                                            </label>
+                                            <label class="label-control" for="points-group-ext-4">
+                                                <span class="match">C</span>heckers (3,206 Points)
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list-item">
+                            <label class="checkbox-control check-all-group"> <!-- add class "-multi" for point this checkbox to indicate that the group is not all marked -->
+                                <input id="points-2" type="checkbox" checked />
+                                <span class="checker"></span>
+                            </label>
+                            <label class="label-control group-title" for="points-2">greek</label>
+    
+                            <ul class="poi-block--points-group">
+                                <li class="list-item">
+                                    <label class="checkbox-control">
+                                        <input id="points-group-ext-21" type="checkbox" checked />
+                                        <span class="checker"></span>
+                                    </label>
+                                    <label class="label-control" for="points-group-ext-21">
+                                        <span class="match">C</span>hipotle (1,234 Points)
+                                    </label>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="poi-block--buttons">
-            <button class="btn btn-second">Back to map</button>
-            <button class="btn">Add to map</button>
+            <div class="poi-block--buttons">
+                <button class="btn btn-second">Back to map</button>
+                <button class="btn">Add to map</button>
+            </div>
         </div>
     </div>
-</div>
