@@ -24,25 +24,22 @@ body {
   font-family: "Roboto", Arial, sans-serif;
 }
 
-body.no-scroll {
-  overflow: hidden;
-}
-
-body.no-scroll:before, body.no-scroll:after {
-  content: " ";
-  display: table;
-}
-
-body.no-scroll:after {
-  clear: both;
-}
-
 html, body, .main {
   height: 100%;
 }
 
-.container {
-  width: 100% !important;
+.no-scroll {
+  height: 100%;
+  overflow: hidden;
+}
+
+.no-scroll:before, .no-scroll:after {
+  content: " ";
+  display: table;
+}
+
+.no-scroll:after {
+  clear: both;
 }
 
 h1, h2, h3, h4, h5, h6 {
