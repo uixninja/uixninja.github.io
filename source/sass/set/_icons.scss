@@ -66,3 +66,11 @@
 .i-icon-gps {
     background-position: -36px -54px;
 }
+.i-icon-close {
+    background-position: 0 -72px;
+
+    button:hover &,
+    a:hover & {
+        background-position: -18px -72px;
+    }
+}

@@ -70,9 +70,7 @@ $checkbox-size: 19px;
     }
     input[type="checkbox"]:checked {
         & + .checker {
-            background: $color-dodger-blue;
-            background: -webkit-linear-gradient(top, $color-dodger-blue 0%,$color-azure 100%);
-            background: linear-gradient(to bottom, $color-dodger-blue 0%,$color-azure 100%);
+            background: $color-azure;
             border-width: 0;
             color: $color-white;
 
