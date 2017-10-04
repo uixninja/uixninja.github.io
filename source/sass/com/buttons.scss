@@ -22,13 +22,14 @@
         box-shadow: 0 11px 49px $color-mirage-60;
 	}
 	&:hover {
+		background: linear-gradient(45deg, lighten($color-azure, 5%) 25%, lighten($color-dodger-blue, 5%) 75%);
 		color: $color-white;
 	}
 	&:focus {
 		color: $color-white;
 	}
 	&.btn-second {
-		background: linear-gradient(45deg, $color-haiti -30%, rgba($color-pickled-bluewood, 0.8) 130%);
+		background: linear-gradient(45deg, $color-haiti -30%, $color-pickled-bluewood 130%);
 		border: solid 1px;
 		border-top-color: rgba($color-pickled-bluewood, 0.8);
 		border-right-color: rgba($color-pickled-bluewood, 0.8);
@@ -37,6 +38,10 @@
 		border-radius: 5px;
 		padding: 12px 24px 11px;
 		color: $color-santas-gray;
+
+		&:hover {
+			background: linear-gradient(45deg, lighten($color-haiti, 4%) -30%, lighten($color-pickled-bluewood, 4%) 130%);
+		}
 	}
 	&.btn-icon {
 		position: relative;

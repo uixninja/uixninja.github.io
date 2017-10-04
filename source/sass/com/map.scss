@@ -67,6 +67,12 @@
         margin-left: 6px;
         padding: 16px;
         z-index: 4;
+
+        &:hover,
+        &:active {
+            background: $color-azure;
+            outline: none;
+        }
     }
     &--dropdown {
         @include border-radius(0 0 10px 10px);

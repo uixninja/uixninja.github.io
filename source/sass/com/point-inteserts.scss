@@ -65,6 +65,15 @@
         background: $color-big-stone;
         margin-bottom: 40px;
         padding: 15px 25px 10px;
+        min-height: 260px;
+
+        &--loader {
+            @include translate(-50%, -50%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 1;
+        }
     }
     &--search {
         @include border-radius(15px);
@@ -96,6 +105,12 @@
             }
         }
     }
+    %points-title {
+        display: block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
     &--points {
         margin: 0;
         padding: 0;
@@ -109,26 +124,13 @@
             float: left;
             margin-right: 12px;
         }
-        .label-control {
-            display: block;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
+        label.label-control {
+            @extend %points-title;
             color: $color-lynch;
             font-size: 14px;
 
-            .match {
+            span {
                 color:  rgba($color-white, 0.8);
-            }
-            &.group-title {
-                font-size: 11px;
-                color: rgba($color-white, 0.8);
-                text-transform: uppercase;
-                line-height: 1.6;
-
-                &:hover {
-                    color: $color-dodger-blue;
-                }
             }
         }
     }
@@ -136,6 +138,40 @@
         padding: 10px 0 0;
         list-style: none;
         margin-left: 32px;
+    }
+    &--group-title {
+        @extend %points-title;
+        font-size: 11px;
+        color: rgba($color-white, 0.8);
+        text-transform: uppercase;
+        line-height: 1.6;
+        padding-left: 22px;
+        position: relative;
+
+        &::before {
+            @include translate(0, -50%);
+            font-size: 24px;
+            content: '+';
+            margin-top: -1px;
+            position: absolute;
+            line-height: 1;
+            left: 0;
+            top: 50%;
+        }
+        &.-closed::before {
+            content: '−';
+            margin-top: 0;
+        }
+        span {
+            color: $color-white;
+        }
+        &:hover {
+            color: $color-dodger-blue;
+
+            span {
+                color: darken($color-dodger-blue, 5%);
+            }
+        }
     }
     &--buttons {
         text-align: center;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Only imported files */
 /* colours */
 /* media (will be implemented) */
@@ -233,6 +234,10 @@ a:hover .i-icon-edit {
 button:hover .i-icon-close,
 a:hover .i-icon-close {
   background-position: -18px -72px;
+}
+
+.i-icon-flash {
+  background-position: -36px -72px;
 }
 
 /* components */
@@ -566,11 +571,27 @@ a:hover .i-icon-close {
   min-height: 50px;
   background: #151935;
   padding: 20px;
+  position: relative;
 }
 
 .box-body.box-body-without-padding {
   padding: 0;
   margin: 0;
+}
+
+.box-body--no-data {
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #333957;
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  right: 20px;
+  text-align: center;
+  z-index: 1;
 }
 
 .box.attributes .box-header {
@@ -611,6 +632,7 @@ a:hover .i-icon-close {
 }
 
 .btn:hover {
+  background: linear-gradient(45deg, #1a90ff 25%, #31a2ff 75%);
   color: #fff;
 }
 
@@ -619,7 +641,7 @@ a:hover .i-icon-close {
 }
 
 .btn.btn-second {
-  background: linear-gradient(45deg, #151935 -30%, rgba(51, 57, 87, 0.8) 130%);
+  background: linear-gradient(45deg, #151935 -30%, #333957 130%);
   border: solid 1px;
   border-top-color: rgba(51, 57, 87, 0.8);
   border-right-color: rgba(51, 57, 87, 0.8);
@@ -628,6 +650,10 @@ a:hover .i-icon-close {
   border-radius: 5px;
   padding: 12px 24px 11px;
   color: #959fbb;
+}
+
+.btn.btn-second:hover {
+  background: linear-gradient(45deg, #1b2044 -30%, #3b4164 130%);
 }
 
 .btn.btn-icon {
@@ -1792,6 +1818,11 @@ div.reset-tour-btn .icon-tour {
   z-index: 4;
 }
 
+.map-search .btn.btn-settings:hover, .map-search .btn.btn-settings:active {
+  background: #0084ff;
+  outline: none;
+}
+
 .map-search--dropdown {
   -webkit-border-radius: 0 0 10px 10px;
   border-radius: 0 0 10px 10px;
@@ -1994,6 +2025,18 @@ div.reset-tour-btn .icon-tour {
   background: #1c2340;
   margin-bottom: 40px;
   padding: 15px 25px 10px;
+  min-height: 260px;
+}
+
+.poi-block .box-body--loader {
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
 }
 
 .poi-block--search {
@@ -2047,6 +2090,13 @@ div.reset-tour-btn .icon-tour {
   outline: none;
 }
 
+.poi-block .poi-block--points label.label-control, .poi-block--points .poi-block label.label-control, .poi-block .poi-block--group-title {
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .poi-block--points {
   margin: 0;
   padding: 0;
@@ -2063,34 +2113,59 @@ div.reset-tour-btn .icon-tour {
   margin-right: 12px;
 }
 
-.poi-block--points .label-control {
-  display: block;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+.poi-block--points label.label-control {
   color: #6e7797;
   font-size: 14px;
 }
 
-.poi-block--points .label-control .match {
+.poi-block--points label.label-control span {
   color: rgba(255, 255, 255, 0.8);
-}
-
-.poi-block--points .label-control.group-title {
-  font-size: 11px;
-  color: rgba(255, 255, 255, 0.8);
-  text-transform: uppercase;
-  line-height: 1.6;
-}
-
-.poi-block--points .label-control.group-title:hover {
-  color: #1796ff;
 }
 
 .poi-block--points-group {
   padding: 10px 0 0;
   list-style: none;
   margin-left: 32px;
+}
+
+.poi-block--group-title {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  line-height: 1.6;
+  padding-left: 22px;
+  position: relative;
+}
+
+.poi-block--group-title::before {
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  font-size: 24px;
+  content: '+';
+  margin-top: -1px;
+  position: absolute;
+  line-height: 1;
+  left: 0;
+  top: 50%;
+}
+
+.poi-block--group-title.-closed::before {
+  content: '−';
+  margin-top: 0;
+}
+
+.poi-block--group-title span {
+  color: #fff;
+}
+
+.poi-block--group-title:hover {
+  color: #1796ff;
+}
+
+.poi-block--group-title:hover span {
+  color: #008afd;
 }
 
 .poi-block--buttons {
