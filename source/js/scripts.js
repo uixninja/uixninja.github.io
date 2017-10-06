@@ -114,67 +114,47 @@ $( ".add-template" ).click(function() {
 });
 
 // Multy checkboxes
-// $(function () {
-//     var liSet_Id;
-//     $("#filter-points li").each( function (i){
-//         var liSet_Id = i+1;
-//         $("ul", this).attr("id", "categorySubItem_"+liSet_Id);
-//         $(".check-all-group input[type='checkbox']", this).attr("id", "checkedAllBox_"+liSet_Id);
-//     });
-//
-//     $(".check-all-group input[type=checkbox]").change(function () {
-//         var checkedAllId = $(this).attr("id");
-//         var numbIdsElem = checkedAllId.split('_').pop();
-//
-//         if($(this).is(":checked")){
-//             $(this).parent("label").removeClass('-multi');
-//             $("#categorySubItem_"+numbIdsElem+" .checkbox-control input[type=checkbox]").each(function(){
-//                 $(this).prop('checked', 'checked');
-//                 $(this).parent("label").removeClass('-multi');
-//             });
-//         }
-//         else{
-//             $(this).parent("label").removeClass("-multi");
-//             $("#categorySubItem_"+numbIdsElem+" .checkbox-control input[type=checkbox]").each(function(){
-//                 $(this).prop('checked', '');
-//                 $(this).parent("label").removeClass('-multi');
-//             });
-//         }
-//     });
-//
-//
-//     $('.checkbox-control input[type=checkbox]').change (function (){
-//     	if ($(this).hasClass("check-all-group")) {
-//             return false;
-//         }
-//         var idParentUl = $(this).closest("ul").attr("id");
-//         var numbIdsElem = idParentUl.split('_').pop();
-//
-//         var countChBoxChec = $("#"+idParentUl+" > li .checkbox-control input[type=checkbox]:checked").length;
-//         var countChBoxNotChec = $("#"+idParentUl+" > li .checkbox-control input[type=checkbox]:not(:checked)").length;
-//
-//         // if($(this).is(":checked")){
-//         //     $(this).prop('checked', 'checked');
-//         // }
-//         // else{
-//         //     $(this).prop('checked', '');
-//         // }
-//         if (countChBoxChec != 0 && countChBoxNotChec == 0) {
-//             $("#checkedAllBox_"+numbIdsElem).prop('checked', 'checked').parent("label").removeClass('-multi');
-//         }
-//         else if (countChBoxChec != 0 && countChBoxNotChec != 0) {
-//             $("#checkedAllBox_"+numbIdsElem).prop('checked', '').parent("label").addClass("-multi");
-//         }
-//         else{
-//             $("#checkedAllBox_"+numbIdsElem).prop('checked', '').parent("label").removeClass('-multi');
-//         }
-//     });
-// });
+$(function () {
+    $(".check-all-group input[type=checkbox]").change(function () {
+    	$label = $(this).parent('.check-all-group');
+        if($(this).is(":checked")){
+            $label.removeClass('-multi');
+            $label.parent('li').find('ul:first input[type=checkbox]').each(function(){
+                $(this).prop('checked', 'checked');
+                $label.removeClass('-multi');
+            });
+        }
+        else{
+            $label.removeClass("-multi");
+            $label.parent('li').find('ul:first input[type=checkbox]').each(function(){
+                $(this).prop('checked', '');
+                $label.removeClass('-multi');
+            });
+        }
+    });
+
+    $('.checkbox-control input[type=checkbox]').change (function (){
+        var idParentUl = $(this).parents("ul").attr("id");
+
+        var countChecked = $("#"+idParentUl).find("li input[type=checkbox]:checked").length;
+        var countNotChecked = $("#"+idParentUl).find("li input[type=checkbox]:not(:checked)").length;
+
+        if (countChecked != 0 && countNotChecked == 0) {
+            $("#"+idParentUl).parent('li').find('.check-all-group input[type=checkbox]').prop('checked', 'checked').parent("label").removeClass('-multi');
+        }
+        else if (countChecked != 0 && countNotChecked != 0) {
+            $("#"+idParentUl).parent('li').find('.check-all-group input[type=checkbox]').prop('checked', '').parent("label").addClass('-multi');
+        }
+        else{
+            $("#"+idParentUl).parent('li').find('.check-all-group input[type=checkbox]').prop('checked', '').parent("label").removeClass('-multi');
+        }
+	});
+});
 
 // click function for showing the searchbox in the Header
-$('.poi-block--group-title').on('click', function(){
+$('.poi-block--toggle').on('click', function(){
     $(this).toggleClass('-closed').blur();
-    $(this).next('.poi-block--points-group').slideToggle();
+    $(this).parent('li').find('.poi-block--points-group:first').slideToggle();
     return false;
 });
 
@@ -182,7 +162,7 @@ $('.poi-block--group-title').on('click', function(){
 // $(document).ready(function () {
 //     /* highlight matches text */
 //     var highlight = function (string) {
-//         $("#search-poi-list label.label-control.match").each(function () {
+//         $("#search-poi-list .label-filter.match").each(function () {
 //             var matchStart = $(this).text().toLowerCase().indexOf("" + string.toLowerCase() + "");
 //             var matchEnd = matchStart + string.length - 1;
 //             var beforeMatch = $(this).text().slice(0, matchStart);
@@ -194,16 +174,16 @@ $('.poi-block--group-title').on('click', function(){
 //
 //     /* filter interests */
 //     $("#search-poi-input").on("keyup", function () {
-//         if (this.value.length >= 0) {
-//             $("#search-poi-list label.label-control").filter(function () {
+//         if (this.value.length > 0) {
+//             $("#search-poi-list .label-filter").filter(function () {
 //                 return $(this).text().toLowerCase().indexOf($("#search-poi-input").val().toLowerCase()) != -1;
 //             }).addClass("match");
 //
-//             //$("#search-poi-list .label-control:not('.match')").parent('li').hide();
+//             //$("#search-poi-list .label-filter:not('.match')").parent('li').hide();
 //             highlight(this.value);
 //         }
 //         else {
-//             $("#search-poi-list .label-control.match").removeClass("match").parent('li').show();
+//             //$("#search-poi-list .label-filter.match").removeClass("match").parent('li').show();
 //         }
 //     });
 // });

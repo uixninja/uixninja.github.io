@@ -15,21 +15,32 @@
                 <div class="box-body right-bottom">
                     <div class="box-body--no-data" style="display: none">No results</div><!-- No results -->
                     <div class="box-body--loader" style="display: none"><img alt="" src="img/loader-dark.gif"></div><!-- Loader placeholder -->
+
                     <ul id="search-poi-list" class="poi-block--points">
                         <li class="list-item">
-                            <a href="#" class="poi-block--group-title label-control">Restourant</a>
+                            <button class="poi-block--toggle" type="button"></button>
+                            <label class="checkbox-control check-all-group -multi"> <!-- add class "-multi" for point this checkbox to indicate that the group is not all marked -->
+                                <input id="points-1" type="checkbox" />
+                                <span class="checker"></span>
+                            </label>
+                            <label class="poi-block--group-title label-filter" for="points-1">Restourant</label>
     
-                            <ul class="poi-block--points-group">
+                            <ul id="points-group-list-1" class="poi-block--points-group">
                                 <li class="list-item">
-                                    <a href="#" class="poi-block--group-title label-control">Mexican</a>
+                                    <button class="poi-block--toggle" type="button"></button>
+                                    <label class="checkbox-control check-all-group -multi"> <!-- add class "-multi" for point this checkbox to indicate that the group is not all marked -->
+                                        <input id="points-2" type="checkbox" />
+                                        <span class="checker"></span>
+                                    </label>
+                                    <label for="points-2" class="poi-block--group-title label-filter">Mexican</label>
     
-                                    <ul class="poi-block--points-group">
+                                    <ul id="points-group-list-2" class="poi-block--points-group">
                                         <li class="list-item">
                                             <label class="checkbox-control">
                                                 <input id="points-group-ext-1" type="checkbox" checked />
                                                 <span class="checker"></span>
                                             </label>
-                                            <label class="label-control" for="points-group-ext-1">
+                                            <label class="label-control label-filter" for="points-group-ext-1">
                                                 Chipotle (1,234 Points)
                                             </label>
                                         </li>
@@ -38,7 +49,7 @@
                                                 <input id="points-group-ext-2" type="checkbox" checked />
                                                 <span class="checker"></span>
                                             </label>
-                                            <label class="label-control" for="points-group-ext-2">
+                                            <label class="label-control label-filter" for="points-group-ext-2">
                                                 Chick Fil A (3,208 Points)
                                             </label>
                                         </li>
@@ -47,7 +58,7 @@
                                                 <input id="points-group-ext-3" type="checkbox" />
                                                 <span class="checker"></span>
                                             </label>
-                                            <label class="label-control" for="points-group-ext-3">
+                                            <label class="label-control label-filter" for="points-group-ext-3">
                                                 Checkers (645 Points)
                                             </label>
                                         </li>
@@ -56,7 +67,7 @@
                                                 <input id="points-group-ext-4" type="checkbox" checked />
                                                 <span class="checker"></span>
                                             </label>
-                                            <label class="label-control" for="points-group-ext-4">
+                                            <label class="label-control label-filter" for="points-group-ext-4">
                                                 Checkers (3,206 Points)
                                             </label>
                                         </li>
@@ -65,15 +76,20 @@
                             </ul>
                         </li>
                         <li class="list-item">
-                            <a href="#" class="poi-block--group-title label-control">greek</a>
+                            <button class="poi-block--toggle" type="button"></button>
+                            <label class="checkbox-control check-all-group"> <!-- add class "-multi" for point this checkbox to indicate that the group is not all marked -->
+                                <input id="points-3" type="checkbox" checked />
+                                <span class="checker"></span>
+                            </label>
+                            <label for="points-3" class="poi-block--group-title label-filter">greek</label>
     
-                            <ul class="poi-block--points-group">
+                            <ul id="points-group-list-3" class="poi-block--points-group">
                                 <li class="list-item">
                                     <label class="checkbox-control">
                                         <input id="points-group-ext-21" type="checkbox" checked />
                                         <span class="checker"></span>
                                     </label>
-                                    <label class="label-control" for="points-group-ext-21">
+                                    <label class="label-control label-filter" for="points-group-ext-21">
                                         Chipotle (1,234 Points)
                                     </label>
                                 </li>

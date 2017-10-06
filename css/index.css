@@ -737,7 +737,6 @@ input[type=text].slider-txt {
   margin-right: 10px;
   vertical-align: middle;
   position: relative;
-  top: -1px;
   height: 19px;
   width: 19px;
 }
@@ -805,7 +804,6 @@ input[type=text].slider-txt {
 
 .checkbox-control + label,
 .checkbox-control + .label-control {
-  color: #6e7797;
   cursor: pointer;
   font-weight: 400;
   margin-bottom: 0;
@@ -2090,13 +2088,6 @@ div.reset-tour-btn .icon-tour {
   outline: none;
 }
 
-.poi-block .poi-block--points label.label-control, .poi-block--points .poi-block label.label-control, .poi-block .poi-block--group-title {
-  display: block;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
 .poi-block--points {
   margin: 0;
   padding: 0;
@@ -2113,47 +2104,36 @@ div.reset-tour-btn .icon-tour {
   margin-right: 12px;
 }
 
-.poi-block--points label.label-control {
+.poi-block--points .label-control {
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   color: #6e7797;
   font-size: 14px;
 }
 
-.poi-block--points label.label-control span {
+.poi-block--points .label-control span {
   color: rgba(255, 255, 255, 0.8);
 }
 
 .poi-block--points-group {
   padding: 10px 0 0;
   list-style: none;
-  margin-left: 32px;
+  margin-left: 45px;
 }
 
 .poi-block--group-title {
+  display: inline-block;
   font-size: 11px;
   color: rgba(255, 255, 255, 0.8);
   text-transform: uppercase;
   line-height: 1.6;
-  padding-left: 22px;
+  vertical-align: middle;
   position: relative;
-}
-
-.poi-block--group-title::before {
-  -webkit-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
-  -o-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-  font-size: 24px;
-  content: '+';
-  margin-top: -1px;
-  position: absolute;
-  line-height: 1;
-  left: 0;
-  top: 50%;
-}
-
-.poi-block--group-title.-closed::before {
-  content: '−';
-  margin-top: 0;
+  top: -1px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .poi-block--group-title span {
@@ -2166,6 +2146,42 @@ div.reset-tour-btn .icon-tour {
 
 .poi-block--group-title:hover span {
   color: #008afd;
+}
+
+.poi-block--toggle {
+  background: none;
+  border: 0 none;
+  color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  outline: none;
+  float: left;
+  margin-right: 6px;
+  vertical-align: middle;
+  height: 20px;
+  width: 16px;
+}
+
+.poi-block--toggle:hover {
+  color: #1796ff;
+}
+
+.poi-block--toggle::before {
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  font-size: 24px;
+  content: '−';
+  margin-top: 0;
+  position: absolute;
+  line-height: 1;
+  left: 0;
+  top: 50%;
+}
+
+.poi-block--toggle.-closed::before {
+  content: '+';
+  margin-top: -1px;
 }
 
 .poi-block--buttons {

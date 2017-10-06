@@ -23,7 +23,6 @@ $checkbox-size: 19px;
     margin-right: 10px;
     vertical-align: middle;
     position: relative;
-    top: -1px;
     height: $checkbox-size;
     width: $checkbox-size;
 
@@ -82,7 +81,6 @@ $checkbox-size: 19px;
 
     & + label,
     & + .label-control {
-        color: $color-lynch;
         cursor: pointer;
         font-weight: 400;
         margin-bottom: 0;

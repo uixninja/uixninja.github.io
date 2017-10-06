@@ -105,12 +105,6 @@
             }
         }
     }
-    %points-title {
-        display: block;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-    }
     &--points {
         margin: 0;
         padding: 0;
@@ -124,8 +118,11 @@
             float: left;
             margin-right: 12px;
         }
-        label.label-control {
-            @extend %points-title;
+        .label-control {
+            display: block;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
             color: $color-lynch;
             font-size: 14px;
 
@@ -137,31 +134,20 @@
     &--points-group {
         padding: 10px 0 0;
         list-style: none;
-        margin-left: 32px;
+        margin-left: 45px;
     }
     &--group-title {
-        @extend %points-title;
+        display: inline-block;
         font-size: 11px;
         color: rgba($color-white, 0.8);
         text-transform: uppercase;
         line-height: 1.6;
-        padding-left: 22px;
+        vertical-align: middle;
         position: relative;
+        top: -1px;
+        overflow: hidden;
+        white-space: nowrap;
 
-        &::before {
-            @include translate(0, -50%);
-            font-size: 24px;
-            content: '+';
-            margin-top: -1px;
-            position: absolute;
-            line-height: 1;
-            left: 0;
-            top: 50%;
-        }
-        &.-closed::before {
-            content: '−';
-            margin-top: 0;
-        }
         span {
             color: $color-white;
         }
@@ -171,6 +157,37 @@
             span {
                 color: darken($color-dodger-blue, 5%);
             }
+        }
+    }
+    &--toggle {
+        background: none;
+        border: 0 none;
+        color: rgba($color-white, 0.8);
+        position: relative;
+        outline: none;
+        float: left;
+        margin-right: 6px;
+        vertical-align: middle;
+        height: 20px;
+        width: 16px;
+
+        &:hover {
+            color: $color-dodger-blue;
+        }
+
+        &::before {
+            @include translate(0, -50%);
+            font-size: 24px;
+            content: '−';
+            margin-top: 0;
+            position: absolute;
+            line-height: 1;
+            left: 0;
+            top: 50%;
+        }
+        &.-closed::before {
+            content: '+';
+            margin-top: -1px;
         }
     }
     &--buttons {
