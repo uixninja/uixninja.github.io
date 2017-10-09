@@ -2090,81 +2090,44 @@ div.reset-tour-btn .icon-tour {
   text-align: center;
 }
 
-.svg-wrp {
-  position: relative;
-  min-height: 100%;
+.svg-body {
+  background: #3c415e;
+  background: -moz-radial-gradient(center, ellipse cover, #3c415e 0%, #131833 75%);
+  background: -webkit-radial-gradient(center, ellipse cover, #3c415e 0%, #131833 75%);
+  background: radial-gradient(ellipse at center, #3c415e 0%, #131833 75%);
+  background-size: 100% 200%;
+  background-position: 0 100%;
 }
 
-.svg {
-  position: absolute;
+.svg-page {
   width: 920px;
-  left: 50%;
-  margin-left: -460px;
-  padding-top: 70px;
+  margin: 0 auto;
+  padding-top: 110px;
   text-align: center;
+  position: relative;
 }
 
-svg #light {
+.svg-page #light {
   transition: opacity 0.3s;
 }
 
-.clock_bottom_1 {
-  transform: translate(72px, 277px);
+.svg-wrp {
+  overflow: hidden;
+  position: relative;
+  height: 500px;
+  max-width: 100%;
 }
 
-.clock_bottom_2 {
-  transform: translate(72px, 291px);
+.svg-wrp .locked-out-svg {
+  -webkit-transform: translate(-50%, -40%);
+  -ms-transform: translate(-50%, -40%);
+  -o-transform: translate(-50%, -40%);
+  transform: translate(-50%, -40%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 
-.clock_bottom_3 {
-  transform: translate(72px, 306px);
-  transition: transform 0.3s;
-}
-
-.clock_bottom_2, .clock_bottom_1, .clock_bttn ellipse, .Bolt {
-  transition: transform 0.3s;
-}
-
-/*  --------------------------------------------  */
-.shown svg:hover #light {
-  opacity: 0.27;
-}
-
-.shown svg:hover .oval-2 {
-  transform: translate(16.28721px, 17.30357px) rotate(34grad) translate(-13.28721px, -17.30357px);
-}
-
-.shown svg:hover .oval-3 {
-  transform: translate(20.28721px, 21.30357px) rotate(34grad) translate(-15.28721px, -21.30357px);
-}
-
-.shown svg:hover .clock_bottom_3 {
-  transform: translate(72px, 320px);
-}
-
-.shown svg:hover .clock_bottom_2 {
-  transform: translate(72px, 298px);
-}
-
-.shown svg:hover .clock_bottom_1 {
-  transform: translate(72px, 280px);
-}
-
-.shown svg:hover .Bolt {
-  transform: translate(174.03684px, 99.82145px) rotate(-367grad) translate(-174.03684px, -119.82145px) translate(101.53684px, 23.32145px);
-}
-
-.shown svg:hover .c00_1 {
-  transform: translate(134px, 214px);
-  transition-timing-function: cubic-bezier(0.83, 1.93, 0.47, -0.06);
-}
-
-.shown svg:hover .c00_2 {
-  transform: translate(134px, 232px);
-  transition-timing-function: cubic-bezier(0.83, 1.93, 0.47, -0.06);
-}
-
-/*  --------------------------------------------  */
 header {
   position: relative;
   height: 64px;
@@ -2186,9 +2149,8 @@ header {
   font: 100 45px/100% 'Roboto';
   color: #fff;
   position: absolute;
-  top: 48px;
+  top: 110px;
   width: 100%;
-  text-align: center;
   opacity: 0;
   margin-top: -50px;
   letter-spacing: 2.4px;
@@ -2202,6 +2164,19 @@ header {
   animation: timeout2 0.4s ease-in;
   animation-delay: 1.6s;
   animation-fill-mode: forwards;
+}
+
+@keyframes timeout {
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+@keyframes timeout2 {
+  to {
+    text-shadow: -5px 7px 0px rgba(255, 255, 255, 0.4), -10px 14px 0px rgba(255, 255, 255, 0.12);
+  }
 }
 
 .text {
@@ -2323,19 +2298,63 @@ header {
   opacity: 0;
 }
 
-@keyframes timeout {
-  to {
-    opacity: 1;
-    margin-top: 0;
-  }
+.clock_bottom_1 {
+  transform: translate(72px, 277px);
 }
 
-@keyframes timeout2 {
-  to {
-    text-shadow: -5px 7px 0px rgba(255, 255, 255, 0.4), -10px 14px 0px rgba(255, 255, 255, 0.12);
-  }
+.clock_bottom_2 {
+  transform: translate(72px, 291px);
 }
 
+.clock_bottom_3 {
+  transform: translate(72px, 306px);
+  transition: transform 0.3s;
+}
+
+.clock_bottom_2, .clock_bottom_1, .clock_bttn ellipse, .Bolt {
+  transition: transform 0.3s;
+}
+
+/*  --------------------------------------------  */
+.shown svg:hover #light {
+  opacity: 0.27;
+}
+
+.shown svg:hover .oval-2 {
+  transform: translate(16.28721px, 17.30357px) rotate(34grad) translate(-13.28721px, -17.30357px);
+}
+
+.shown svg:hover .oval-3 {
+  transform: translate(20.28721px, 21.30357px) rotate(34grad) translate(-15.28721px, -21.30357px);
+}
+
+.shown svg:hover .clock_bottom_3 {
+  transform: translate(72px, 320px);
+}
+
+.shown svg:hover .clock_bottom_2 {
+  transform: translate(72px, 298px);
+}
+
+.shown svg:hover .clock_bottom_1 {
+  transform: translate(72px, 280px);
+}
+
+.shown svg:hover .Bolt {
+  transform: translate(174.03684px, 99.82145px) rotate(-367grad) translate(-174.03684px, -119.82145px) translate(101.53684px, 23.32145px);
+}
+
+.shown svg:hover .c00_1 {
+  transform: translate(134px, 214px);
+  transition-timing-function: cubic-bezier(0.83, 1.93, 0.47, -0.06);
+}
+
+.shown svg:hover .c00_2 {
+  transform: translate(134px, 232px);
+  transition-timing-function: cubic-bezier(0.83, 1.93, 0.47, -0.06);
+}
+
+/*  --------------------------------------------  */
 #mid, #linearGradient-8, #linearGradient-13, #linearGradient-14, #linearGradient-15, #radialGradient-17, #radialGradient-18, .Bolt, .top-circle, #light, #mid_clock, .clock_bottom_1, .clock_bottom_2, .clock_bottom_3, .oval-1, .oval-2, .oval-3, .c00_1, .c00_2, .c00_3 {
   opacity: 0;
 }

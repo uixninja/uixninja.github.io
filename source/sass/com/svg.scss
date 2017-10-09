@@ -1,779 +1,37 @@
-////colors
-//$white_40: rgba(255, 255, 255, 0.4);
-//$white_12: rgba(255, 255, 255, 0.12);
-//$color_downy_approx: #76c7c0;
-//$white: #fff;
-//$color_snuff_approx: #dee0ee;
-//$color_blue_bell_approx: #929bbd;
-//$color_viking_approx: #6ebee1;
-//$color_royal_blue_approx: #4479eb;
-//$black_26: rgba(0, 0, 0, 0.26);
-//$black_20: rgba(0, 0, 0, 0.2);
-//$color_cornflower_blue_approx: #4c87f7;
-//$color_shakespeare_approx: #64b1d6;
-//$color_dodger_blue_approx: #3787f7;
-//
-//.svg {
-//    position: absolute;
-//    width: 920px;
-//    left: 50%;
-//    margin-left: -460px;
-//    padding-top: 70px;
-//    text-align: center;
-//}
-//.clock_bottom_1 {
-//    //transform: translate(72px, 277px);
-//    transform: translate(72px, 320px);
-//    animation: clock_bottom_1 0.5s ease-in;
-//    animation-fill-mode: forwards;
-//    transition: transform 0.3s;
-//    opacity: 0;
-//}
-//.clock_bottom_2 {
-//    //transform: translate(72px, 291px);
-//    transform: translate(72px, 348px);
-//    animation: clock_bottom_2 0.5s ease-in;
-//    animation-fill-mode: forwards;
-//    transition: transform 0.3s;
-//    opacity: 0;
-//}
-//.clock_bottom_3 {
-//    //transform: translate(72px, 306px);
-//    transform: translate(72px, 365px);
-//    animation: clock_bottom_3 0.5s ease-in;
-//    animation-fill-mode: forwards;
-//    transition: transform 0.3s;
-//    opacity: 0;
-//}
-//.Bolt {
-//    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-//    transition: transform 0.3s;
-//    opacity: 0;
-//    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//    transform: translate(174.036842px, 99.821451px) rotate(-367.000000grad) translate(-174.036842px, -119.821451px) translate(101.536842px, 23.321451px);
-//    animation: bolt 0.5s;
-//    animation-fill-mode: forwards;
-//    animation-delay: 1.3s;
-//}
-//.shown {
-//    .clock_bottom_1 {
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(72px, 277px);
-//        opacity: 1;
-//        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-//        transition: all 0.6s;
-//    }
-//    .clock_bottom_2 {
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(72px, 291px);
-//        opacity: 1;
-//        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-//        transition: all 0.6s;
-//    }
-//    .clock_bottom_3 {
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(72px, 306px);
-//        opacity: 1;
-//        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-//        transition: all 0.6s;
-//    }
-//    .c00_1 {
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(134px, 234px);
-//        opacity: 1;
-//        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-//        transition: all 0.5s;
-//        //Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
-//        transition-timing-function: cubic-bezier(.53,1.83,.62,.4);
-//    }
-//    .c00_2 {
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(134px, 241px);
-//        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-//        transition: all 0.5s;
-//        //Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
-//        transition-timing-function: cubic-bezier(.53,1.83,.62,.4);
-//        opacity: 0.48;
-//    }
-//    .c00_3 {
-//        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-//        transition: all 0.5s;
-//        //Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
-//        transition-timing-function: cubic-bezier(.53,1.83,.62,.4);
-//        opacity: 0.24;
-//    }
-//    #light {
-//        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-//        transition: opacity 0.3s;
-//        opacity: 0.18;
-//    }
-//    .oval-1 {
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(12.287213px, 14.303567px) rotate(34grad) translate(-12.287213px, -14.303567px);
-//        opacity: .723675272;
-//        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-//        transition: all 0.4s ease-in;
-//    }
-//    .oval-2 {
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(16.287213px, 17.303567px) rotate(34.000000grad) translate(-16.287213px, -17.303567px);
-//        opacity: .562047101;
-//        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-//        transition: all 0.4s ease-in;
-//    }
-//    .oval-3 {
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(20.287213px, 21.303567px) rotate(34.000000grad) translate(-20.287213px, -21.303567px);
-//        opacity: 1;
-//        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-//        transition: all 0.4s ease-in;
-//    }
-//    .Bolt {
-//        opacity: 1;
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(174.036842px, 119.821451px) rotate(-367.000000grad) translate(-174.036842px, -119.821451px) translate(101.536842px, 23.321451px);
-//        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-//        transition: all 0.3s ease-in;
-//    }
-//    #mid_clock {
-//        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-//        transition: all 0.5s ease-in;
-//        opacity: 1;
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(65px, 202px);
-//    }
-//    .top-circle {
-//        opacity: 1;
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(37px, 25px);
-//        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-//        transition: all 0.5s ease-in;
-//    }
-//    svg:hover {
-//        #light {
-//            opacity: 0.27;
-//        }
-//        .oval-2 {
-//            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//            transform: translate(16.287213px, 17.303567px) rotate(34.000000grad) translate(-13.287213px, -17.303567px);
-//        }
-//        .oval-3 {
-//            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//            transform: translate(20.287213px, 21.303567px) rotate(34.000000grad) translate(-15.287213px, -21.303567px);
-//        }
-//        .clock_bottom_3 {
-//            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//            transform: translate(72px, 320px);
-//        }
-//        .clock_bottom_2 {
-//            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//            transform: translate(72px, 298px);
-//        }
-//        .clock_bottom_1 {
-//            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//            transform: translate(72px, 280px);
-//        }
-//        .Bolt {
-//            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//            transform: translate(174.036842px, 99.821451px) rotate(-367.000000grad) translate(-174.036842px, -119.821451px) translate(101.536842px, 23.321451px);
-//        }
-//        .c00_1 {
-//            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//            transform: translate(134.000000px, 214.000000px);
-//            //Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
-//            transition-timing-function: cubic-bezier(.83,1.93,.47,-0.06);
-//        }
-//        .c00_2 {
-//            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//            transform: translate(134.000000px, 232.000000px);
-//            //Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
-//            transition-timing-function: cubic-bezier(.83,1.93,.47,-0.06);
-//        }
-//    }
-//}
-//header {
-//    position: relative;
-//    height: 64px;
-//    background: $color_downy_approx;
-//}
-//.end_content {
-//    position: relative;
-//    height: 350px;
-//    clear: both;
-//}
-//.txt {
-//    padding-left: 300px;
-//}
-//.timeout {
-//    font: 100 45px/100% Roboto;
-//    color: $white;
-//    position: absolute;
-//    top: 48px;
-//    width: 100%;
-//    text-align: center;
-//    opacity: 0;
-//    margin-top: -50px;
-//    letter-spacing: 2.4px;
-//    animation: timeout 0.4s ease-out;
-//    animation-delay: 1.3s;
-//    animation-fill-mode: forwards;
-//    span {
-//        font-weight: bold;
-//        animation: timeout2 0.4s ease-in;
-//        animation-delay: 1.6s;
-//        animation-fill-mode: forwards;
-//    }
-//}
-//.text {
-//    font: 300 14px/200% Roboto;
-//    color: $color_snuff_approx;
-//    text-align: center;
-//    letter-spacing: 1px;
-//    opacity: 0.92;
-//}
-//.login {
-//    font: normal 12px/200% Roboto;
-//    color: $color_blue_bell_approx;
-//    text-align: center;
-//    padding-top: 30px;
-//    letter-spacing: 0.8px;
-//    a {
-//        color: $color_snuff_approx;
-//        text-decoration: none;
-//        &:hover {
-//            color: $white;
-//            text-decoration: none;
-//            cursor: pointer;
-//        }
-//    }
-//    button {
-//        width: 140px;
-//        height: 40px;
-//        border: none;
-//        cursor: pointer;
-//        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-//        border-radius: 4px;
-//        color: $white;
-//        text-transform: uppercase;
-//        font: normal 12px Arial;
-//        margin-top: 50px;
-//        background: $color_viking_approx;
-//        position: relative;
-//        background: -moz-linear-gradient(top, $color_viking_approx 0, $color_royal_blue_approx 100%);
-//        background: -webkit-gradient(left top, left bottom, color-stop(0%, $color_viking_approx), color-stop(100%, $color_royal_blue_approx));
-//        background: -webkit-linear-gradient(top, $color_viking_approx 0, $color_royal_blue_approx 100%);
-//        background: -o-linear-gradient(top, $color_viking_approx 0, $color_royal_blue_approx 100%);
-//        background: -ms-linear-gradient(top, $color_viking_approx 0, $color_royal_blue_approx 100%);
-//        background: linear-gradient(to bottom, $color_viking_approx 0, $color_royal_blue_approx 100%);
-//        filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_viking_approx', endcolorstr='$color_royal_blue_approx', gradienttype=0 );
-//        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-//        transition: all 0.4s;
-//        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-//        box-shadow: 0 2px 5px 0 $black_26;
-//        &:focus {
-//            outline: none;
-//        }
-//        &:hover {
-//            //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-//            box-shadow: 0 8px 17px 0 $black_20;
-//            //Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
-//            transition-delay: 0s;
-//            &:after {
-//                opacity: 0;
-//            }
-//        }
-//        span {
-//            margin: 2px;
-//            float: left;
-//            width: 136px;
-//            height: 36px;
-//            line-height: 36px;
-//            position: relative;
-//            z-index: 3;
-//        }
-//        &:before {
-//            content: "";
-//            width: 136px;
-//            height: 36px;
-//            left: 2px;
-//            top: 2px;
-//            z-index: 1;
-//            display: block;
-//            position: absolute;
-//            background: $color_cornflower_blue_approx;
-//            line-height: 36px;
-//            //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-//            transition: all 1.5s ease-in;
-//            background: -moz-linear-gradient(left, $color_cornflower_blue_approx 0, $color_shakespeare_approx 100%);
-//            background: -webkit-gradient(left top, right top, color-stop(0%, $color_cornflower_blue_approx), color-stop(100%, $color_shakespeare_approx));
-//            background: -webkit-linear-gradient(left, $color_cornflower_blue_approx 0, $color_shakespeare_approx 100%);
-//            background: -o-linear-gradient(left, $color_cornflower_blue_approx 0, $color_shakespeare_approx 100%);
-//            background: -ms-linear-gradient(left, $color_cornflower_blue_approx 0, $color_shakespeare_approx 100%);
-//            background: linear-gradient(to right, $color_cornflower_blue_approx 0, $color_shakespeare_approx 100%);
-//            filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color_cornflower_blue_approx', endcolorstr='$color_shakespeare_approx', gradienttype=1 );
-//        }
-//        &:after {
-//            content: "";
-//            width: 136px;
-//            height: 36px;
-//            background: $color_dodger_blue_approx;
-//            left: 2px;
-//            top: 2px;
-//            z-index: 2;
-//            display: block;
-//            position: absolute;
-//            //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-//            transition: all 0.5s ease-in;
-//        }
-//    }
-//}
-//.text_block {
-//    position: absolute;
-//    text-align: center;
-//    width: 100%;
-//    margin-top: 30px;
-//    opacity: 0;
-//    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-//    transition: all 0.4s;
-//    animation: timeout 0.4s ease-out;
-//    animation-delay: 1.3s;
-//    animation-fill-mode: forwards;
-//}
-//@keyframes timeout {
-//    to {
-//        opacity: 1;
-//        margin-top: 0;
-//    }
-//}
-//@keyframes timeout2 {
-//    to {
-//        //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-//        text-shadow: -5px 7px 0 $white_40, -10px 14px 0 $white_12;
-//    }
-//}
-//#mid {
-//    opacity: 0;
-//    animation: mid 0.5s ease-in;
-//    animation-fill-mode: forwards;
-//    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//    transform: translate(0px, 68px);
-//}
-//#linearGradient-8 {
-//    opacity: 0;
-//}
-//#linearGradient-13 {
-//    opacity: 0;
-//}
-//#linearGradient-14 {
-//    opacity: 0;
-//}
-//#linearGradient-15 {
-//    opacity: 0;
-//}
-//#radialGradient-17 {
-//    opacity: 0;
-//}
-//#radialGradient-18 {
-//    opacity: 0;
-//}
-//.top-circle {
-//    opacity: 0;
-//    animation: top-circle 0.5s ease-in;
-//    animation-fill-mode: forwards;
-//    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//    transform: translate(37px, 35px);
-//}
-//#light {
-//    opacity: 0;
-//    animation: light 1s ease-in;
-//    animation-fill-mode: forwards;
-//}
-//#mid_clock {
-//    opacity: 0;
-//    animation: mid_clock 0.5s ease-in;
-//    animation-fill-mode: forwards;
-//    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//    transform: translate(65px, 232px);
-//}
-//.oval-1 {
-//    opacity: 0;
-//}
-//.oval-2 {
-//    opacity: 0;
-//}
-//.oval-3 {
-//    opacity: 0;
-//}
-//.c00_1 {
-//    opacity: 0;
-//    animation: c00_1 0.9s;
-//    animation-fill-mode: forwards;
-//    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//    transform: translate(134px, 195px);
-//    animation-timing-function: cubic-bezier(.53,1.83,.62,.4);
-//}
-//.c00_2 {
-//    opacity: 0;
-//    animation: c00_2 0.9s;
-//    animation-fill-mode: forwards;
-//    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//    transform: translate(134px, 222px);
-//    animation-timing-function: cubic-bezier(.53,1.83,.62,.4);
-//}
-//.c00_3 {
-//    opacity: 0;
-//    animation: c00_3 0.9s;
-//    animation-fill-mode: forwards;
-//    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//    transform: translate(134px, 247px);
-//    animation-timing-function: cubic-bezier(.53,1.83,.62,.4);
-//}
-//@keyframes light {
-//    to {
-//        opacity: 0.18;
-//    }
-//}
-//@keyframes top-circle {
-//    to {
-//        opacity: 1;
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(37px, 25px);
-//    }
-//}
-//@keyframes mid_clock {
-//    to {
-//        opacity: 1;
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(65px, 202px);
-//    }
-//}
-//@keyframes mid {
-//    to {
-//        opacity: 1;
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(0px, 68px);
-//    }
-//}
-//@keyframes clock_bottom_3 {
-//    to {
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(72px, 306px);
-//        opacity: 1;
-//        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-//        transition: transform 0.3s;
-//    }
-//}
-//@keyframes clock_bottom_2 {
-//    to {
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(72px, 291px);
-//        opacity: 1;
-//    }
-//}
-//@keyframes clock_bottom_1 {
-//    to {
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(72px, 277px);
-//        opacity: 1;
-//    }
-//}
-//@keyframes c00_1 {
-//    to {
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(134px, 234px);
-//        opacity: 1;
-//        animation-timing-function: cubic-bezier(.83,1.93,.47,-0.06);
-//    }
-//}
-//@keyframes c00_2 {
-//    to {
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(134px, 241px);
-//        opacity: 0.48;
-//        animation-timing-function: cubic-bezier(.83,1.93,.47,-0.06);
-//    }
-//}
-//@keyframes c00_3 {
-//    to {
-//        opacity: 0.24;
-//        //Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
-//        transition-timing-function: cubic-bezier(.83,1.93,.47,-0.06);
-//    }
-//}
-//.loaded {
-//    .oval-1 {
-//        animation: oval-1 1.5s;
-//        animation-fill-mode: forwards;
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(16.287213px, 17.303567px) rotate(34.000000grad) translate(-4.287213px, -17.303567px);
-//        animation-timing-function: liear;
-//    }
-//    .oval-2 {
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(16.287213px, 17.303567px) rotate(34.000000grad) translate(6.287213px, -17.303567px);
-//        animation: oval-2 1.5s;
-//        animation-fill-mode: forwards;
-//        animation-timing-function: liear;
-//    }
-//    .oval-3 {
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(20.287213px, 21.303567px) rotate(34.000000grad) translate(15.287213px, -21.303567px);
-//        animation: oval-3 1.5s;
-//        animation-fill-mode: forwards;
-//        animation-timing-function: liear;
-//    }
-//}
-//@keyframes oval-1 {
-//    to {
-//        opacity: 0.723675272;
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(12.287213px, 14.303567px) rotate(34grad) translate(-12.287213px, -14.303567px);
-//    }
-//}
-//@keyframes oval-2 {
-//    to {
-//        opacity: 0.562047101;
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(16.287213px, 17.303567px) rotate(34.000000grad) translate(-16.287213px, -17.303567px);
-//    }
-//}
-//@keyframes oval-3 {
-//    to {
-//        opacity: 1;
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(20.287213px, 21.303567px) rotate(34.000000grad) translate(-20.287213px, -21.303567px);
-//    }
-//}
-//@keyframes bolt {
-//    to {
-//        opacity: 1;
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(174.036842px, 119.821451px) rotate(-367.000000grad) translate(-174.036842px, -119.821451px) translate(101.536842px, 23.321451px);
-//    }
-//}
-//@media screen and(max-width: 935px) {
-//    .svg {
-//        width: 700px;
-//        margin-left: -350px;
-//    }
-//}
-//@media screen and(max-width: 770px) {
-//    .svg {
-//        width: 590px;
-//        margin-left: -295px;
-//    }
-//}
-//.logining {
-//    #mid_clock {
-//        opacity: 0;
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(65px, 232px);
-//    }
-//    .text_block {
-//        animation: text_block_end 0.5s;
-//        animation-fill-mode: forwards;
-//        opacity: 1;
-//        margin: 0;
-//    }
-//    .timeout {
-//        animation: timeout_end 0.5s;
-//        animation-fill-mode: forwards;
-//        opacity: 1;
-//        top: 70px;
-//        margin: 0;
-//    }
-//    .Bolt {
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(174.036842px, 99.821451px) rotate(-367.000000grad) translate(-174.036842px, -119.821451px) translate(101.536842px, 23.321451px);
-//        opacity: 0;
-//    }
-//    .clock_bottom_3 {
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(72px, 354px);
-//        opacity: 0;
-//    }
-//    .clock_bottom_2 {
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(72px, 329px);
-//        opacity: 0;
-//    }
-//    .clock_bottom_1 {
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(72px, 300px);
-//        opacity: 0;
-//    }
-//    #light {
-//        opacity: 0;
-//        display: none;
-//    }
-//    .top-circle {
-//        opacity: 0;
-//    }
-//    .c00_1 {
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(134.000000px, 214.000000px);
-//        //Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
-//        transition-timing-function: ease-in;
-//        opacity: 0;
-//    }
-//    .c00_2 {
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(134.000000px, 232.000000px);
-//        //Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
-//        transition-timing-function: ease-in;
-//        opacity: 0;
-//    }
-//    .c00_3 {
-//        opacity: 0;
-//    }
-//    .oval-1 {
-//        opacity: 0;
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(16.287213px, 17.303567px) rotate(34.000000grad) translate(-4.287213px, -17.303567px);
-//    }
-//    .oval-2 {
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(16.287213px, 17.303567px) rotate(34.000000grad) translate(6.287213px, -17.303567px);
-//        opacity: 0;
-//    }
-//    .oval-3 {
-//        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-//        transform: translate(20.287213px, 21.303567px) rotate(34.000000grad) translate(15.287213px, -21.303567px);
-//        opacity: 0;
-//    }
-//}
-//@keyframes text_block_end {
-//    to {
-//        margin-top: 50px;
-//        opacity: 0;
-//    }
-//}
-//@keyframes timeout_end {
-//    to {
-//        top: 20px;
-//        opacity: 0;
-//    }
-//}
-//.animated {
-//    .clock_bottom_1 {
-//        animation: none;
-//    }
-//    .clock_bottom_2 {
-//        animation: none;
-//    }
-//    .clock_bottom_3 {
-//        animation: none;
-//    }
-//    .Bolt {
-//        animation: none;
-//    }
-//    .oval-1 {
-//        animation: none;
-//    }
-//    .oval-2 {
-//        animation: none;
-//    }
-//    .oval-3 {
-//        animation: none;
-//    }
-//    .c00_1 {
-//        animation: none;
-//    }
-//    .c00_2 {
-//        animation: none;
-//    }
-//    .c00_3 {
-//        animation: none;
-//    }
-//    #light {
-//        animation: none;
-//    }
-//    #mid_clock {
-//        animation: none;
-//    }
-//    .top-circle {
-//        animation: none;
-//    }
-//}
-//svg #light {
-//    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-//    transition: opacity 0.3s;
-//}
-//.clock_bttn ellipse {
-//    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-//    transition: transform 0.3s;
-//}
-
-
-.svg-wrp {
-    position: relative;
-    min-height: 100%;
-}
 .svg {
-    position: absolute;
-    width: 920px;
-    left: 50%;
-    margin-left: -460px;
-    padding-top: 70px;
-    text-align: center;
-}
+    &-body {
+        background: #3c415e;
+        background: -moz-radial-gradient(center, ellipse cover, #3c415e 0%, #131833 75%);
+        background: -webkit-radial-gradient(center, ellipse cover, #3c415e 0%,#131833 75%);
+        background: radial-gradient(ellipse at center, #3c415e 0%,#131833 75%);
+        background-size: 100% 200%;
+        background-position: 0 100%;
+    }
+    &-page {
+        width: 920px;
+        margin: 0 auto;
+        padding-top: 110px;
+        text-align: center;
+        position: relative;
 
-svg #light {
-    transition: opacity 0.3s;
-}
+        #light {
+            transition: opacity 0.3s;
+        }
+    }
+    &-wrp {
+        overflow: hidden;
+        position: relative;
+        height: 500px;
+        max-width: 100%;
 
-.clock_bottom_1 {
-    transform: translate(72px, 277px);
-}
-
-.clock_bottom_2 {
-    transform: translate(72px, 291px);
-}
-
-.clock_bottom_3 {
-    transform: translate(72px, 306px);
-    transition: transform 0.3s;
-}
-
-.clock_bottom_2, .clock_bottom_1, .clock_bttn ellipse, .Bolt {
-    transition: transform 0.3s;
-}
-
-/*  --------------------------------------------  */
-
-.shown svg:hover {
-    #light {
-        opacity: 0.27;
-    }
-    .oval-2 {
-        transform: translate(16.28721px, 17.30357px) rotate(34grad) translate(-13.28721px, -17.30357px);
-    }
-    .oval-3 {
-        transform: translate(20.28721px, 21.30357px) rotate(34grad) translate(-15.28721px, -21.30357px);
-    }
-    .clock_bottom_3 {
-        transform: translate(72px, 320px);
-    }
-    .clock_bottom_2 {
-        transform: translate(72px, 298px);
-    }
-    .clock_bottom_1 {
-        transform: translate(72px, 280px);
-    }
-    .Bolt {
-        transform: translate(174.03684px, 99.82145px) rotate(-367grad) translate(-174.03684px, -119.82145px) translate(101.53684px, 23.32145px);
-    }
-    .c00_1 {
-        transform: translate(134px, 214px);
-        transition-timing-function: cubic-bezier(0.83, 1.93, 0.47, -0.06);
-    }
-    .c00_2 {
-        transform: translate(134px, 232px);
-        transition-timing-function: cubic-bezier(0.83, 1.93, 0.47, -0.06);
+        .locked-out-svg {
+            @include translate(-50%, -40%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
     }
 }
-
-/*  --------------------------------------------  */
 
 header {
     position: relative;
@@ -796,20 +54,31 @@ header {
     font: 100 45px/100% 'Roboto';
     color: #fff;
     position: absolute;
-    top: 48px;
+    top: 110px;
     width: 100%;
-    text-align: center;
     opacity: 0;
     margin-top: -50px;
     letter-spacing: 2.4px;
     animation: timeout 0.4s ease-out;
     animation-delay: 1.3s;
     animation-fill-mode: forwards;
+
     span {
         font-weight: bold;
         animation: timeout2 0.4s ease-in;
         animation-delay: 1.6s;
         animation-fill-mode: forwards;
+    }
+}
+@keyframes timeout {
+    to {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+@keyframes timeout2 {
+    to {
+        text-shadow: -5px 7px 0px rgba(255, 255, 255, 0.4), -10px 14px 0px rgba(255, 255, 255, 0.12);
     }
 }
 
@@ -924,21 +193,57 @@ header {
     }
 }
 
-@keyframes timeout {
-    to {
-        opacity: 1;
-        margin-top: 0;
+
+
+.clock_bottom_1 {
+    transform: translate(72px, 277px);
+}
+.clock_bottom_2 {
+    transform: translate(72px, 291px);
+}
+.clock_bottom_3 {
+    transform: translate(72px, 306px);
+    transition: transform 0.3s;
+}
+.clock_bottom_2, .clock_bottom_1, .clock_bttn ellipse, .Bolt {
+    transition: transform 0.3s;
+}
+
+/*  --------------------------------------------  */
+
+.shown svg:hover {
+    #light {
+        opacity: 0.27;
+    }
+    .oval-2 {
+        transform: translate(16.28721px, 17.30357px) rotate(34grad) translate(-13.28721px, -17.30357px);
+    }
+    .oval-3 {
+        transform: translate(20.28721px, 21.30357px) rotate(34grad) translate(-15.28721px, -21.30357px);
+    }
+    .clock_bottom_3 {
+        transform: translate(72px, 320px);
+    }
+    .clock_bottom_2 {
+        transform: translate(72px, 298px);
+    }
+    .clock_bottom_1 {
+        transform: translate(72px, 280px);
+    }
+    .Bolt {
+        transform: translate(174.03684px, 99.82145px) rotate(-367grad) translate(-174.03684px, -119.82145px) translate(101.53684px, 23.32145px);
+    }
+    .c00_1 {
+        transform: translate(134px, 214px);
+        transition-timing-function: cubic-bezier(0.83, 1.93, 0.47, -0.06);
+    }
+    .c00_2 {
+        transform: translate(134px, 232px);
+        transition-timing-function: cubic-bezier(0.83, 1.93, 0.47, -0.06);
     }
 }
 
-
-@keyframes timeout2 {
-    to {
-        text-shadow: -5px 7px 0px rgba(255, 255, 255, 0.4), -10px 14px 0px rgba(255, 255, 255, 0.12);
-    }
-}
-
-
+/*  --------------------------------------------  */
 #mid, #linearGradient-8, #linearGradient-13, #linearGradient-14, #linearGradient-15, #radialGradient-17, #radialGradient-18, .Bolt, .top-circle, #light, #mid_clock, .clock_bottom_1, .clock_bottom_2, .clock_bottom_3, .oval-1, .oval-2, .oval-3, .c00_1, .c00_2, .c00_3 {
     opacity: 0;
 }
