@@ -117,3 +117,7 @@ a {
         text-align: left;
     }
 }
+
+.clearfix {
+    @include clearfix();
+}

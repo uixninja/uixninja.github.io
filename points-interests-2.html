@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Uixninja</title>
+
+        <link rel="stylesheet" href="vendors/bootstrap.min.css">
+		<link rel="stylesheet" href="vendors/bootstrap-slider.min.css">
+		<link rel="stylesheet" href="vendors/bootstrap-table.css">
+		<link rel="stylesheet" href="vendors/jquery.multiselect.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+        <link rel="stylesheet" href="css/index.css">
+
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+	</head>
+	<body>
+		<div class="clearfix">
+			<div class="poi-block-wrp">
+			    <button class="poi-block--close-btn">
+			        <span class="i-icon-close"></span>
+			    </button>
+			    <div class="poi-block">
+			        <div class="poi-block--label">Layers</div>
+			        <h1 class="poi-block--title">Points of Interest</h1>
+			        <p class="poi-block--descr">Which Layer would you like add to?</p>
+			        <div class="box box-graph">
+			            <div class="box-header left-top">
+			                <div class="el-title">Selected</div>
+			                <div class="el-points"><b>3,489</b> Points</div>
+			            </div>
+			            <div class="box-body right-bottom">
+			                <div class="box-body--no-data" style="display: none">No results</div><!-- No results -->
+			                <div class="box-body--loader" style="display: none"><img alt="" src="img/loader-dark.gif"></div><!-- Loader placeholder -->
+			
+			                <ul class="poi-block--points">
+			                    <li class="list-item">
+			                        <label class="radio-control">
+			                            <input id="points-rad-1" type="radio" name="poi-radio" checked />
+			                            <span class="checker"></span>
+			                        </label>
+			                        <label class="radio-label-control" for="points-rad-1"><span class="icon-star"></span>Label title</label>
+			                    </li>
+			                    <li class="list-item">
+			                        <label class="radio-control">
+			                            <input id="points-rad-2" type="radio" name="poi-radio" />
+			                            <span class="checker"></span>
+			                        </label>
+			                        <label class="radio-label-control" for="points-rad-2"><span class="icon-star"></span>Label title</label>
+			                    </li>
+			                    <li class="list-item">
+			                        <label class="radio-control">
+			                            <input id="points-rad-3" type="radio" name="poi-radio" />
+			                            <span class="checker"></span>
+			                        </label>
+			                        <label class="radio-label-control" for="points-rad-3"><span class="icon-star"></span>Label title</label>
+			                    </li>
+			                </ul>
+			            </div>
+			        </div>
+			        <div class="poi-block--buttons">
+			            <button class="btn btn-second">Back to map</button>
+			            <button class="btn">Add to map</button>
+			        </div>
+			    </div>
+			</div>
+		</div>
+
+
+        <script src="vendors/jquery-1.9.1.min.js"></script>
+        <script src="vendors/bootstrap.min.js"></script>
+		<script src="vendors/bootstrap-slider.min.js"></script>
+		<script src="vendors/bootstrap-table.min.js"></script>
+		<script src="vendors/jquery.multiselect.js"></script>
+		<script src="js/tour.js"></script>
+ 		<script src="js/scripts.js"></script>
+	</body>
+</html>

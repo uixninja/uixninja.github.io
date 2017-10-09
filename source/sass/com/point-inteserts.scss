@@ -1,13 +1,11 @@
 .poi-block-wrp {
     @include border-radius(20px);
     background-color: $color-haiti;
-    overflow-y: auto;
-    height: calc(100vh - 80px);
-    margin: 40px 40px 0;
+    margin: 40px;
+    position: relative;
 
     @include mobile {
-        height: calc(100vh - 20px);
-        margin: 10px 10px 0;
+        margin: 10px;
     }
 }
 .poi-block {
@@ -15,6 +13,27 @@
     max-width: 400px;
     padding: 40px 10px;
     position: relative;
+
+    &--close-btn {
+        @include border-radius(3px);
+        background: none;
+        border: 0 none;
+        color: lighten($color-pickled-bluewood, 5%);
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 30px;
+        height: 30px;
+        padding: 4px;
+        overflow: hidden;
+        outline: none;
+        white-space: nowrap;
+
+        &:hover {
+            background: $color-big-stone;
+            color: rgba($color-white, 0.8);
+        }
+    }
 
     &--label {
         color: $color-big-stone;
@@ -114,7 +133,8 @@
             padding: 8px 0;
             overflow: hidden;
         }
-        .checkbox-control {
+        .checkbox-control,
+        .radio-control {
             float: left;
             margin-right: 12px;
         }
@@ -128,6 +148,29 @@
 
             span {
                 color:  rgba($color-white, 0.8);
+            }
+        }
+        .radio-label-control {
+            display: inline-block;
+            font-size: 11px;
+            color: rgba($color-white, 0.8);
+            text-transform: uppercase;
+            line-height: 1.6;
+            vertical-align: middle;
+
+            .icon-star {
+                margin-top: -4px;
+                margin-right: 6px;
+            }
+            span {
+                color: $color-white;
+            }
+            &:hover {
+                color: $color-dodger-blue;
+
+                span {
+                    color: darken($color-dodger-blue, 5%);
+                }
             }
         }
     }

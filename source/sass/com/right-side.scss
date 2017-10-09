@@ -63,6 +63,13 @@
     background: linear-gradient($color-azure, $color-dodger-blue);
 }
 
+.icon-star {
+    display: inline-block;
+    background: $url-search;
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+}
 .card-icon-left {
     position: relative;
     width: 18px;
