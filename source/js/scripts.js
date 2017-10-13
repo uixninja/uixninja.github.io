@@ -105,23 +105,23 @@ $( ".slider-item-4 .add-tag" ).click(function() {
 //   $( ".slider-head-4" ).toggleClass('active');
 // });
 
-$(document).ready(function() {
-    $('body').addClass('loaded');
-
-    function svgload() {
-        $('body').removeClass('animating').addClass("shown");
-
-        setTimeout(function() {
-            $('body').addClass('animated');
-        }, 500);
-    }
-    setTimeout(svgload, 200);
-
-    $('#loadLoginPage').click(function () {
-        $('body').addClass('logining');
-        return false;
-    });
-});
+// $(document).load(function() {
+//     $('body').addClass('loaded');
+//
+//     function svgload() {
+//         $('body').removeClass('animating').addClass("shown");
+//
+//         setTimeout(function() {
+//             $('body').addClass('animated');
+//         }, 500);
+//     }
+//     setTimeout(svgload, 2000);
+//
+//     $('#loadLoginPage').click(function () {
+//         $('body').addClass('logining');
+//         return false;
+//     });
+// });
 $(".ms-options-wrap > .ms-options > ul label").css({
 	'padding-left': '26px'
 });
