@@ -1923,7 +1923,7 @@ div.reset-tour-btn .icon-tour {
   -webkit-transition: all 200ms ease;
   -o-transition: all 200ms ease;
   transition: all 200ms ease;
-  background-color: #1796ff;
+  background-color: #0084ff;
   color: #fff;
   position: absolute;
   overflow: hidden;
@@ -1960,9 +1960,9 @@ div.reset-tour-btn .icon-tour {
   -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-shadow: 0 14px 34px rgba(44, 53, 83, 0.15);
-  box-shadow: 0 14px 34px rgba(44, 53, 83, 0.15);
-  background-color: rgba(44, 53, 83, 0.05);
+  -webkit-box-shadow: 0 10px 24px rgba(0, 132, 255, 0.75);
+  box-shadow: 0 10px 24px rgba(0, 132, 255, 0.75);
+  background-color: #1796ff;
   padding: 30px 20px 20px;
 }
 
@@ -1982,18 +1982,20 @@ div.reset-tour-btn .icon-tour {
 .map-search--results {
   overflow-y: auto;
   max-height: 60vh;
-  padding: 0 20px 5px;
+  padding: 5px 20px;
 }
 
 .map-search--results .el-title {
+  background-color: #1796ff;
   display: block;
-  padding: 5px 0;
+  margin: 0 -20px;
+  padding: 12px 20px;
   text-transform: uppercase;
 }
 
 .map-search--list {
   list-style: none;
-  margin: 5px 0;
+  margin: 4px 0;
   padding: 0;
 }
 
@@ -2012,8 +2014,8 @@ div.reset-tour-btn .icon-tour {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
   color: rgba(255, 255, 255, 0.7);
   display: block;
   font-size: 12px;
@@ -2028,7 +2030,7 @@ div.reset-tour-btn .icon-tour {
 }
 
 .map-search--list .list-item:hover {
-  background-color: rgba(44, 53, 83, 0.05);
+  background-color: #007cf0;
 }
 
 .poi-block-wrp {

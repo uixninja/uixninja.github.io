@@ -77,7 +77,7 @@
     &--dropdown {
         @include border-radius(0 0 10px 10px);
         @include transition(all $anim-speed ease);
-        background-color: $color-dodger-blue;
+        background-color: $color-azure;
         color: $color-white;
         position: absolute;
         overflow: hidden;
@@ -103,8 +103,8 @@
     &--header {
         @include flexbox();
         @include justify-content(space-between);
-        @include box-shadow(0 14px 34px rgba($color-martinique, 0.15));
-        background-color: rgba($color-martinique, 0.05);
+        @include box-shadow(0 10px 24px rgba($color-azure, 0.75));
+        background-color: $color-dodger-blue;
         padding: 30px 20px 20px;
 
         .el-title,
@@ -126,18 +126,20 @@
     &--results {
         overflow-y: auto;
         max-height: 60vh;
-        padding: 0 20px 5px;
+        padding: 5px 20px;
 
         .el-title {
             @extend %title;
+            background-color: $color-dodger-blue;
             display: block;
-            padding: 5px 0;
+            margin: 0 -20px;
+            padding: 12px 20px;
             text-transform: uppercase;
         }
     }
     &--list {
         list-style: none;
-        margin: 5px 0;
+        margin: 4px 0;
         padding: 0;
 
         [class^="i-icon-"] {
@@ -149,7 +151,7 @@
         }
         .list-item {
             @include ellipsis();
-            @include border-radius(5px);
+            @include border-radius(3px);
             color: rgba($color-white, 0.7);
             display: block;
             font-size: 12px;
@@ -162,7 +164,7 @@
                 font-weight: 600;
             }
             &:hover {
-                background-color: rgba($color-martinique, 0.05);
+                background-color: darken($color-azure, 3%);
             }
         }
     }
