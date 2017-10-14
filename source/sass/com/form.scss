@@ -14,8 +14,8 @@ input[type=text] {
     }
 }
 
-$checkbox-size: 19px;
-.checkbox-control {
+$control-size: 19px;
+%control-set {
     cursor: pointer;
     display: inline-block;
     font-size: 0;
@@ -23,17 +23,37 @@ $checkbox-size: 19px;
     margin-right: 10px;
     vertical-align: middle;
     position: relative;
-    top: -1px;
-    height: $checkbox-size;
-    width: $checkbox-size;
+    height: $control-size;
+    width: $control-size;
 
     .checker {
-        @include border-radius(3px);
         background: transparent;
         border: 2px solid $color-lynch;
         display: block;
-        height: $checkbox-size;
-        width: $checkbox-size;
+        height: $control-size;
+        width: $control-size;
+
+        &:hover {
+            background-color: rgba($color-lynch, 0.25);
+        }
+    }
+    &[readonly] {
+        cursor: default !important;
+    }
+    input[type="checkbox"],
+    input[type="radio"] {
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        position: absolute;
+    }
+}
+
+.checkbox-control {
+    @extend %control-set;
+
+    .checker {
+        @include border-radius(3px);
 
         &:before {
             @include rotate(-45deg);
@@ -47,18 +67,6 @@ $checkbox-size: 19px;
             top: 5px;
             visibility: hidden;
         }
-        &:hover {
-            background-color: rgba($color-lynch, 0.25);
-        }
-    }
-    &[readonly] {
-        cursor: default !important;
-    }
-    input[type="checkbox"] {
-        top: 0;
-        left: 0;
-        visibility: hidden;
-        position: absolute;
     }
     &.-multi .checker {
         background: $color-lynch;
@@ -70,9 +78,7 @@ $checkbox-size: 19px;
     }
     input[type="checkbox"]:checked {
         & + .checker {
-            background: $color-dodger-blue;
-            background: -webkit-linear-gradient(top, $color-dodger-blue 0%,$color-azure 100%);
-            background: linear-gradient(to bottom, $color-dodger-blue 0%,$color-azure 100%);
+            background: $color-azure;
             border-width: 0;
             color: $color-white;
 
@@ -84,7 +90,45 @@ $checkbox-size: 19px;
 
     & + label,
     & + .label-control {
-        color: $color-lynch;
+        cursor: pointer;
+        font-weight: 400;
+        margin-bottom: 0;
+        vertical-align: middle;
+    }
+}
+
+.radio-control {
+    @extend %control-set;
+    @include border-radius(10px);
+
+    .checker {
+        @include border-radius(10px);
+
+        &:before {
+            @include border-radius(4px);
+            @include translate(-50%, -50%);
+            content: "";
+            height: 8px;
+            width: 8px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            visibility: hidden;
+        }
+    }
+    input[type="radio"]:checked {
+        & + .checker {
+            background: $color-azure;
+            border-width: 0;
+
+            &:before {
+                background-color: $color-white;
+                visibility: visible;
+            }
+        }
+    }
+    & + .radio-label-control,
+    & + .label-control {
         cursor: pointer;
         font-weight: 400;
         margin-bottom: 0;

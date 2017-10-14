@@ -66,3 +66,36 @@
 .i-icon-gps {
     background-position: -36px -54px;
 }
+.i-icon-close {
+    background-position: 0 -72px;
+
+    button:hover &,
+    a:hover & {
+        background-position: -18px -72px;
+    }
+}
+.i-icon-flash {
+    background-position: -36px -72px;
+}
+.i-icon-close {
+    background: none;
+    position: relative;
+    color: inherit;
+
+    &::before,
+    &::after {
+        border-bottom: 2px solid;
+        content: "";
+        margin-top: -2px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+    }
+    &::before {
+        @include rotate(-45deg);
+    }
+    &::after {
+        @include rotate(45deg);
+    }
+}

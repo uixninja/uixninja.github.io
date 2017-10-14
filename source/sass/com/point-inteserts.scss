@@ -1,13 +1,11 @@
 .poi-block-wrp {
     @include border-radius(20px);
     background-color: $color-haiti;
-    overflow-y: auto;
-    height: calc(100vh - 80px);
-    margin: 40px 40px 0;
+    margin: 40px;
+    position: relative;
 
     @include mobile {
-        height: calc(100vh - 20px);
-        margin: 10px 10px 0;
+        margin: 10px;
     }
 }
 .poi-block {
@@ -15,6 +13,27 @@
     max-width: 400px;
     padding: 40px 10px;
     position: relative;
+
+    &--close-btn {
+        @include border-radius(3px);
+        background: none;
+        border: 0 none;
+        color: lighten($color-pickled-bluewood, 5%);
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 30px;
+        height: 30px;
+        padding: 4px;
+        overflow: hidden;
+        outline: none;
+        white-space: nowrap;
+
+        &:hover {
+            background: $color-big-stone;
+            color: rgba($color-white, 0.8);
+        }
+    }
 
     &--label {
         color: $color-big-stone;
@@ -65,6 +84,15 @@
         background: $color-big-stone;
         margin-bottom: 40px;
         padding: 15px 25px 10px;
+        min-height: 260px;
+
+        &--loader {
+            @include translate(-50%, -50%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 1;
+        }
     }
     &--search {
         @include border-radius(15px);
@@ -105,7 +133,8 @@
             padding: 8px 0;
             overflow: hidden;
         }
-        .checkbox-control {
+        .checkbox-control,
+        .radio-control {
             float: left;
             margin-right: 12px;
         }
@@ -117,17 +146,30 @@
             color: $color-lynch;
             font-size: 14px;
 
-            .match {
+            span {
                 color:  rgba($color-white, 0.8);
             }
-            &.group-title {
-                font-size: 11px;
-                color: rgba($color-white, 0.8);
-                text-transform: uppercase;
-                line-height: 1.6;
+        }
+        .radio-label-control {
+            display: inline-block;
+            font-size: 11px;
+            color: rgba($color-white, 0.8);
+            text-transform: uppercase;
+            line-height: 1.6;
+            vertical-align: middle;
 
-                &:hover {
-                    color: $color-dodger-blue;
+            .icon-star {
+                margin-top: -4px;
+                margin-right: 6px;
+            }
+            span {
+                color: $color-white;
+            }
+            &:hover {
+                color: $color-dodger-blue;
+
+                span {
+                    color: darken($color-dodger-blue, 5%);
                 }
             }
         }
@@ -135,7 +177,61 @@
     &--points-group {
         padding: 10px 0 0;
         list-style: none;
-        margin-left: 32px;
+        margin-left: 45px;
+    }
+    &--group-title {
+        display: inline-block;
+        font-size: 11px;
+        color: rgba($color-white, 0.8);
+        text-transform: uppercase;
+        line-height: 1.6;
+        vertical-align: middle;
+        position: relative;
+        top: -1px;
+        overflow: hidden;
+        white-space: nowrap;
+
+        span {
+            color: $color-white;
+        }
+        &:hover {
+            color: $color-dodger-blue;
+
+            span {
+                color: darken($color-dodger-blue, 5%);
+            }
+        }
+    }
+    &--toggle {
+        background: none;
+        border: 0 none;
+        color: rgba($color-white, 0.8);
+        position: relative;
+        outline: none;
+        float: left;
+        margin-right: 6px;
+        vertical-align: middle;
+        height: 20px;
+        width: 16px;
+
+        &:hover {
+            color: $color-dodger-blue;
+        }
+
+        &::before {
+            @include translate(0, -50%);
+            font-size: 24px;
+            content: '−';
+            margin-top: 0;
+            position: absolute;
+            line-height: 1;
+            left: 0;
+            top: 50%;
+        }
+        &.-closed::before {
+            content: '+';
+            margin-top: -1px;
+        }
     }
     &--buttons {
         text-align: center;

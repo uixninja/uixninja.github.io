@@ -19,15 +19,18 @@
         <![endif]-->
 	</head>
 	<body>
-		<div class="no-scroll">
+		<div class="clearfix"><!-- deleted 'no-scroll' class / added new class 'clearfix' -->
 			<div class="poi-block-wrp">
+			        <button class="poi-block--close-btn">
+			            <span class="i-icon-close"></span>
+			        </button>
 			        <div class="poi-block">
 			            <div class="poi-block--label">Layers</div>
 			            <h1 class="poi-block--title">Points of Interest</h1>
 			            <p class="poi-block--descr">Search & Select Points of Interest</p>
 			            <div class="poi-block--search">
 			                <span class="i-icon-search-blue"></span>
-			                <input class="map-search--input" type="search" placeholder="Search By Industry, Category or Brand" />
+			                <input id="search-poi-input" type="search" placeholder="Search By Industry, Category or Brand" />
 			            </div>
 			            <div class="box box-graph">
 			                <div class="box-header left-top">
@@ -35,30 +38,35 @@
 			                    <div class="el-points"><b>3,489</b> Points</div>
 			                </div>
 			                <div class="box-body right-bottom">
-			                    <ul id="filter-points" class="poi-block--points">
+			                    <div class="box-body--no-data" style="display: none">No results</div><!-- No results -->
+			                    <div class="box-body--loader" style="display: none"><img alt="" src="img/loader-dark.gif"></div><!-- Loader placeholder -->
+			
+			                    <ul id="search-poi-list" class="poi-block--points">
 			                        <li class="list-item">
-			                            <label class="checkbox-control"> <!-- add class "-multi" for point this checkbox to indicate that the group is not all marked -->
+			                            <button class="poi-block--toggle" type="button"></button>
+			                            <label class="checkbox-control check-all-group -multi"> <!-- add class "-multi" for point this checkbox to indicate that the group is not all marked -->
 			                                <input id="points-1" type="checkbox" />
 			                                <span class="checker"></span>
 			                            </label>
-			                            <label class="label-control group-title" for="points-1">Restourant</label>
+			                            <label class="poi-block--group-title label-filter" for="points-1">Restourant</label>
 			    
-			                            <ul class="poi-block--points-group">
+			                            <ul id="points-group-list-1" class="poi-block--points-group">
 			                                <li class="list-item">
-			                                    <label class="checkbox-control check-all-group"> <!-- add class "-multi" for point this checkbox to indicate that the group is not all marked -->
-			                                        <input id="points-group-1" type="checkbox" />
+			                                    <button class="poi-block--toggle" type="button"></button>
+			                                    <label class="checkbox-control check-all-group -multi"> <!-- add class "-multi" for point this checkbox to indicate that the group is not all marked -->
+			                                        <input id="points-2" type="checkbox" />
 			                                        <span class="checker"></span>
 			                                    </label>
-			                                    <label class="label-control group-title" for="points-group-1">Mexican</label>
+			                                    <label for="points-2" class="poi-block--group-title label-filter">Mexican</label>
 			    
-			                                    <ul class="poi-block--points-group">
+			                                    <ul id="points-group-list-2" class="poi-block--points-group">
 			                                        <li class="list-item">
 			                                            <label class="checkbox-control">
 			                                                <input id="points-group-ext-1" type="checkbox" checked />
 			                                                <span class="checker"></span>
 			                                            </label>
-			                                            <label class="label-control" for="points-group-ext-1">
-			                                                <span class="match">C</span>hipotle (1,234 Points)
+			                                            <label class="label-control label-filter" for="points-group-ext-1">
+			                                                Chipotle (1,234 Points)
 			                                            </label>
 			                                        </li>
 			                                        <li class="list-item">
@@ -66,8 +74,8 @@
 			                                                <input id="points-group-ext-2" type="checkbox" checked />
 			                                                <span class="checker"></span>
 			                                            </label>
-			                                            <label class="label-control" for="points-group-ext-2">
-			                                                <span class="match">C</span>hick Fil A (3,208 Points)
+			                                            <label class="label-control label-filter" for="points-group-ext-2">
+			                                                Chick Fil A (3,208 Points)
 			                                            </label>
 			                                        </li>
 			                                        <li class="list-item">
@@ -75,8 +83,8 @@
 			                                                <input id="points-group-ext-3" type="checkbox" />
 			                                                <span class="checker"></span>
 			                                            </label>
-			                                            <label class="label-control" for="points-group-ext-3">
-			                                                <span class="match">C</span>heckers (645 Points)
+			                                            <label class="label-control label-filter" for="points-group-ext-3">
+			                                                Checkers (645 Points)
 			                                            </label>
 			                                        </li>
 			                                        <li class="list-item">
@@ -84,8 +92,8 @@
 			                                                <input id="points-group-ext-4" type="checkbox" checked />
 			                                                <span class="checker"></span>
 			                                            </label>
-			                                            <label class="label-control" for="points-group-ext-4">
-			                                                <span class="match">C</span>heckers (3,206 Points)
+			                                            <label class="label-control label-filter" for="points-group-ext-4">
+			                                                Checkers (3,206 Points)
 			                                            </label>
 			                                        </li>
 			                                    </ul>
@@ -93,20 +101,21 @@
 			                            </ul>
 			                        </li>
 			                        <li class="list-item">
+			                            <button class="poi-block--toggle" type="button"></button>
 			                            <label class="checkbox-control check-all-group"> <!-- add class "-multi" for point this checkbox to indicate that the group is not all marked -->
-			                                <input id="points-2" type="checkbox" checked />
+			                                <input id="points-3" type="checkbox" checked />
 			                                <span class="checker"></span>
 			                            </label>
-			                            <label class="label-control group-title" for="points-2">greek</label>
+			                            <label for="points-3" class="poi-block--group-title label-filter">greek</label>
 			    
-			                            <ul class="poi-block--points-group">
+			                            <ul id="points-group-list-3" class="poi-block--points-group">
 			                                <li class="list-item">
 			                                    <label class="checkbox-control">
 			                                        <input id="points-group-ext-21" type="checkbox" checked />
 			                                        <span class="checker"></span>
 			                                    </label>
-			                                    <label class="label-control" for="points-group-ext-21">
-			                                        <span class="match">C</span>hipotle (1,234 Points)
+			                                    <label class="label-control label-filter" for="points-group-ext-21">
+			                                        Chipotle (1,234 Points)
 			                                    </label>
 			                                </li>
 			                            </ul>

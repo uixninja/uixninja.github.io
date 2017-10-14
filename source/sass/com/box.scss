@@ -38,9 +38,23 @@
 	min-height: 50px;
 	background: $color-haiti;
 	padding: 20px;
+	position: relative;
+
 	&.box-body-without-padding {
 		padding: 0;
 		margin: 0;
+	}
+
+	&--no-data {
+		@include translate(0, -50%);
+		color: $color-pickled-bluewood;
+		font-size: 18px;
+		position: absolute;
+		top: 50%;
+		left: 20px;
+		right: 20px;
+		text-align: center;
+		z-index: 1;
 	}
 }
 .box.attributes .box-header {
