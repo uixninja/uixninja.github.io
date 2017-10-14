@@ -1,22 +1,19 @@
 .svg {
     &-body {
         background: #3c415e;
-        background: -moz-radial-gradient(center, ellipse cover, #3c415e 0%, #131833 75%);
-        background: -webkit-radial-gradient(center, ellipse cover, #3c415e 0%,#131833 75%);
-        background: radial-gradient(ellipse at center, #3c415e 0%,#131833 75%);
+        background: -moz-radial-gradient(center, ellipse cover, #3c415e 0%, #131833 70%);
+        background: -webkit-radial-gradient(center, ellipse cover, #3c415e 0%,#131833 70%);
+        background: radial-gradient(ellipse at center, #3c415e 0%,#131833 70%);
         background-size: 100% 200%;
         background-position: 0 100%;
     }
     &-page {
         margin: 0 auto;
         padding-top: 175px;
+        padding-bottom: 220px;
         text-align: center;
         position: relative;
         max-width: 950px;
-
-        #light {
-            transition: opacity 0.3s;
-        }
 
         .timeout {
             text-align: center;
@@ -49,7 +46,7 @@
         }
         @keyframes timeout2 {
             to {
-                text-shadow: -5px 7px 0px rgba(255, 255, 255, 0.4), -10px 14px 0px rgba(255, 255, 255, 0.12);
+                text-shadow: -3px 7px 0px rgba(255, 255, 255, 0.4), -6px 14px 0px rgba(255, 255, 255, 0.12);
             }
         }
         .login {
@@ -80,9 +77,9 @@
     }
     &-wrp {
         overflow: hidden;
-        margin-bottom: -140px;
+        margin-bottom: -110px;
         position: relative;
-        height: 575px;
+        height: 550px;
         max-width: 100%;
 
         .locked-out-svg {
@@ -90,9 +87,6 @@
             position: absolute;
             left: 50%;
             top: 50%;
-            //@include scale(1.8, 1.8);
-            //top: 0;
-            //left: -300px;
         }
     }
     &-text-block,
@@ -119,19 +113,19 @@
     }
 }
 .login .btn {
-    background: -moz-linear-gradient(left, rgba(76, 135, 247, 1) 0%, rgba(14, 187, 219, 1) 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(14, 187, 219, 1)), color-stop(100%, rgba(100, 177, 214, 1)));
-    background: -webkit-linear-gradient(left, rgba(76, 135, 247, 1) 0%, rgba(14, 187, 219, 1) 100%);
-    background: -o-linear-gradient(left, rgba(76, 135, 247, 1) 0%, rgba(14, 187, 219, 1) 100%);
-    background: -ms-linear-gradient(left, rgba(76, 135, 247, 1) 0%, rgba(14, 187, 219, 1) 100%);
-    background: linear-gradient(to right, rgba(76, 135, 247, 1) 0%, rgba(14, 187, 219, 1) 100%);
+    background: -moz-linear-gradient(left, $color-dodger-blue 0%, $color-viking 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, $color-dodger-blue), color-stop(100%, $color-viking));
+    background: -webkit-linear-gradient(left, $color-dodger-blue 0%, $color-viking 100%);
+    background: -o-linear-gradient(left, $color-dodger-blue 0%, $color-viking 100%);
+    background: -ms-linear-gradient(left, $color-dodger-blue 0%, $color-viking 100%);
+    background: linear-gradient(to right, $color-dodger-blue 0%, $color-viking 100%);
     margin-top: 40px;
     font-size: 12px;
     font-weight: 400;
     position: relative;
     transition: all 0.4s;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-    text-shadow: 0 2px 3px rgb(59, 102, 194);
+    text-shadow: 0 2px 3px darken($color-science-blue, 5%);
     padding: 12px 30px;
 
     &:focus {
@@ -181,7 +175,12 @@
     transform: translate(28px, -22px);
 }
 #shadow {
-    //display: none;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+}
+.locker-wrp {
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
 }
 
 /*  HOVER --------------------------------------------  */
@@ -223,6 +222,9 @@
 .loaded {
     .locker-wrp {
         opacity: 1;
+    }
+    #shadow {
+        opacity: 0.5;
     }
     .bottom-figures {
         transition: all 0.5s ease;
@@ -329,7 +331,19 @@
         top: 70px;
         margin: 0;
     }
+    .timeout span {
+        animation: text-shadow 0.5s ease-out;
+        animation-fill-mode: forwards;
+    }
+    @keyframes text-shadow {
+        to {
+            text-shadow: -2px -10px 0px rgba(255, 255, 255, 0.4), -4px -20px 0px rgba(255, 255, 255, 0.12);
+        }
+    }
     /*  bottom-figures opened */
+    #shadow {
+        opacity: 0;
+    }
     .locker-wrp {
         animation: fade-out 1s ease;
         animation-fill-mode: forwards;

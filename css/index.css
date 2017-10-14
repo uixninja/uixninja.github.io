@@ -2092,9 +2092,9 @@ div.reset-tour-btn .icon-tour {
 
 .svg-body {
   background: #3c415e;
-  background: -moz-radial-gradient(center, ellipse cover, #3c415e 0%, #131833 75%);
-  background: -webkit-radial-gradient(center, ellipse cover, #3c415e 0%, #131833 75%);
-  background: radial-gradient(ellipse at center, #3c415e 0%, #131833 75%);
+  background: -moz-radial-gradient(center, ellipse cover, #3c415e 0%, #131833 70%);
+  background: -webkit-radial-gradient(center, ellipse cover, #3c415e 0%, #131833 70%);
+  background: radial-gradient(ellipse at center, #3c415e 0%, #131833 70%);
   background-size: 100% 200%;
   background-position: 0 100%;
 }
@@ -2102,13 +2102,10 @@ div.reset-tour-btn .icon-tour {
 .svg-page {
   margin: 0 auto;
   padding-top: 175px;
+  padding-bottom: 220px;
   text-align: center;
   position: relative;
   max-width: 950px;
-}
-
-.svg-page #light {
-  transition: opacity 0.3s;
 }
 
 .svg-page .timeout {
@@ -2144,7 +2141,7 @@ div.reset-tour-btn .icon-tour {
 
 @keyframes timeout2 {
   to {
-    text-shadow: -5px 7px 0px rgba(255, 255, 255, 0.4), -10px 14px 0px rgba(255, 255, 255, 0.12);
+    text-shadow: -3px 7px 0px rgba(255, 255, 255, 0.4), -6px 14px 0px rgba(255, 255, 255, 0.12);
   }
 }
 
@@ -2177,9 +2174,9 @@ div.reset-tour-btn .icon-tour {
 
 .svg-wrp {
   overflow: hidden;
-  margin-bottom: -140px;
+  margin-bottom: -110px;
   position: relative;
-  height: 575px;
+  height: 550px;
   max-width: 100%;
 }
 
@@ -2218,19 +2215,19 @@ div.reset-tour-btn .icon-tour {
 }
 
 .login .btn {
-  background: -moz-linear-gradient(left, #4c87f7 0%, #0ebbdb 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, #0ebbdb), color-stop(100%, #64b1d6));
-  background: -webkit-linear-gradient(left, #4c87f7 0%, #0ebbdb 100%);
-  background: -o-linear-gradient(left, #4c87f7 0%, #0ebbdb 100%);
-  background: -ms-linear-gradient(left, #4c87f7 0%, #0ebbdb 100%);
-  background: linear-gradient(to right, #4c87f7 0%, #0ebbdb 100%);
+  background: -moz-linear-gradient(left, #1796ff 0%, #50cad8 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #1796ff), color-stop(100%, #50cad8));
+  background: -webkit-linear-gradient(left, #1796ff 0%, #50cad8 100%);
+  background: -o-linear-gradient(left, #1796ff 0%, #50cad8 100%);
+  background: -ms-linear-gradient(left, #1796ff 0%, #50cad8 100%);
+  background: linear-gradient(to right, #1796ff 0%, #50cad8 100%);
   margin-top: 40px;
   font-size: 12px;
   font-weight: 400;
   position: relative;
   transition: all 0.4s;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-  text-shadow: 0 2px 3px #3b66c2;
+  text-shadow: 0 2px 3px #0063bf;
   padding: 12px 30px;
 }
 
@@ -2287,6 +2284,16 @@ div.reset-tour-btn .icon-tour {
   transform: translate(28px, -22px);
 }
 
+#shadow {
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.locker-wrp {
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+
 /*  HOVER --------------------------------------------  */
 .locked-out-svg:hover {
   /* locker body shadow (:HOVER) */
@@ -2337,6 +2344,10 @@ div.reset-tour-btn .icon-tour {
 
 .loaded .locker-wrp {
   opacity: 1;
+}
+
+.loaded #shadow {
+  opacity: 0.5;
 }
 
 .loaded .bottom-figures {
@@ -2462,6 +2473,21 @@ div.reset-tour-btn .icon-tour {
   opacity: 1;
   top: 70px;
   margin: 0;
+}
+
+.logining .timeout span {
+  animation: text-shadow 0.5s ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes text-shadow {
+  to {
+    text-shadow: -2px -10px 0px rgba(255, 255, 255, 0.4), -4px -20px 0px rgba(255, 255, 255, 0.12);
+  }
+}
+
+.logining #shadow {
+  opacity: 0;
 }
 
 .logining .locker-wrp {
