@@ -104,6 +104,7 @@ $( ".slider-item-4 .add-tag" ).click(function() {
 //   $( ".collapse-4" ).slideToggle( "slow" );
 //   $( ".slider-head-4" ).toggleClass('active');
 // });
+
 $(".ms-options-wrap > .ms-options > ul label").css({
 	'padding-left': '26px'
 });
