@@ -1,0 +1,141 @@
+.map-widget {
+    position: absolute;
+    top: 40px;
+    z-index: 5;
+
+    &.-w-horizontal {
+        color: $color-white;
+        right: 80px;
+    }
+    &.-w-vertical {
+        right: 40px;
+    }
+
+    &--group {
+        display: inline-block;
+        font-size: 0;
+        margin-right: 30px;
+        vertical-align: middle;
+    }
+    &--label {
+        display: inline-block;
+        font-size: 13px;
+        font-weight: bold;
+        color: $color-white;
+        margin: 0 10px;
+        text-transform: uppercase;
+        vertical-align: middle;
+    }
+
+    %buttons-stgs {
+        text-align: center;
+        position: relative;
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+        outline: none;
+        padding: 0;
+        vertical-align: middle;
+
+        [class^="i-icon-"] {
+            @include translate(-50%, -50%);
+            transition: background-positions 0.3s ease;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+    }
+    &--btn {
+        @extend %buttons-stgs;
+        @include border-radius(6px);
+        background: $color-fiord-light;
+        color: $color-white;
+        border: 0 none;
+        display: block;
+        margin-bottom: 10px;
+        height: 40px;
+        width: 40px;
+
+        &:hover {
+            background: $color-picton-blue;
+        }
+    }
+
+    &--btn-round {
+        @extend %buttons-stgs;
+        @include border-radius(50%);
+        background: transparent;
+        border: 2px solid $color-picton-blue;
+        display: inline-block;
+        opacity: 0.72;
+
+        [class^="i-icon-"] {
+            opacity: 0.72;
+        }
+
+        &:hover {
+            background-color: rgba($color-picton-blue, 0.4);
+            opacity: 1;
+            z-index: 1;
+
+            [class^="i-icon-"] {
+                opacity: 1;
+            }
+        }
+
+        &.-with-icon {
+            &:hover {
+                background: transparent;
+            }
+        }
+
+        &.-size-1 {
+            height: 48px;
+            width: 48px;
+            margin: 0 -4px;
+        }
+        &.-size-2 {
+            height: 44px;
+            width: 44px;
+            margin: 0 -3px;
+        }
+        &.-size-3 {
+            height: 40px;
+            width: 40px;
+            margin: 0 -2px;
+        }
+        &.-size-4 {
+            height: 36px;
+            width: 36px;
+            margin: 0;
+        }
+        &.-size-5 {
+            height: 32px;
+            width: 32px;
+            margin: 0 1px;
+        }
+        &.-size-6 {
+            height: 28px;
+            width: 28px;
+            margin: 0 2px;
+        }
+        &.-size-7 {
+            height: 24px;
+            width: 24px;
+            margin: 0 3px;
+        }
+        &.-size-8 {
+            height: 20px;
+            width: 20px;
+            margin: 0 4px;
+        }
+        &.-size-9 {
+            height: 16px;
+            width: 16px;
+            margin: 0 5px;
+        }
+        &.-size-10 {
+            height: 12px;
+            width: 12px;
+            margin: 0 6px;
+        }
+    }
+}

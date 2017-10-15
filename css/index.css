@@ -249,36 +249,42 @@ a:hover .i-icon-close {
   background-position: -36px -72px;
 }
 
-.i-icon-close {
-  background: none;
-  position: relative;
-  color: inherit;
+.i-icon-mobile {
+  background-position: -18px -90px;
 }
 
-.i-icon-close::before, .i-icon-close::after {
-  border-bottom: 2px solid;
-  content: "";
-  margin-top: -2px;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
+button:hover .i-icon-mobile,
+a:hover .i-icon-mobile {
+  background-position: 0 -90px;
 }
 
-.i-icon-close::before {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+.i-icon-car {
+  background-position: -18px -108px;
 }
 
-.i-icon-close::after {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
+button:hover .i-icon-car,
+a:hover .i-icon-car {
+  background-position: 0 -108px;
+}
+
+.i-icon-routes {
+  background-position: -54px 0;
+}
+
+.i-icon-plus {
+  background-position: -54px -18px;
+}
+
+.i-icon-minus {
+  background-position: -54px -36px;
+}
+
+.i-icon-fire {
+  background-position: -54px -54px;
+}
+
+.i-icon-layers {
+  background-position: -54px -72px;
 }
 
 /* components */
@@ -2033,6 +2039,161 @@ div.reset-tour-btn .icon-tour {
   background-color: #007cf0;
 }
 
+.map-widget {
+  position: absolute;
+  top: 40px;
+  z-index: 5;
+}
+
+.map-widget.-w-horizontal {
+  color: #fff;
+  right: 80px;
+}
+
+.map-widget.-w-vertical {
+  right: 40px;
+}
+
+.map-widget--group {
+  display: inline-block;
+  font-size: 0;
+  margin-right: 30px;
+  vertical-align: middle;
+}
+
+.map-widget--label {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: bold;
+  color: #fff;
+  margin: 0 10px;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.map-widget .map-widget--btn, .map-widget .map-widget--btn-round {
+  text-align: center;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  outline: none;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.map-widget .map-widget--btn [class^="i-icon-"], .map-widget .map-widget--btn-round [class^="i-icon-"] {
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition: background-positions 0.3s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.map-widget--btn {
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  background: #394467;
+  color: #fff;
+  border: 0 none;
+  display: block;
+  margin-bottom: 10px;
+  height: 40px;
+  width: 40px;
+}
+
+.map-widget--btn:hover {
+  background: #4ca5fa;
+}
+
+.map-widget--btn-round {
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid #4ca5fa;
+  display: inline-block;
+  opacity: 0.72;
+}
+
+.map-widget--btn-round [class^="i-icon-"] {
+  opacity: 0.72;
+}
+
+.map-widget--btn-round:hover {
+  background-color: rgba(76, 165, 250, 0.4);
+  opacity: 1;
+  z-index: 1;
+}
+
+.map-widget--btn-round:hover [class^="i-icon-"] {
+  opacity: 1;
+}
+
+.map-widget--btn-round.-with-icon:hover {
+  background: transparent;
+}
+
+.map-widget--btn-round.-size-1 {
+  height: 48px;
+  width: 48px;
+  margin: 0 -4px;
+}
+
+.map-widget--btn-round.-size-2 {
+  height: 44px;
+  width: 44px;
+  margin: 0 -3px;
+}
+
+.map-widget--btn-round.-size-3 {
+  height: 40px;
+  width: 40px;
+  margin: 0 -2px;
+}
+
+.map-widget--btn-round.-size-4 {
+  height: 36px;
+  width: 36px;
+  margin: 0;
+}
+
+.map-widget--btn-round.-size-5 {
+  height: 32px;
+  width: 32px;
+  margin: 0 1px;
+}
+
+.map-widget--btn-round.-size-6 {
+  height: 28px;
+  width: 28px;
+  margin: 0 2px;
+}
+
+.map-widget--btn-round.-size-7 {
+  height: 24px;
+  width: 24px;
+  margin: 0 3px;
+}
+
+.map-widget--btn-round.-size-8 {
+  height: 20px;
+  width: 20px;
+  margin: 0 4px;
+}
+
+.map-widget--btn-round.-size-9 {
+  height: 16px;
+  width: 16px;
+  margin: 0 5px;
+}
+
+.map-widget--btn-round.-size-10 {
+  height: 12px;
+  width: 12px;
+  margin: 0 6px;
+}
+
 .poi-block-wrp {
   -webkit-border-radius: 20px;
   border-radius: 20px;
@@ -2074,6 +2235,38 @@ div.reset-tour-btn .icon-tour {
 .poi-block--close-btn:hover {
   background: #1c2340;
   color: rgba(255, 255, 255, 0.8);
+}
+
+.poi-block--close-btn .i-icon-close {
+  background: none;
+  position: relative;
+  color: inherit;
+}
+
+.poi-block--close-btn .i-icon-close::before, .poi-block--close-btn .i-icon-close::after {
+  border-bottom: 2px solid;
+  content: "";
+  margin-top: -2px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+}
+
+.poi-block--close-btn .i-icon-close::before {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.poi-block--close-btn .i-icon-close::after {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .poi-block--label {

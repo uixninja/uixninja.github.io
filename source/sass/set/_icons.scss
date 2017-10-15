@@ -77,25 +77,34 @@
 .i-icon-flash {
     background-position: -36px -72px;
 }
-.i-icon-close {
-    background: none;
-    position: relative;
-    color: inherit;
+.i-icon-mobile {
+    background-position: -18px -90px;
 
-    &::before,
-    &::after {
-        border-bottom: 2px solid;
-        content: "";
-        margin-top: -2px;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        right: 0;
+    button:hover &,
+    a:hover & {
+        background-position: 0 -90px;
     }
-    &::before {
-        @include rotate(-45deg);
+}
+.i-icon-car {
+    background-position: -18px -108px;
+
+    button:hover &,
+    a:hover & {
+        background-position: 0 -108px;
     }
-    &::after {
-        @include rotate(45deg);
-    }
+}
+.i-icon-routes {
+    background-position: -54px 0;
+}
+.i-icon-plus {
+    background-position: -54px -18px;
+}
+.i-icon-minus {
+    background-position: -54px -36px;
+}
+.i-icon-fire {
+    background-position: -54px -54px;
+}
+.i-icon-layers {
+    background-position: -54px -72px;
 }
