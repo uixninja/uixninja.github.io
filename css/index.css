@@ -1948,6 +1948,17 @@ div.reset-tour-btn .icon-tour {
   max-height: 80vh;
 }
 
+.map-search--dropdown [class^="i-icon-"] {
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  position: absolute;
+  left: auto;
+  top: 50%;
+  margin-left: -25px;
+}
+
 .map-search .map-search--header .el-title, .map-search--header .map-search .el-title, .map-search
 .map-search--header .el-see-all,
 .map-search--header .map-search .el-see-all, .map-search .map-search--results .el-title, .map-search--results .map-search .el-title {
@@ -1975,6 +1986,8 @@ div.reset-tour-btn .icon-tour {
 .map-search--header .el-title {
   padding-top: 2px;
   text-transform: uppercase;
+  position: relative;
+  padding-left: 25px;
 }
 
 .map-search--header a.el-see-all {
@@ -1995,7 +2008,8 @@ div.reset-tour-btn .icon-tour {
   background-color: #1796ff;
   display: block;
   margin: 0 -20px;
-  padding: 12px 20px;
+  padding: 12px 20px 12px 45px;
+  position: relative;
   text-transform: uppercase;
 }
 
@@ -2003,17 +2017,6 @@ div.reset-tour-btn .icon-tour {
   list-style: none;
   margin: 4px 0;
   padding: 0;
-}
-
-.map-search--list [class^="i-icon-"] {
-  -webkit-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
-  -o-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-  position: absolute;
-  left: auto;
-  top: 50%;
-  margin-left: -25px;
 }
 
 .map-search--list .list-item {
@@ -2026,7 +2029,7 @@ div.reset-tour-btn .icon-tour {
   display: block;
   font-size: 12px;
   line-height: 1;
-  padding: 10px 30px 10px 50px;
+  padding: 10px 10px 10px 25px;
   position: relative;
 }
 

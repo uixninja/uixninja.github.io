@@ -94,6 +94,14 @@
             display: block;
             max-height: 80vh;
         }
+
+        [class^="i-icon-"] {
+            @include translate(0, -50%);
+            position: absolute;
+            left: auto;
+            top: 50%;
+            margin-left: -25px;
+        }
     }
     %title {
         color: rgba($color-white, 0.9);
@@ -114,6 +122,8 @@
         .el-title {
             padding-top: 2px;
             text-transform: uppercase;
+            position: relative;
+            padding-left: 25px;
         }
         a.el-see-all {
             font-size: 13px !important;
@@ -133,7 +143,8 @@
             background-color: $color-dodger-blue;
             display: block;
             margin: 0 -20px;
-            padding: 12px 20px;
+            padding: 12px 20px 12px 45px;
+            position: relative;
             text-transform: uppercase;
         }
     }
@@ -142,13 +153,6 @@
         margin: 4px 0;
         padding: 0;
 
-        [class^="i-icon-"] {
-            @include translate(0, -50%);
-            position: absolute;
-            left: auto;
-            top: 50%;
-            margin-left: -25px;
-        }
         .list-item {
             @include ellipsis();
             @include border-radius(3px);
@@ -156,7 +160,7 @@
             display: block;
             font-size: 12px;
             line-height: 1;
-            padding: 10px 30px 10px 50px;
+            padding: 10px 10px 10px 25px;
             position: relative;
 
             .match {
