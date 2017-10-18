@@ -80,7 +80,9 @@
 .i-icon-mobile {
     background-position: -18px -90px;
 
+    input:checked ~ &,
     button:hover &,
+    label:hover &,
     a:hover & {
         background-position: 0 -90px;
     }
@@ -88,7 +90,9 @@
 .i-icon-car {
     background-position: -18px -108px;
 
+    input:checked ~ &,
     button:hover &,
+    label:hover &,
     a:hover & {
         background-position: 0 -108px;
     }
