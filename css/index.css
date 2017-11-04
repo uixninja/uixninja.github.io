@@ -291,6 +291,10 @@ a:hover .i-icon-car {
   background-position: -54px -72px;
 }
 
+.i-icon-bell {
+  background-position: -36px -90px;
+}
+
 /* components */
 .header {
   width: 100%;
@@ -3013,18 +3017,6 @@ div.reset-tour-btn .icon-tour {
   to {
     opacity: 0;
   }
-}
-
-.loader {
-  border: 1px solid #1b6d85;
-  margin: 0 auto;
-  height: 300px;
-  width: 300px;
-}
-
-.loader--svg {
-  height: 100%;
-  width: 100%;
 }
 
 /* tour and media */
