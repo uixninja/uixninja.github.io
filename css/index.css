@@ -2111,6 +2111,7 @@ div.reset-tour-btn .icon-tour {
   border: 0 none;
   display: block;
   margin-bottom: 10px;
+  position: relative;
   height: 40px;
   width: 40px;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -2118,6 +2119,29 @@ div.reset-tour-btn .icon-tour {
 
 .map-widget--btn:hover {
   background: #0a89ff;
+}
+
+.map-widget--btn:hover .el-notice {
+  top: -10px;
+}
+
+.map-widget--btn .el-notice {
+  border-radius: 10px;
+  background-color: #ef3c11;
+  border: 1px solid #fff;
+  color: #fff;
+  font-weight: normal;
+  font-size: 9px;
+  padding: 0;
+  position: absolute;
+  height: 18px;
+  min-width: 18px;
+  top: -6px;
+  right: -6px;
+  z-index: 1;
+  line-height: 18px;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 1px rgba(44, 53, 83, 0.4);
 }
 
 .map-widget--btn-round {
