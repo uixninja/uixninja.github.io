@@ -188,3 +188,31 @@ $('.poi-block--toggle').on('click', function(){
 //         }
 //     });
 // });
+
+/* change maps view*/
+$('#toggle-maps').click(function () {
+    var classes = ['map-widget--btn -map-black','map-widget--btn -map-satellite','map-widget--btn -map-road'];
+    $(this).each(function(){
+        this.className = classes[($.inArray(this.className, classes)+1)%classes.length];
+    });
+});
+
+$('#map-vert-menu-toggle').click(function () {
+    $('#map-vert-menu').slideToggle('fast');
+    $(this).toggleClass('-active');
+    return false;
+});
+
+function mapMobileMenu() {
+    $('#map-main-menu').slideToggle('fast');
+    $('.map-widget--map-mask').fadeToggle('fast');
+    $('#map-main-menu-toggle').toggleClass('-active');
+    return false;
+}
+$('#map-main-menu-toggle').click(function () {
+    mapMobileMenu();
+});
+/* just for demo. Close Mobile menu */
+$('.map-widget--header-link').click(function () {
+    mapMobileMenu();
+});

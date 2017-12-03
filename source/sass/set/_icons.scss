@@ -82,7 +82,6 @@
 
     input:checked ~ &,
     button:hover &,
-    label:hover &,
     a:hover & {
         background-position: 0 -90px;
     }
@@ -92,7 +91,6 @@
 
     input:checked ~ &,
     button:hover &,
-    label:hover &,
     a:hover & {
         background-position: 0 -108px;
     }
@@ -112,6 +110,21 @@
 .i-icon-layers {
     background-position: -54px -72px;
 }
+.i-icon-marker-circle {
+    background-position: -54px -90px;
+}
+.i-icon-arrow-expand {
+    background-position: -54px -108px;
+}
 .i-icon-bell {
     background-position: -36px -90px;
+}
+.i-icon-google {
+    background-position: -36px -108px;
+}
+.i-icon-edit-white {
+    background-position: -72px 0;
+}
+.i-icon-car-white {
+    background-position: -72px -18px;
 }

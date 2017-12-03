@@ -323,23 +323,18 @@
 }
 
 // media queries
-@mixin mobile-xs {
-    @media (max-width: #{$screen-xs - 1px}){
-        @content
-    }
-}
 @mixin mobile-landscape {
-    @media (max-width: #{$screen-sm - 1px}) and (orientation: landscape) {
+    @media (max-width: #{$screen-xs - 1px}) and (orientation: landscape) {
         @content
     }
 }
 @mixin mobile {
-    @media (max-width: #{$screen-sm - 1px}){
+    @media (max-width: #{$screen-xs - 1px}){
         @content
     }
 }
 @mixin tablet {
-    @media (min-width: #{$screen-sm}) and (max-width: #{$screen-md - 1px}){
+    @media (min-width: #{$screen-xs}) and (max-width: #{$screen-md - 1px}){
         @content
     }
 }
@@ -353,14 +348,8 @@
         @content
     }
 }
-
-@mixin devices-only {
-  @media (max-width: #{$screen-md - 1px}){
-    @content
-  }
-}
 @mixin desktop-only {
-    @media (min-width: #{$screen-md}){
+    @media (min-width: #{$screen-xs}){
         @content
     }
 }

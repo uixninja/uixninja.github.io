@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Uixninja</title>
+
+        <link rel="stylesheet" href="vendors/bootstrap.min.css">
+		<link rel="stylesheet" href="vendors/bootstrap-slider.min.css">
+		<link rel="stylesheet" href="vendors/bootstrap-table.css">
+		<link rel="stylesheet" href="vendors/jquery.multiselect.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+        <link rel="stylesheet" href="css/index.css">
+
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+	</head>
+	<body>
+		<!-- if we need the header on this page, we should add the wrapper -->
+		<div class="map-container">
+			<div id="map-main-menu" class="map-widget--w-horizontal-wrp">
+			    <header class="map-widget--header">
+			        <a class="map-widget--header-link" href="#">Cancel</a>
+			        <img alt="" class="map-widget--logo" src="img/sz-logo-small.png" />
+			        <a class="map-widget--header-link" href="#">Done</a>
+			    </header>
+			    <div class="map-widget -w-horizontal">
+			        <div class="map-widget--group -trade-area">
+			            <span class="map-widget--label">Trade area</span>
+			            <label class="map-widget--btn-round -size-10">
+			                <input id="trade-area-10" type="radio" name="trade-area">
+			                <span class="label-control"></span>
+			            </label>
+			            <label class="map-widget--btn-round -size-9">
+			                <input id="trade-area-9" type="radio" name="trade-area">
+			                <span class="label-control"></span>
+			            </label>
+			            <label class="map-widget--btn-round -size-8">
+			                <input id="trade-area-8" type="radio" name="trade-area">
+			                <span class="label-control"></span>
+			            </label>
+			            <label class="map-widget--btn-round -size-7">
+			                <input id="trade-area-7" type="radio" name="trade-area">
+			                <span class="label-control"></span>
+			            </label>
+			            <label class="map-widget--btn-round -size-6">
+			                <input id="trade-area-6" type="radio" name="trade-area">
+			                <span class="label-control"></span>
+			            </label>
+			            <label class="map-widget--btn-round -size-5">
+			                <input id="trade-area-5" type="radio" name="trade-area">
+			                <span class="label-control"></span>
+			            </label>
+			            <label class="map-widget--btn-round -size-4">
+			                <input id="trade-area-4" type="radio" name="trade-area">
+			                <span class="label-control"></span>
+			            </label>
+			            <label class="map-widget--btn-round -size-3">
+			                <input id="trade-area-3" type="radio" name="trade-area">
+			                <span class="label-control"></span>
+			            </label>
+			            <label class="map-widget--btn-round -size-2">
+			                <input id="trade-area-2" type="radio" name="trade-area">
+			                <span class="label-control"></span>
+			            </label>
+			            <label class="map-widget--btn-round -size-1">
+			                <input id="trade-area-1" type="radio" name="trade-area">
+			                <span class="label-control"></span>
+			            </label>
+			        </div>
+			
+			        <div class="map-widget--group">
+			            <label class="map-widget--btn-round -with-icon -size-3">
+			                <input id="car-distance-3" type="radio" name="car-distance">
+			                <span class="label-control"></span>
+			                <span class="i-icon-car"></span>
+			            </label>
+			            <label class="map-widget--btn-round -with-icon -size-2">
+			                <input id="car-distance-2" type="radio" name="car-distance">
+			                <span class="label-control"></span>
+			                <span class="i-icon-car"></span>
+			            </label>
+			            <label class="map-widget--btn-round -with-icon -size-1">
+			                <input id="car-distance-1" type="radio" name="car-distance">
+			                <span class="label-control"></span>
+			                <span class="i-icon-car"></span>
+			            </label>
+			        </div>
+			
+			        <div class="map-widget--group -mbl-area">
+			            <label class="map-widget--btn-round -with-icon -size-1">
+			                <input id="include-mobile-1" type="checkbox" name="include-mobile">
+			                <span class="label-control"></span>
+			                <span class="i-icon-mobile"></span>
+			            </label>
+			            <span class="map-widget--label">Mbl</span>
+			        </div>
+			    </div>
+			</div>
+			<!-- add class '-opened' to show mobile dropdown backdrop -->
+			<div class="map-widget--map-mask"></div>
+			
+			<div class="map-widget -w-horizontal visible-xs">
+			    <button id="map-main-menu-toggle" class="map-widget--btn" type="button">
+			        <span class="i-icon-arrow-expand"></span>
+			    </button>
+			</div>
+			<div class="map-widget -w-vertical">
+			    <!-- add class '-active' when 'map-widget--vert-list' is visible -->
+			    <button id="map-vert-menu-toggle" class="map-widget--btn visible-xs" type="button">
+			        <span class="i-icon-marker-circle"></span>
+			    </button>
+			    <div id="map-vert-menu" class="map-widget--vert-list">
+			        <button class="map-widget--btn" type="button">
+			            <b class="el-notice">12</b>
+			            <span class="i-icon-bell"></span>
+			        </button>
+			        <button class="map-widget--btn" type="button">
+			            <span class="i-icon-plus"></span>
+			        </button>
+			        <button class="map-widget--btn" type="button">
+			            <span class="i-icon-minus"></span>
+			        </button>
+			        <!-- classes for change maps '-map-black', '-map-satellite', '-map-road'. Added demo js in scripts.js -->
+			        <button id="toggle-maps" class="map-widget--btn -map-road" type="button">
+			            <span class="i-icon-google"></span>
+			        </button>
+			        <button class="map-widget--btn" type="button">
+			            <span class="i-icon-edit-white"></span>
+			        </button>
+			        <button class="map-widget--btn" type="button">
+			            <span class="i-icon-fire"></span>
+			        </button>
+			        <button class="map-widget--btn" type="button">
+			            <span class="i-icon-car-white"></span>
+			        </button>
+			        <button class="map-widget--btn" type="button">
+			            <span class="i-icon-layers"></span>
+			        </button>
+			    </div>
+			</div>
+			<div class="map-wrapper">
+				<!--<iframe src="https://snazzymaps.com/embed/17322" width="100%" height="100%" style="border:none;"></iframe>-->
+			</div>
+		</div>
+
+        <script src="vendors/jquery-1.9.1.min.js"></script>
+        <script src="vendors/bootstrap.min.js"></script>
+		<script src="vendors/bootstrap-slider.min.js"></script>
+		<script src="vendors/bootstrap-table.min.js"></script>
+		<script src="vendors/jquery.multiselect.js"></script>
+		<script src="js/tour.js"></script>
+ 		<script src="js/scripts.js"></script>
+	</body>
+</html>

@@ -5,24 +5,34 @@
 
     &.-w-horizontal {
         color: $color-white;
-        right: 80px;
+        right: 92px;
+        padding-left: 15px;
     }
     &.-w-vertical {
         right: 40px;
     }
-
     &--group {
         display: inline-block;
         font-size: 0;
         margin-right: 30px;
         vertical-align: middle;
+
+        &:last-child {
+            margin-right: 15px;
+        }
+
+        &.-trade-area .map-widget--label {
+            margin-right: 10px;
+        }
+        &.-mbl-area .map-widget--label {
+            margin-left: 12px;
+        }
     }
     &--label {
         display: inline-block;
         font-size: 13px;
         font-weight: bold;
         color: $color-white;
-        margin: 0 10px;
         text-shadow: 0 1px 1px rgba($color-martinique, 0.8);
         text-transform: uppercase;
         vertical-align: middle;
@@ -45,7 +55,7 @@
     &--btn {
         @extend %buttons-stgs;
         @include border-radius(6px);
-        @include box-shadow(0px 1px 16px rgba($color-martinique, 0.6));
+        @include box-shadow(0px 1px 14px rgba($color-martinique, 0.6));
         background: $color-fiord-light;
         color: $color-white;
         border: 0 none;
@@ -54,33 +64,78 @@
         position: relative;
         height: 40px;
         width: 40px;
-        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+        transition: background 0.2s ease;
+        -webkit-tap-highlight-color: lighten($color-azure, 2%);
+        z-index: 1;
 
-        &:hover {
+        @include desktop-only {
+            &:hover {
+                background: lighten($color-azure, 2%);
+
+                $size-circle: 8px;
+                .el-notice:before {
+                    border-radius: $size-circle * 3;
+                    top: -$size-circle;
+                    left: -$size-circle;
+                    right: -$size-circle;
+                    bottom: -$size-circle;
+                    opacity: 0.2;
+                }
+            }
+        }
+        &.-active {
             background: lighten($color-azure, 2%);
+        }
+        .el-notice {
+            @include box-sizing(content-box);
+            display: block;
+            border-radius: 10px;
+            background-color: darken($color-french-rose, 5%);
+            color: $color-white;
+            font-size: 9px;
+            font-weight: bold;
+            padding: 0;
+            position: absolute;
+            height: 13px;
+            min-width: 13px;
+            top: -4px;
+            right: -4px;
+            z-index: 5;
+            line-height: 13px;
+            transition: all 0.6s ease-in-out;
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.6), 0 0 1px 3px rgba(44, 53, 83, 0.2);
 
-            .el-notice {
-                top: -10px;
+            $size-circle: 5px;
+            &:before {
+                border-radius: $size-circle * 3;
+                background-color: $color-french-rose;
+                content: "";
+                position: absolute;
+                top: -$size-circle;
+                left: -$size-circle;
+                right: -$size-circle;
+                bottom: -$size-circle;
+                opacity: 0.4;
+                z-index: -1;
+                transition: all 0.2s ease;
             }
         }
 
-        .el-notice {
-            border-radius: 10px;
-            background-color: $color-red-tia;
-            border: 1px solid $color-white;
-            color: $color-white;
-            font-weight: normal;
-            font-size: 9px;
-            padding: 0;
-            position: absolute;
-            height: 18px;
-            min-width: 18px;
-            top: -6px;
-            right: -6px;
-            z-index: 1;
-            line-height: 18px;
-            transition: all 0.2s ease;
-            box-shadow: 0 1px 1px rgba($color-martinique, 0.4);
+        /* types of map */
+        &.-map-road {
+            background: url("../img/map-preview-road.png") no-repeat scroll 0 0;
+        }
+        &.-map-black {
+            background: url("../img/map-preview-black.png") no-repeat scroll 0 0;
+        }
+        &.-map-satellite {
+            background: url("../img/map-preview-satellite.png") no-repeat scroll 0 0;
+        }
+        &.-map-road,
+        &.-map-black,
+        &.-map-satellite {
+            background-size: cover;
+            -webkit-tap-highlight-color: transparent;
         }
     }
 
@@ -98,7 +153,7 @@
         .label-control {
             @include border-radius(50%);
             @include box-shadow(0px 1px 1px rgba($color-martinique, 0.25));
-            background: transparent;
+            background-color: rgba($color-azure, 0.2);
             border: 2px solid lighten($color-azure, 2%);
             cursor: pointer;
             position: absolute;
@@ -108,11 +163,11 @@
             width: 100%;
             transition: all 0.15s ease;
         }
-
-        &:hover .label-control {
-            background-color: rgba($color-azure, 0.6);
-            border-color: lighten($color-dodger-blue, 2%);
-            z-index: 1;
+        @include desktop-only {
+            &:hover .label-control {
+                background-color: rgba($color-azure, 0.4);
+                z-index: 1;
+            }
         }
         input[type="checkbox"]:checked + .label-control,
         input[type="radio"]:checked + .label-control {
@@ -122,27 +177,25 @@
         }
         &.-with-icon {
             [class^="i-icon-"] {
-                opacity: 0.8;
+                pointer-events: none;
+                z-index: 2;
             }
-            &:hover {
-                .label-control {
-                    background: transparent;
-                    border-color: lighten($color-azure, 2%);
+            @include desktop-only {
+                &:hover .label-control {
+                    background-color: rgba($color-azure, 0.4);
+                    z-index: 1;
                 }
-                [class^="i-icon-"] {
-                    opacity: 1;
-                }
+            }
+            &:active .label-control {
+                background-color: rgba($color-azure, 0.4);
+                z-index: 1;
             }
             input[type="checkbox"]:checked,
             input[type="radio"]:checked {
                 & + .label-control {
                     background-color: rgba($color-azure, 0.6);
-                    border-color: lighten($color-dodger-blue, 2%);
+                    border-color: lighten($color-dodger-blue, 4%);
                     z-index: 1;
-                }
-                & ~ [class^="i-icon-"] {
-                    opacity: 1;
-                    z-index: 2;
                 }
             }
         }
@@ -198,4 +251,126 @@
             margin: 0 4px;
         }
     }
+
+    $mobile-grid-padding: 15px;
+    &--header {
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(space-between);
+        background: rgba($color-martinique, 0.5);
+        padding: 5px $mobile-grid-padding;
+
+        @include desktop-only {
+            display: none;
+        }
+        &-link {
+            font-size: 13px;
+            font-weight: bold;
+            color: $color-white;
+            text-shadow: 0 1px 1px rgba($color-martinique, 0.8);
+            text-transform: uppercase;
+            padding: 5px 0;
+        }
+    }
+    &--logo {
+        height: 50px;
+        width: 50px;
+    }
+    &--map-mask {
+        display: none;
+        background: rgba($color-martinique, 0.4);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 50;
+    }
+    @include desktop-only {
+        &--map-mask {
+            display: none !important;
+        }
+        &--w-horizontal-wrp,
+        &--vert-list {
+            display: block !important;
+        }
+    }
+    @include mobile {
+        top: 30px;
+        right: $mobile-grid-padding;
+
+        &.-w-horizontal {
+            right: 75px;
+        }
+        &.-w-vertical {
+            right: 20px;
+        }
+
+        &--group {
+            display: inline-block;
+            font-size: 0;
+            margin-right: 0;
+
+            &:last-child {
+                margin-right: 0;
+            }
+            &.-trade-area {
+                @include flex(1 1 auto);
+                margin-bottom: 25px;
+                width: 100%;
+
+                .map-widget--label {
+                    display: block;
+                    margin: 0 0 $mobile-grid-padding;
+                }
+            }
+            &.-mbl-area {
+                direction: rtl;
+
+                .map-widget--label {
+                    margin-left: 0;
+                    margin-right: 12px;
+                }
+            }
+        }
+        &--btn-round {
+            &.-size-7 {
+                margin: 0;
+            }
+            &.-size-8 {
+                margin: 0 1px;
+            }
+            &.-size-9 {
+                margin: 0 2px;
+            }
+            &.-size-10 {
+                margin: 0 3px;
+            }
+        }
+        &--w-horizontal-wrp {
+            display: none;
+            background: $color-port-gore;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 12px 16px rgba($color-martinique, 0.24);
+
+            .map-widget.-w-horizontal {
+                @include flexbox();
+                @include flex-wrap(wrap);
+                @include justify-content(space-between);
+                padding: 25px $mobile-grid-padding;
+                right: 0;
+                position: static;
+            }
+        }
+        &--vert-list {
+            display: none;
+            margin: -15px;
+            padding: 15px;
+        }
+    }
+
 }
