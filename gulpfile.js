@@ -19,7 +19,7 @@ gulp.task('connect', function() {
 // styles (outputStyle: expanded, compressed)
 gulp.task('sass', function() {
     gulp.src('source/sass/*.scss')
-        .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(gulp.dest('css'))
         .pipe(connect.reload())
 });

@@ -296,7 +296,7 @@
         }
     }
     @include mobile {
-        top: 30px;
+        top: 25px;
         right: $mobile-grid-padding;
 
         &.-w-horizontal {
@@ -370,6 +370,18 @@
             display: none;
             margin: -15px;
             padding: 15px;
+
+            @include mobile-landscape() {
+                width: 98vw;
+                position: absolute;
+                right: 0;
+                top: 100%;
+
+                .map-widget--btn {
+                    margin: 15px 0 0 15px;
+                    float: right;
+                }
+            }
         }
     }
 
