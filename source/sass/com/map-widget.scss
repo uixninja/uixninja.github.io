@@ -65,7 +65,7 @@
         height: 40px;
         width: 40px;
         transition: background 0.2s ease;
-        -webkit-tap-highlight-color: lighten($color-azure, 2%);
+        -webkit-tap-highlight-color: rgba($color-azure, 0.5);
         z-index: 1;
 
         @include desktop-only {
