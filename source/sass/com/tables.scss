@@ -189,7 +189,7 @@
 
 .table-stat {
     background: $color-haiti;
-    padding: 20px;
+    padding: 0 20px 20px 20px;
     table {
         td {
             overflow: hidden;
@@ -314,6 +314,50 @@
             font-weight: 800;
             font-family: $font-base;
             text-transform: uppercase;
+
+            .search {
+                width: 282px;
+                height: 48px;
+                @include border-radius(13px);
+                margin: 5px 0;
+                transition: 0.8s background;
+
+                &.active,
+                &:hover {
+                    background: #2c3553;
+                }
+
+                input {
+                    &[type=submit] {
+                        width: 36px;
+                        height: 38px;
+                        margin: 5px;
+                        background: url('/img/zoom-icon.png') no-repeat 50% 50%;
+                        border: none;
+                        cursor: pointer;
+                        @include border-radius(0);
+                        float: left;
+                    }
+
+                    &[type=text] {
+                        background: none;
+                        width: 236px;
+                        height: 48px;
+                        float: left;
+                        padding: 0;
+
+                        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                            color: #959fbb;
+                            font: 500 13px/48px "Roboto";
+                        }
+     
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
         }
         tr:hover td svg path {
             fill: $color-white;

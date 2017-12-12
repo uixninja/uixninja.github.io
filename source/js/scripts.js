@@ -8,8 +8,15 @@ jQuery(document).ready(function($) {
 	}, function(){
 		!$('.cd-tour-wrapper').hasClass('active') ? 
 		$('.cd-tour-wrapper li.cd-single-step').removeClass('is-selected') : null;
-	});
-	
+    });
+    
+    if ($('.table-stat .search').size() > 0) {
+        $('.table-stat .search input[type=text]').focus(function(){
+            $(this).closest('.search').addClass('active');
+        }).blur(function(){
+                $(this).closest('.search').removeClass('active');
+        });
+    }
 });
 $(function () {
   $('[data-toggle="tooltip"]').tooltip({
